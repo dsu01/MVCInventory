@@ -14,17 +14,17 @@ namespace MVCInventory.WebUI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            Init();
-
-            return View();
+            //Init();
+            var building = repo.Buildings.FirstOrDefault();
+            return View(building);
         }
 
-        private void Init()
-        {
-            using (var dbContext = new InventoryContext())
-            {
-                var buildings = dbContext.Buildings.ToList();
-            }
-        }
+        //private void Init()
+        //{
+        //    using (var dbContext = new InventoryContext())
+        //    {
+        //        var buildings = dbContext.Buildings.ToList();
+        //    }
+        //}
     }
 }
