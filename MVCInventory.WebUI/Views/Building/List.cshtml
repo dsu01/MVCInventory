@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MVCInventory.Domain.Building>
+
+@{
+    ViewBag.Title = "Buildings";
+}
+
+<h2>List</h2>
+@foreach (var p in Model)
+{
+    <div>
+        <h3>@p.BuildingName</h3>
+        @p.Property 
+        <h4>@p.IsActive.ToString()</h4>
+    </div>
+}
