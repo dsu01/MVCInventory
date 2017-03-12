@@ -1,0 +1,236 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// SECTIONS ------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+header {
+	margin-bottom: 20px;
+	z-index: 9999;
+	background-color: $primary-color;
+	box-shadow: 0 20px 5px rgb(255,255,255);
+}
+
+main {
+	display: block;
+	background-color: #fff;
+    a {
+        text-decoration: underline;
+    }
+}
+
+section {
+    margin: 0.5rem 0;
+    padding: 0.325rem 0 0;    
+}
+
+footer {
+	margin-top: 1.25rem;
+	padding-top: 1.25rem;
+}
+
+article, 
+aside, 
+details, 
+div, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+main, 
+nav, 
+section, 
+summary  {
+    &.card {
+        margin: 1.25rem 0;
+        padding: 0.825rem 1.25rem 0.5rem;
+        border: 1px solid $gray-bright-color;
+        box-shadow: 2px 2px 1px 1px lighten($gray-light-color,0.5%);
+    }
+    &.rule {
+        margin: 1rem 0;
+        padding: 0.825rem 0 0.5rem;
+        border-bottom: 1px solid $primary-color;
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+    &.primary-color {
+        background-color: $primary-color;
+        div, 
+        dl, 
+        dt, 
+        dd, 
+        ul, 
+        ol, 
+        li, 
+        h1, 
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6, 
+        pre, 
+        form, 
+        p, 
+        blockquote, 
+        th, 
+        td {
+            color: $gray-bright-color;
+        }
+    }
+    &.secondary-color {
+        background-color: $secondary-color;
+    }
+    &.light-color {
+        background-color: $gray-bright-color;
+    }
+    &.dark-color {
+        background-color: $gray-dark-color;
+        div, 
+        dl, 
+        dt, 
+        dd, 
+        ul, 
+        ol, 
+        li, 
+        h1, 
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6, 
+        pre, 
+        form, 
+        p, 
+        blockquote, 
+        th, 
+        td {
+            color: $gray-bright-color;
+        }        
+    }
+}
+
+.section-nav {
+    min-height: 46px;
+    box-shadow: 0 3px 3px darken($secondary-color, 3%);
+    h2 {
+        padding-top: 0.3em;
+        color: $gray-dark-color;
+    }   
+}
+
+.section .client-info {
+	vertical-align: middle;
+}
+
+.section-content {
+	&.row {
+		padding-top: .85em;
+		border-bottom: 1px solid rgb(200,200,200);
+		&:last-child {
+			border-bottom: none;
+		}
+		h4 {
+			width: 85%;
+			margin-bottom: .25em;
+			color: $primary-color;
+		}
+		a {
+			text-decoration: underline;
+		}
+		table form {
+			margin-top: 0;
+		}
+	}
+	.navicon-area a {
+		color: rgb(160,160,160);
+		&:active, 
+		&:focus,
+		&:hover {
+			color: rgb(20,20,20);
+		}
+	}
+}
+
+.section-content, 
+.section-header {
+	.navicon-area {
+		position: absolute;
+		right: 15px;
+		line-height: 1.85em;
+		text-align: right;
+		a {
+			font-size: 1.3em;
+			vertical-align: middle;
+			text-decoration: none;
+			i {
+				padding-right: .1em;
+				vertical-align: middle;
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+@mixin section-form {
+	margin-bottom: 1rem;
+}
+
+.section-form {
+	@include section-form;
+}
+
+.section-form-secondary {
+	@include section-form;
+	padding: 1rem 0;
+	background: $gray-bright-color;
+}
+
+@media #{$medium-up} { 
+	.section-form-secondary {
+		margin-right: -0.375rem;
+		margin-left: -0.375rem;
+		padding: 1rem 0.375rem;		
+	}
+}
+
+@media #{$medium-up} {
+	.section-content .navicon-area a {
+		cursor: pointer;
+		position: relative;
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		padding: .3em 1em .1em;
+		font-size: 1.2em;
+		font-weight: 500;
+		color: rgba(85,85,85,0.85);
+		background: rgba(255,255,255,0.8);
+		border-style: solid;
+		border-width: 4px;
+		border-color: rgba(85,85,85,0.45);
+		border-radius: 1000px;
+		box-shadow: none;
+		a {
+			&:focused,
+			&:hover {
+				color: rgb(85,85,85);
+				background: rgba(255,255,255,0.8);
+				border-color: rgba(85,85,85,0.7);
+				box-shadow: none;
+				i {
+					color: rgba(85,85,85,0.95);
+				}
+			}
+			i {
+				color: rgba(85,85,85,0.65);
+			}
+		}
+	}
+}

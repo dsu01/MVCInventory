@@ -1,0 +1,93 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// REVEAL MODAL --------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.reveal-modal {
+	padding: 1.55em 0 0.25em;
+	background-color: #fff;
+	// border: 8px solid $primary-color;
+    border: none;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	a.close-reveal-modal,
+    a.x-close-reveal-modal {
+        @include reveal-close;
+        top: 1rem;
+		margin-top: -0.25em;
+		margin-right: -0.15em;
+		padding: 0;
+		line-height: 1.85rem;
+		font-weight: 700;
+		font-size: 1.85rem;
+		color: $gray-bright-color !important;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $gray-dark-color !important;
+	}
+	hr {
+		margin: 1.2em auto;
+		color: $gray-light-color; 
+	}
+    button.close-reveal-modal,
+    .button.close-reveal-modal {
+        position: relative;
+		top: auto;
+		right: auto;
+        margin: 0 0 0.75rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.65rem;
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none !important;
+        color: #fff;
+        background-color: $gray-color;
+        border: 4px solid $gray-color;
+        box-shadow: none !important;
+        transition: border-color 100ms ease-in-out;
+        cursor: pointer;
+        &:hover, 
+        &:active, 
+        &:focus {
+            background-color: $gray-color !important;
+            border-color: $gray-dark-color !important;
+            outline: none !important;        
+        }
+	}
+    section {
+        margin: 1.25rem 0;
+    }
+}
+
+dialog,
+.reveal-modal {
+	max-width: 100%;
+}
+
+dialog .close-reveal-modal, 
+.reveal-modal .close-reveal-modal {
+	padding-top: 0.6rem;
+	padding-bottom: 0.65rem;
+	line-height: normal;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.reveal-modal-bg {
+    background: rgba(0,0,0,0.75);
+}
+
+@media #{$medium-up} {
+	.reveal-modal {
+		padding: 1.25em 1.25em 0.25em;
+		// border: 12px solid $primary-color;
+	}
+}

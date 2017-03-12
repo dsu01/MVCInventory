@@ -1,0 +1,276 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// TABLES --------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+table,
+table.footable {
+    width: 100%;
+    margin: 0.7em 0em 1.25em;
+    border: none;
+    border-collapse: collapse;
+    > thead {
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid $gray-shade-color;
+        > tr {
+            width: 100%;
+            > th {
+                padding: 10px;
+                text-align: left;
+                font-size: 0.83em;
+                font-weight: 700;
+                color: $secondary-color;
+            }
+        }
+    }
+    > tbody {
+        width: 100%;
+        > tr {
+            width: 100%;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: $gray-bright-color;
+        	&.even,
+        	&.alt,
+            &:nth-of-type(even) {
+            	background: #fff;
+            }
+        	&.odd,
+            &:nth-of-type(odd) {
+            	background: #fff;
+            }
+            &:last-child {
+                border-bottom: 1px solid $gray-shade-color;
+            }
+            > td {
+                padding: 10px;
+                line-height: 1.25;
+                vertical-align: top;
+                text-align: left;
+                font-weight: 400;
+            	a.ss-icon,
+				a ss-icon,
+				button,
+				.button {
+					color: $primary-color;
+					&:active,
+					&:focus,
+					&:hover {
+						color:$primary-color;
+					}
+				}
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+		> tr table.nested tr,
+		> tr table.nested tr:hover,
+		> tr:hover table.nested tr,
+		> tr:hover table.nested tr:hover {
+			background: transparent;
+		}
+		> tr table.nested tr:nth-child(even),
+		> tr table.nested tr:nth-child(even):hover,
+		> tr:hover table.nested tr:nth-child(even),
+		> tr:hover table.nested tr:nth-child(even):hover {
+			background: rgba($primary-color, 0.05);
+		}
+    }
+    > tfoot {
+        background: #fff;
+        border-top: none !important;
+        > tr > td {
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+        }
+    }
+    a.ss-icon, 
+    a ss-icon {
+        font-size: 1.5em;
+    }
+    .ss-icon {
+        line-height: 1.5;
+        vertical-align: middle;		
+    }
+    button, 
+    .button {
+    	background: none;
+		border: none;
+		margin: 0 .3em;
+		padding: 0.05em 1em 0.2em;
+		box-shadow: none;
+		vertical-align: middle;
+		color: $primary-color;
+		font-size: 1.15em;
+		line-height: 1.5em;
+		text-align: right;
+		text-decoration: none !important;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $primary-color;
+			background: none !important;
+			box-shadow: none !important;
+			outline: none !important;
+			border: none !important;
+		}
+		i {
+			vertical-align: middle;
+		}
+    }
+	table {
+		margin: 0;
+		border: none;
+		background: none;
+	    tbody {
+	        tr {
+	            border-top: none;
+	        	&.alt,
+	        	&.even,
+	        	&.odd,
+	            &:even, 
+	            &:odd, 
+	            &:nth-of-type(even), 
+	            &:nth-of-type(odd) {
+	                border-bottom: none;   
+	                background: #fff;                 
+	            }        
+	            td {
+	                padding: .2em;
+	                &:first-child {
+	                    padding-top: 0;
+	                }
+	            }
+	        }
+	    }
+	}
+    
+    // Footable specific styles
+    
+    .footable-sortable {
+        text-decoration: underline;
+    }
+    span.footable-sort-indicator {
+        display: none !important;
+    }
+    > tbody > tr > td {
+        &.footable-cell-detail {
+            border-left: none;
+        }
+        .footable-row-detail-inner > div {
+            line-height: 1.4;
+            color: darken($secondary-color, 40%);
+            > strong {
+                color: $body-font-color;
+            }
+        }
+    }		
+    &.breakpoint {
+        > tbody > tr {
+            > td > span.footable-toggle {
+                display: inline-block;
+                margin-top: 0.1em;
+                padding-right: 0.7em;					
+                font-family: "SSGlyphish";
+                speak: none;
+                font-size: 1.1em;					
+                font-style: normal;
+                font-weight: 800;
+                font-variant: normal;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                color: $primary-color;
+                &::before {
+                    content: "\002B";
+                }
+            }
+            &.footable-detail-show {
+                > td > span.footable-toggle:before {
+                    content: "\002D";
+                }
+                + .footable-row-detail {
+                    border-bottom: none;
+                    .footable-row-detail-cell {
+                        .footable-row-detail-inner {
+                            .footable-row-detail-row {
+                                .footable-row-detail-name {
+                                    padding-top: 0.4em;
+                                    padding-bottom: 0.4em;
+                                    font-weight: 300;
+                                    color: #888;
+                                }
+                                .footable-row-detail-value {
+                                    padding-top: 0.4em;
+                                    padding-bottom: 0.4em;
+                                    color: $body-font-color;
+                                }
+                            }												
+                        }
+                    }
+                }
+            }
+            &.highlight {
+                > td > span.footable-toggle,
+                &.footable-detail-show > td > span.footable-toggle:before {
+                    color: #fff;
+                }
+                + tr.footable-row-detail {
+                    background: $alert-color;
+                    .footable-row-detail-cell {
+                        .footable-row-detail-inner {
+                            .footable-row-detail-row {
+                                .footable-row-detail-name {
+                                    font-weight: 300;
+                                    color: rgba(255,255,255,0.7);
+                                }
+                                .footable-row-detail-value {
+                                    color: #fff;
+                                }
+                            }
+                            > div {
+                                border-bottom: 1px solid rgba(255,255,255,0.2);
+                                &:last-of-type {
+                                    border-bottom: none;
+                                }
+                            }							
+                        }
+                    }
+                }
+            }
+            > td.expand:before,
+            &.footable-detail-show > td.expand:before {
+                font-size: 1.5em;
+                line-height: 1.5;
+                color: darken($secondary-color, 30%);
+                vertical-align: middle;
+            }
+            &:hover:not(.footable-row-detail) {
+                cursor: pointer;
+            }
+        }	
+    }
+}
+
+@media #{$medium-up} {
+
+	table {
+		margin-top: 0.75rem;
+		button,
+		.button {
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			text-align: center;
+			display: inline-block;
+		}
+        .ss-icon {
+            line-height: 1;
+        }
+	}
+}

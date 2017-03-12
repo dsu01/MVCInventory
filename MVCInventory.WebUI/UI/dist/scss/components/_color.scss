@@ -1,0 +1,309 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// COLOR CLASSES -------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.black-bg {
+    background-color: $black-color !important;
+}
+.black-color {
+    color: $black-color !important;
+}
+.white-bg {
+    background-color: $white-color !important;
+}
+.white-color {
+    color: $white-color !important;
+}
+
+.gray-light-bg {
+    background-color: $gray-light-color !important;
+}
+.gray-bright-bg {
+    background-color: $gray-bright-color !important;
+}
+.gray-bg {
+    background-color: $gray-color !important;
+}
+.gray-shade-bg {
+    background-color: $gray-shade-color !important;
+}
+.gray-dark-bg {
+    background-color: $gray-dark-color !important;
+}
+
+.gray-light-color {
+    color: $gray-light-color !important;
+}
+.gray-bright-color {
+    color: $gray-bright-color !important;
+}
+.gray-color {
+    color: $gray-color !important;
+}
+.gray-shade-color {
+    color: $gray-shade-color !important;
+}
+.gray-dark-color {
+    color: $gray-dark-color !important;
+}
+
+.primary-light-bg {
+    background-color: $primary-light-color !important;
+}
+.primary-bright-bg {
+    background-color: $primary-bright-color !important;
+}
+.primary-bg {
+    background-color: $primary-color !important;
+}
+.primary-shade-bg {
+    background-color: $primary-shade-color !important;
+}
+.primary-dark-bg {
+    background-color: $primary-dark-color !important;
+}
+
+.primary-light-color {
+    color: $primary-light-color !important;
+}
+.primary-bright-color {
+    color: $primary-bright-color !important;
+}
+.primary-color {
+    color: $primary-color !important;
+}
+.primary-shade-color {
+    color: $primary-shade-color !important;
+}
+.primary-dark-color {
+    color: $primary-dark-color !important;
+}
+
+.secondary-light-bg {
+    background-color: $secondary-light-color !important;
+}
+.secondary-bright-bg {
+    background-color: $secondary-bright-color !important;
+}
+.secondary-bg {
+    background-color: $secondary-color !important;
+}
+.secondary-shade-bg {
+    background-color: $secondary-shade-color !important;
+}
+.secondary-dark-bg {
+    background-color: $secondary-dark-color !important;
+}
+
+.secondary-light-color {
+    color: $secondary-light-color !important;
+}
+.secondary-bright-color {
+    color: $secondary-bright-color !important;
+}
+.secondary-color {
+    color: $secondary-color !important;
+}
+.secondary-shade-color {
+    color: $secondary-shade-color !important;
+}
+.secondary-dark-color {
+    color: $secondary-dark-color !important;
+}
+
+.tertiary-light-bg {
+    background-color: $tertiary-light-color !important;
+}
+.tertiary-bright-bg {
+    background-color: $tertiary-bright-color !important;
+}
+.tertiary-bg {
+    background-color: $tertiary-color !important;
+}
+.tertiary-shade-bg {
+    background-color: $tertiary-shade-color !important;
+}
+.tertiary-dark-bg {
+    background-color: $tertiary-dark-color !important;
+}
+
+.tertiary-light-color {
+    color: $tertiary-light-color !important;
+}
+.tertiary-bright-color {
+    color: $tertiary-bright-color !important;
+}
+.tertiary-color {
+    color: $tertiary-color !important;
+}
+.tertiary-shade-color {
+    color: $tertiary-shade-color !important;
+}
+.tertiary-dark-color {
+    color: $tertiary-dark-color !important;
+}
+
+.alert-light-bg {
+    background-color: $alert-light-color !important;
+}
+.alert-bright-bg {
+    background-color: $alert-bright-color !important;
+}
+.alert-bg {
+    background-color: $alert-color !important;
+}
+.alert-shade-bg {
+    background-color: $alert-shade-color !important;
+}
+.alert-dark-bg {
+    background-color: $alert-dark-color !important;
+}
+
+.alert-light-color {
+    color: $alert-light-color !important;
+}
+.alert-bright-color {
+    color: $alert-bright-color !important;
+}
+.alert-color {
+    color: $alert-color !important;
+}
+.alert-shade-color {
+    color: $alert-shade-color !important;
+}
+.alert-dark-color {
+    color: $alert-dark-color !important;
+}
+
+.success-light-bg {
+    background-color: $success-light-color !important;
+}
+.success-bright-bg {
+    background-color: $success-bright-color !important;
+}
+.success-bg {
+    background-color: $success-color !important;
+}
+.success-shade-bg {
+    background-color: $success-shade-color !important;
+}
+.success-dark-bg {
+    background-color: $success-dark-color !important;
+}
+
+.success-light-color {
+    color: $success-light-color !important;
+}
+.success-bright-color {
+    color: $success-bright-color !important;
+}
+.success-color {
+    color: $success-color !important;
+}
+.success-shade-color {
+    color: $success-shade-color !important;
+}
+.success-dark-color {
+    color: $success-dark-color !important;
+}
+
+.warning-light-bg {
+    background-color: $warning-light-color !important;
+}
+.warning-bright-bg {
+    background-color: $warning-bright-color !important;
+}
+.warning-bg {
+    background-color: $warning-color !important;
+}
+.warning-shade-bg {
+    background-color: $warning-shade-color !important;
+}
+.warning-dark-bg {
+    background-color: $warning-dark-color !important;
+}
+
+.warning-light-color {
+    color: $warning-light-color !important;
+}
+.warning-bright-color {
+    color: $warning-bright-color !important;
+}
+.warning-color {
+    color: $warning-color !important;
+}
+.warning-shade-color {
+    color: $warning-shade-color !important;
+}
+.warning-dark-color {
+    color: $warning-dark-color !important;
+}
+
+.info-light-bg {
+    background-color: $info-light-color !important;
+}
+.info-bright-bg {
+    background-color: $info-bright-color !important;
+}
+.info-bg {
+    background-color: $info-color !important;
+}
+.info-shade-bg {
+    background-color: $info-shade-color !important;
+}
+.info-dark-bg {
+    background-color: $info-dark-color !important;
+}
+
+.info-light-color {
+    color: $info-light-color !important;
+}
+.info-bright-color {
+    color: $info-bright-color !important;
+}
+.info-color {
+    color: $info-color !important;
+}
+.info-shade-color {
+    color: $info-shade-color !important;
+}
+.info-dark-color {
+    color: $info-dark-color !important;
+}
+
+.marginal-light-bg {
+    background-color: $marginal-light-color !important;
+}
+.marginal-bright-bg {
+    background-color: $marginal-bright-color !important;
+}
+.marginal-bg {
+    background-color: $marginal-color !important;
+}
+.marginal-shade-bg {
+    background-color: $marginal-shade-color !important;
+}
+.marginal-dark-bg {
+    background-color: $marginal-dark-color !important;
+}
+
+.marginal-light-color {
+    color: $marginal-light-color !important;
+}
+.marginal-bright-color {
+    color: $marginal-bright-color !important;
+}
+.marginal-color {
+    color: $marginal-color !important;
+}
+.marginal-shade-color {
+    color: $marginal-shade-color !important;
+}
+.marginal-dark-color {
+    color: $marginal-dark-color !important;
+}
+

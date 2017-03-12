@@ -1,0 +1,26 @@
+﻿@model List<MVCInventory.Domain.Building>
+
+@{
+    ViewBag.Title = "Building Manager Page";
+}
+
+<h2>BuildingManager</h2><br/>
+
+@using (Html.BeginForm("Add", "Admin", FormMethod.Get, new {@class = "form-horizontal", role = "form"}))
+{
+    foreach (var p in Model)
+     {
+         <div>
+             <h3>@p.BuildingName</h3>
+             @p.Property
+             <h4>@p.IsActive.ToString()</h4>
+
+
+         </div>
+     }
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Add" />
+        </div>
+    </div>
+}

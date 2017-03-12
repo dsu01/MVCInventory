@@ -1,0 +1,24 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// LABELS --------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+span.label {
+    &.info {
+        background-color: $info-color;
+        color: $body-font-color;
+    }
+    &.filter {
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+        i {
+            padding-left: 0.4rem;
+            vertical-align: middle;
+            color: #fff;
+            opacity: 0.55;
+        }
+    }
+}

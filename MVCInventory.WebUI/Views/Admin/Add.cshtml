@@ -1,0 +1,39 @@
+﻿@model MVCInventory.Domain.Building
+
+@{
+    ViewBag.Title = "Add Building";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+<div>
+    <h2>@ViewBag.Title</h2>
+    @using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.LabelFor(m => m.BuildingName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.BuildingName)
+        </div><br/>
+        @Html.LabelFor(m => m.Property, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Property)
+        </div><br />
+        @Html.LabelFor(m => m.IsActive, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.CheckBoxFor(m => m.IsActive)
+        </div><br />
+
+         
+            <input type="submit" value="Save" class="btn btn-default"/>
+     }
+
+ </div>
+</body>
+</html>

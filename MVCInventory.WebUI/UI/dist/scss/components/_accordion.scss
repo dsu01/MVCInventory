@@ -1,0 +1,55 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// ACCORDION -----------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.accordion {
+	.accordion-navigation {
+		a {
+			position: relative;
+			padding-left: 3em;
+			background: $secondary-color;
+			transition: background 150ms ease-in-out;
+			&:active,
+			&:focus,
+			&:hover {
+				background: $primary-color;
+				color: #fff;
+			}
+			&::before {
+				content: "\002B";
+				position: absolute;
+				top: 1.05em;
+				left: 1em;
+				font-family: "SSGlyphish";
+				speak: none;
+				font-size: 1.1em;					
+				font-style: normal;
+				font-weight: 800;
+				font-variant: normal;
+				text-transform: none;
+				-webkit-font-smoothing: antialiased;
+			}
+		}
+		.content {
+
+		}
+		&.active {
+			a {
+				background: $secondary-shade-color;
+				color: #fff;
+				&::before {
+					content: "\002D";
+					color: #fff;
+				}
+			}
+			.content {
+				border: 1px solid $secondary-shade-color;
+				border-top: none;
+			}
+		}
+	}
+}

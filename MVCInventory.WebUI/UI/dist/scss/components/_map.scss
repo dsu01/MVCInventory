@@ -1,0 +1,144 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// MAP -----------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.map {
+	position: relative;
+	margin-top: 15px;
+	padding-bottom: 1rem;
+	.map-canvas {
+		img[src*="gstatic.com/"], 
+		img[src*="googleapis.com/"] {
+    		max-width: none;
+		}
+		img[src*="map-marker"] {
+			padding: 0 4px;
+			-webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.9));
+		}
+	}
+	.map-legend {
+		margin-top: 1.5rem;
+		margin-left: 0;
+		list-style-type: none;
+		list-style-position: outside;
+		.map-legend-title {
+			display: block;
+			width: 100%;
+			padding: 0.5rem 44px 0.5rem 1rem;
+			background-color: $gray-dark-color;
+			background-image: url('img/icon-down-white.svg');
+			background-size: 20px;
+			background-position: right 1em center;
+			background-repeat: no-repeat;
+			z-index: 2;
+			font-size: 1.125em;
+			line-height: 2.4;
+			color: $secondary-color;
+			cursor: pointer;
+		}
+		li {
+			display: block;
+			position: relative;
+			height: 0;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			background: lighten($gray-dark-color, 20%);
+			z-index: 1;
+			transition: height 150ms ease-in-out, padding 150ms ease-in-out, background-color 150ms ease-in-out, color 150ms ease-in-out, line-height 150ms ease-in-out;
+			line-height: 0;
+			color: #fff;
+			&:active,
+			&:focus,
+			&:hover {
+				background: $primary-color;
+			}	
+			a {
+				&:link,
+				&:active,
+				&:focus,
+				&:hover,
+				&:visited {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+			.map-legend-item-id {}
+			.map-legend-item-name {}
+			.map-legend-item-info {
+				font-size: 0.75em;
+				color: $gray-bright-color !important;
+			}			
+			.photocard {
+				background: lighten($gray-dark-color, 20%);
+				.photocard-content {
+					text-align: center;
+					width: 150px;
+				}
+			}
+			* {
+				position: absolute;
+				top: -9999px;
+				opacity: 0;
+				transition: opacity 15ms ease-in-out;
+			}			
+		}
+		&.active {
+			.map-legend-title {
+				background-image: url('img/icon-up-white.svg');
+			}
+			li {
+				height: auto;
+				padding: 0.5rem 1rem;
+				overflow-y: visible;
+				line-height: 1.25;
+				* {
+					position: relative;
+					top: auto;
+					opacity: 1;
+				}
+			}
+		}
+		&:not(.active) {
+			li * {
+				display: none;
+			}
+		}
+	}
+}
+
+@media #{$medium-up} { 
+	.map {
+		padding-bottom: 1.75rem;
+		.map-legend {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-top: 0;
+			min-width: 25%;
+			max-width: 33.333%;
+			z-index: 10;
+			.map-legend-title {
+			}
+			li {
+				white-space: wrap; 
+				overflow: visible;
+				color: #fff;
+				&.sexOffender {
+					background: $alert-color;
+				}
+			}
+		}
+	}
+}
+
+.round-marker {
+	display: inline-block;
+	transform: translateY(0.1em);
+	font-size: 2.2em;
+	color: #60A4DA;
+}

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.Domain", "MVCI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.Data", "MVCInventory.Data\MVCInventory.Data.csproj", "{F690B6EF-87B7-484C-AA42-244245562F8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.Business", "MVCInventory.Business\MVCInventory.Business.csproj", "{C9930363-B50A-4D3D-AD6E-59D9EE62F524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F690B6EF-87B7-484C-AA42-244245562F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F690B6EF-87B7-484C-AA42-244245562F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F690B6EF-87B7-484C-AA42-244245562F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9930363-B50A-4D3D-AD6E-59D9EE62F524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9930363-B50A-4D3D-AD6E-59D9EE62F524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9930363-B50A-4D3D-AD6E-59D9EE62F524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9930363-B50A-4D3D-AD6E-59D9EE62F524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

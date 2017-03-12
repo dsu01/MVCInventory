@@ -72,6 +72,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MVCInventory.Business\MVCInventory.Business.csproj">
+      <Project>{C9930363-B50A-4D3D-AD6E-59D9EE62F524}</Project>
+      <Name>MVCInventory.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVCInventory.Data\MVCInventory.Data.csproj">
+      <Project>{F690B6EF-87B7-484C-AA42-244245562F8F}</Project>
+      <Name>MVCInventory.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVCInventory.Domain\MVCInventory.Domain.csproj">
       <Project>{ed72fa3d-c3da-4da0-bf96-f401b3202849}</Project>
       <Name>MVCInventory.Domain</Name>

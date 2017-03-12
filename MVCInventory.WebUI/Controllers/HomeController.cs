@@ -15,8 +15,8 @@ namespace MVCInventory.WebUI.Controllers
         public ActionResult Index()
         {
             //Init();
-            var building = repo.Buildings.FirstOrDefault();
-            return View(building);
+            //var building = repo.Buildings.FirstOrDefault();
+            return View();
         }
 
         //private void Init()

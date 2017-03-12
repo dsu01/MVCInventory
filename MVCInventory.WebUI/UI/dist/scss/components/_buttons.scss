@@ -1,0 +1,195 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// BUTTONS -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+@-webkit-keyframes pulse {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+button,
+.button {
+    margin: 0 0 0.75rem;
+	padding-top: 0.6rem;
+	padding-bottom: 0.65rem;
+	font-size: 1rem;
+	font-weight: 400;
+    text-decoration: none !important;
+	color: #fff;
+    background-color: $gray-color;
+    // border: 4px solid $gray-color;
+    border: none;
+    border-width: $button-border-width;
+    border-color: $gray-color;
+    box-shadow: none !important;
+    transition: border-color 100ms ease-in-out;
+    &:hover, 
+    &:active, 
+    &:focus {
+        // background-color: $gray-color !important;
+        // border-color: $gray-dark-color !important;
+        border: none;
+        outline: none !important;
+    }
+    &.primary {
+        background-color: $primary-color !important;
+        border-color: $primary-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $primary-color !important;
+	    	// border-color: $primary-dark-color !important;
+	    }
+    }
+    &.secondary {
+        background-color: $secondary-color !important;
+        border-color: $secondary-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $secondary-color !important;
+	    	// border-color: $secondary-dark-color !important;
+	    }
+    }
+    &.tertiary {
+        background-color: $tertiary-color !important;
+        border-color: $tertiary-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $tertiary-color !important;
+	    	// border-color: $tertiary-dark-color !important;
+	    }
+    }   
+    &.alert {
+        background-color: $alert-color !important;
+        border-color: $alert-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $alert-color !important;
+	    	// border-color: $alert-dark-color !important;
+	    }
+    }
+    &.warning {
+        background-color: $warning-color !important;
+        border-color: $warning-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $warning-color !important;
+	    	// border-color: $warning-dark-color !important;
+	    }
+    }
+    &.success {
+        background-color: $success-color !important;
+        border-color: $success-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $success-color !important;
+	    	// border-color: $success-dark-color !important;
+	    }
+    }
+    &.info {
+        background-color: $info-color !important;
+        border-color: $info-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $info-color !important;
+	    	// border-color: $info-dark-color !important;
+	    }
+    }
+    &.marginal {
+        background-color: $marginal-color !important;
+        border-color: $marginal-color !important;
+        color: $gray-dark-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $marginal-color !important;
+	    	// border-color: $marginal-dark-color !important;
+            // color: $gray-dark-color !important;
+	    }
+    } 
+    &.light {
+        background-color: $white-color !important;
+        border-color: $white-color !important;
+        color: $gray-dark-color !important;
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+            // background-color: $white-color !important;
+	    	// border-color: $gray-shade-color !important;
+            // color: $gray-dark-color !important;
+	    }
+    } 
+
+    &.disabled, &.disabled.info, &.disabled.warning,
+    &[disabled], &[disabled].info, &[disabled].warning { 
+        margin: 0 0 0.75rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.65rem;
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none !important;
+        color: #fff;
+        background-color: $gray-color;
+        border: 0;
+        box-shadow: none !important;
+        transition: border-color 100ms ease-in-out;
+        &:hover, 
+        &:active, 
+        &:focus {
+            // background-color: $gray-color !important;
+            // border-color: $gray-color !important;
+            outline: none !important;
+        }
+    }
+    &.small {
+        padding: 0.4rem 1.5rem; 
+        // border-width: 3px;
+    }
+    &.tiny {
+        padding: 0.25rem 0.75rem;
+        // border-width: 2px;
+    }
+    + button,
+    + .button {
+        margin-left: 0.25em;
+    }
+    > .inner-panel {
+        margin: 0.5em -1.75rem -0.35rem;
+        padding: 0.75em 0.75em;
+        background-color: #fff;
+        color: $gray-shade-color;
+        font-size: 90%;
+    }
+}
+
+.row.final-button-set,
+.column.final-button-set,
+.columns.final-button-set {
+	margin-top: 1.25em;
+}
+
+@media #{$medium-up} {
+	button,
+	.button {
+		> .inner-panel {
+            min-height: 4.5em;
+		}
+	}
+}

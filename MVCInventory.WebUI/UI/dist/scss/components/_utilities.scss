@@ -1,0 +1,131 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// UTILITY CLASSES -----------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+*[hidden] { 
+	display: none;
+}
+
+.block {
+	display: block;
+}
+
+.contain-floats:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.margin-bottom {
+    margin-bottom: 1em !important;
+}
+
+.margin-top {
+    margin-top: 0.75em !important;
+}
+
+.padded-bottom {
+    padding-bottom: 1em !important;
+}
+
+.padded-top {
+    padding-top: 0.75em !important;
+}
+
+.no-close .ui-dialog-titlebar-close {
+	display: none;
+	font-size: .8em;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.no-margin-top {
+	margin-top: 0 !important;
+}
+
+.no-margin-right {
+	margin-right: 0 !important;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+	margin-left: 0 !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.no-padding-top {
+	padding-top: 0 !important;
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+	padding-left: 0 !important;
+}
+
+.rotate-45 {
+	transform: rotate(45deg);
+}
+
+.rotate-90 {
+	transform: rotate(90deg);
+}
+.rotate-90-on-hover:hover {
+    @extend .rotate-90;
+}
+
+.rotate-180 {
+	transform: rotate(180deg);
+}
+
+.screen {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=72)";
+	opacity: 0.72;
+	z-index: 10;
+}
+
+.separated {
+	margin-top: .5em;
+	padding-top: .5em;
+	border-top: 1px solid rgb(210,210,210);
+}
+
+.small-left {
+	float: left !important;
+}
+
+.small-right {
+	float: right !important;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}

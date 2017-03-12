@@ -1,0 +1,104 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// TOP BAR -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.f-topbar-fixed {
+    padding-top: 0 !important;
+}
+
+.contain-to-grid {
+    .top-bar {
+        max-width: initial;
+    }
+}
+
+.top-bar {
+    top: 0;
+    background: transparent;
+    overflow: hidden;
+    height: auto;
+    line-height: normal;
+    .app-logo img {
+        float: left;
+        margin: 0.4rem 0 0 1.25rem;
+        width: 20px;
+        opacity: 0.7;
+        transform: rotate(45deg);
+    }
+    .name {
+        float: left;
+        height: auto;
+        color: #fff;
+        h1 {
+            color: #fff;
+            font-size: 1.4rem;
+            a {
+                width: auto;
+                font-weight: 400;
+                opacity: 0.75;
+            }
+        }
+    }
+    .action {
+        float: right;
+        > a {
+            display: block;
+            padding: 0.8rem .9375rem 0 0;
+            color: #fff;
+            font-size: 0.7rem;
+            text-decoration: underline;
+            &.ss-icon {
+                padding: 0.8rem .7rem 0 0;
+                opacity: 0.8;
+                font-size: 0.9rem;
+                text-decoration: none;
+            }
+        }
+    }
+    .top-bar-section {
+        ul {
+            background: none;
+            li {
+                background: none;
+                &.hover > a:not(.button) {
+                    background: none;
+                    background: #194c95;
+                    color: white; 
+                }
+                &:not(.has-form) a:not(.button) {
+                    padding: 0 5px;
+                    line-height: 45px;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &.active:not(.has-form) a:not(.button) {
+                    padding: 0 5px;
+                    line-height: 45px;
+                    color: white;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:last-child:not(.has-form) a:not(.button) {
+                    padding: 0 15px 0 5px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .top-bar .name {
+        margin: 0;
+    }
+    .top-bar .title-area {
+        float: none;
+    }
+}

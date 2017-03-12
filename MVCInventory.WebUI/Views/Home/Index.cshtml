@@ -1,21 +1,62 @@
-﻿@model MVCInventory.Domain.Building
-
+﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+   
 }
 
-<!DOCTYPE html>
+@*@section scripts {*@
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/Home/Index.js"></script>
+    
+@*}*@
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-<div>
-    @Model.BuildingName 
-    @Html.TextBoxFor(x => x.Phone)
-    @Html.CheckBox(x => x.IsActive)
+<div id="summaryDisplay" class="display">
+    <h4>Buildings</h4>
+    <table>
+        <thead>
+        <tr>
+            <th class="selectCol"></th>
+            <th class="nameCol">Name</th>
+            <th class="propertyCol">Property</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        <tr><td colspan="3">The data is loading</td></tr>
+        </tbody>
+    </table>
+    <div id="buttonContainer">
+        <button id="refresh">Refresh</button>
+        <button id="add">Add</button>
+        <button id="edit">Edit</button>
+        <button id="delete">Delete</button>
+    </div>
 </div>
-</body>
-</html>
+
+<div id="addDisplay" class="display">
+    <h4>Add New Building</h4>
+    @{
+        AjaxOptions addAjaxOpts = new AjaxOptions
+        {
+            OnSuccess = "getData",
+            Url = "/api/building",
+            HttpMethod = "POST",
+        };
+    }
+    @using (Ajax.BeginForm(addAjaxOpts))
+    {
+        <p><label>Name:</label>@Html.Editor("BuildingName")</p>
+        <p><label>Property:</label>@Html.Editor("Property")</p>
+        <button type="submit">Submit</button>
+    }
+</div>
+
+<div id="editDisplay" class="display">
+    <h4>Edit Building</h4>
+    <form id="editForm">
+        <input id="editBuildingId" type="hidden" name="Id" />
+        <p><label>Name:</label><input id="editBuildingName" name="BuildingName" /></p>
+        <p><label>Property:</label><input id="editProperty" name="Property" /></p>
+    </form>
+    <button id="submitEdit" type="submit">Save</button>
+</div>

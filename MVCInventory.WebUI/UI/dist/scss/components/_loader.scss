@@ -1,0 +1,106 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// LOADING ANIMATION ---------------------------------------------------------------------
+// https://github.com/pasqualevitiello/Tumblr-Style-Cog-Spinners -------------------------
+// ---------------------------------------------------------------------------------------
+
+.loader-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 250px;
+	z-index: 1000;
+	.loader-icon {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -45px 0 0 -45px;
+		width: 90px;
+		font-size: 90px;
+		color: #fff;
+		&.spinning-cog {
+			animation: spinning-cog 1.3s infinite ease;
+		}
+		&.shrinking-cog {
+			animation: shrinking-cog .3s 1 ease forwards;
+		}
+		&[data-cog*="b"] {
+			display: inline-block;
+			opacity: 0.45;
+		}
+	}
+}
+
+.loader-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: $reveal-overlay-bg;
+	transition: background-color .2s 0s linear,right .2s .3s ease-out;
+	.loader-container {
+		.loader-icon {
+			display: inline-block;			
+			&[data-cog*="b"] {
+				display: none;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes spinning-cog {
+  0% { -webkit-transform: rotate(0deg) }
+  20% { -webkit-transform: rotate(-45deg) }
+  100% { -webkit-transform: rotate(360deg) }
+}
+
+@-moz-keyframes spinning-cog {
+  0% { -moz-transform: rotate(0deg) }
+  20% { -moz-transform: rotate(-45deg) }
+  100% { -moz-transform: rotate(360deg) }
+}
+
+@-o-keyframes spinning-cog {
+  0% { -o-transform: rotate(0deg) }
+  20% { -o-transform: rotate(-45deg) }
+  100% { -o-transform: rotate(360deg) }
+}
+
+@keyframes spinning-cog {
+  0% { transform: rotate(0deg) }
+  20% { transform: rotate(-45deg) }
+  100% { transform: rotate(360deg) }
+}
+
+@-webkit-keyframes shrinking-cog {
+  0% { -webkit-transform: scale(1) }
+  20% { -webkit-transform: scale(1.2) }
+  100% { -webkit-transform: scale(0) }
+}
+
+@-moz-keyframes shrinking-cog {
+  0% { -moz-transform: scale(1) }
+  20% { -moz-transform: scale(1.2) }
+  100% { -moz-transform: scale(0) }
+}
+
+@-o-keyframes shrinking-cog {
+  0% { -o-transform: scale(1) }
+  20% { -o-transform: scale(1.2) }
+  100% { -o-transform: scale(0) }
+}
+
+@keyframes shrinking-cog {
+  0% { transform: scale(1) }
+  20% { transform: scale(1.2) }
+  100% { transform: scale(0) }
+}
