@@ -118,7 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angular\Scripts\app.js" />
+    <Content Include="Angular\Scripts\Controller\commonController.js" />
     <Content Include="Angular\Scripts\Controller\controllers.js" />
+    <Content Include="Angular\Scripts\Service\commonServices.js" />
     <Content Include="Angular\Scripts\Service\services.js" />
     <Content Include="Angular\Template\Empty.html" />
     <Content Include="Angular\Template\Buildings.html" />
@@ -163,7 +165,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AngularController.cs" />
-    <Compile Include="Controllers\BuildingApiController.cs" />
     <Compile Include="Controllers\BuildingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -172,6 +173,10 @@
     </Compile>
     <Compile Include="Models\BuildingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebAPIServices\ApiBaseController.cs" />
+    <Compile Include="WebAPIServices\BuildingApiController.cs" />
+    <Compile Include="WebAPIServices\FacilityApiController.cs" />
+    <Compile Include="WebAPIServices\FileApiController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

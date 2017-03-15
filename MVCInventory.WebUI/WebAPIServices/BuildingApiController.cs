@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
-using MVCInventory.Business.Abstract;
-using MVCInventory.Business;
+using MVCInventory.Data;
 using MVCInventory.Domain;
+using MVCInventory.Business;
+using MVCInventory.Business.Abstract;
 
-namespace MVCInventory.WebUI.Controllers
+namespace MVCInventory.WebUI.WebAPIServices
 {
     public class BuildingApiController : ApiController
     {
@@ -54,7 +54,7 @@ namespace MVCInventory.WebUI.Controllers
         }
 
         [System.Web.Http.HttpDelete]
-        [System.Web.Http.Route("api/building/{Id}", Name = "DeleteBuilding")]
+        [System.Web.Http.Route("api/building/{id}", Name = "DeleteBuilding")]
         public void DeleteBuilding(int id)
         {
             buildingRepo.DeleteBuilding(id);

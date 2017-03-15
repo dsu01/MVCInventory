@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InventoryContext.cs" />
+    <Compile Include="IStore.cs" />
     <Compile Include="Migrations\201703070221569_InitialCreate.cs" />
     <Compile Include="Migrations\201703070221569_InitialCreate.Designer.cs">
       <DependentUpon>201703070221569_InitialCreate.cs</DependentUpon>

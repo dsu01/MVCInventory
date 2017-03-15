@@ -7,7 +7,7 @@
 mvcInventoryApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
            when('/', {
-               templateUrl: 'Angular/Template/Buildings.html',
+               templateUrl: '../Angular/Template/Buildings.html',
                //template: 'Route 1',
                controller: 'BuildingIndexCtrl'
            }).

@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IBuildingRepository.cs" />
     <Compile Include="BuildingRepository.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

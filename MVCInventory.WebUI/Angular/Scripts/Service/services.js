@@ -4,12 +4,19 @@ mvcInventoryAppServices.factory('MVCInventoryAppService',
     function ($http) {
         var buildingAPIService = {};
 
-        buildingAPIService.GetBuilding = function () {
+        buildingAPIService.GetBuilding = function() {
             return $http({
                 method: 'GET',
-                url: "/api/buildings"
+                url: "api/building"
             });
-        }
+        };
+
+        buildingAPIService.remove = function(id) {
+            return $http({
+                method: 'DELETE',
+                url: "api/building/" + id
+            });
+        };
 
         return buildingAPIService;
 
