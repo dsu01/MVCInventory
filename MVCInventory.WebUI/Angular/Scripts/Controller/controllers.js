@@ -2,6 +2,7 @@
 
 mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInventoryAppService) {
     $scope.buildingList = [];
+    $scope.currentBuilding = {};
 
     function selectView(view) {
         $('.display').not('#' + view + "Display").hide();
@@ -38,6 +39,11 @@ mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInv
            alert("remove building failed...");
        }
        );
+    }
+
+    $scope.edit = function (item) {
+        currentBuilding = item;
+        selectView("edit");
     }
 }
 );
