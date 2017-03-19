@@ -11,6 +11,13 @@ mvcInventoryAppServices.factory('MVCInventoryAppService',
             });
         };
 
+        buildingAPIService.GetBuildingById = function (id) {
+            return $http({
+                method: 'GET',
+                url: "api/building/" + id
+            });
+        };
+
         buildingAPIService.remove = function(id) {
             return $http({
                 method: 'DELETE',
@@ -21,7 +28,8 @@ mvcInventoryAppServices.factory('MVCInventoryAppService',
         buildingAPIService.update = function (item) {
             return $http({
                 method: 'POST',
-                url: "api/building"
+                url: "api/building/edit",
+                data: item
             });
         };
         return buildingAPIService;

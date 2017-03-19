@@ -16,7 +16,7 @@
                         </button>
                     </td>
                     <td>
-                        <button ng-click="edit(building)" class="btn btn-sm btn-warning">
+                        <button ng-click="edit(building.Id)" class="btn btn-sm btn-warning">
                             Edit
                         </button>
                     </td>
@@ -27,8 +27,12 @@
         
         </div>
         <div id="editDisplay" class="display">
-            {{currentBuilding.BuldingName}}<br />
-            {{currentBuilding.Property}}
+           Building Name:<input id="BuildingName" name="BuildingName" type="text" ng-model="currentBuilding.BuildingName" /><br />
+           Property <input id="Property" name="Property" type="text" ng-model="currentBuilding.Property" />
+            <br />
+            <button ng-click="sumbitChange(currentBuilding)" class="btn btn-sm btn-warning">
+                Edit
+            </button>
         </div>
         <!--<div class="col-xs-3">
             <a ng-click="selectCategory()"

@@ -34,7 +34,7 @@ namespace MVCInventory.WebUI.WebAPIServices
 
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/building/{Id}", Name = "GetBuildingById")]
-        public Building GetBuilding(int id)
+        public Building GetBuildingById(int id)
         {
             return buildingRepo.FetchByBuildingId(id);
         }
@@ -46,8 +46,8 @@ namespace MVCInventory.WebUI.WebAPIServices
             return buildingRepo.Add(building);
         }
 
-        [System.Web.Http.HttpPut]
-        [System.Web.Http.Route("api/building", Name = "UpdateBuilding")]
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/building/edit", Name = "UpdateBuilding")]
         public Building UpdateBuilding(Building building)
         {
             return buildingRepo.Update(building);

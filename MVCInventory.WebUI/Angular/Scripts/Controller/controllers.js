@@ -3,13 +3,14 @@
 mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInventoryAppService) {
     $scope.buildingList = [];
     $scope.currentBuilding = {};
+    getData();
 
     function selectView(view) {
         $('.display').not('#' + view + "Display").hide();
         $('#' + view + "Display").show();
     }
    
-    this.getData = function() {
+    function getData() {
         MVCInventoryAppService.GetBuilding()
             .then(function(response) {
                 $scope.buildingList = response.data;
@@ -27,7 +28,7 @@ mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInv
         );
     }
     
-    this.getData();
+   
 
     $scope.remove = function (id) {
         MVCInventoryAppService.remove(id)
@@ -41,9 +42,29 @@ mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInv
        );
     }
 
-    $scope.edit = function (item) {
-        currentBuilding = item;
-        selectView("edit");
+    $scope.edit = function (id) {       
+        MVCInventoryAppService.GetBuildingById(id)
+         .then(function (response) {
+             $scope.currentBuilding = response.data;
+             selectView("edit");
+         })        
+     .catch
+     (function (response) {
+         alert("edit failed...");
+     }
+     );
+    }
+
+    $scope.sumbitChange = function (item) {        
+        MVCInventoryAppService.update(item)
+           .then(function (response) {               
+               getData();
+           })            
+       .catch
+       (function (response) {
+           alert("update failed...");
+       }
+       );
     }
 }
 );
