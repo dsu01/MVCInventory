@@ -67,6 +67,7 @@ angular.module('FacilitiesApp.controllers', []).
               case "edit":
                   FacilityAPIService.GetFacility(facilityId)
                       .then(function (response) {
+                          $scope.CurrentFacility = response.data.Id;
                           $('#editFacilityId').val(response.data.Id);
                           $('#editFacilityName').val(response.data.FacilityName);
                           $('#editFacilityGroup').val(response.data.FacilityGroup);
@@ -104,7 +105,7 @@ angular.module('FacilitiesApp.controllers', []).
 
                   var app = angular.module('FacilitiesApp', []);
                   var controllers = angular.module('FacilitiesApp.controllers', []);
-                  var controllers2 = angular.module('FacilitiesApp.controllers', []);
+                  //var controllers2 = angular.module('FacilitiesApp.controllers', []);
                   break;
           }
       });
