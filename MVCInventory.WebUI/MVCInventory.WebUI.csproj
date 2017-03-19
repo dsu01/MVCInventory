@@ -130,6 +130,7 @@
     <Content Include="Angular\Scripts\app.js" />
     <Content Include="Angular\Scripts\Controller\commonController.js" />
     <Content Include="Angular\Scripts\Controller\controllers.js" />
+    <Content Include="Angular\Scripts\Controller\employeeCtrl.js" />
     <Content Include="Angular\Scripts\Service\commonServices.js" />
     <Content Include="Angular\Scripts\Service\services.js" />
     <Content Include="Angular\Template\Empty.html" />
@@ -176,6 +177,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AngularController.cs" />
     <Compile Include="Controllers\BuildingController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -200,6 +202,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Angular\AngularIndex.cshtml" />
+    <Content Include="Views\Employee\EmployeeList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

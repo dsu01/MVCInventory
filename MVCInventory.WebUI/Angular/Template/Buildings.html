@@ -21,27 +21,22 @@
                         </button>
                     </td>
                 </tr>   
-
+               
                 </tbody>
             </table>
-        
+            <input type="button" class="btnAdd" value="Refresh" ng-click="Refresh()" />
+            &nbsp;&nbsp;
+            <input type="button" class="btnAdd" value="Add" ng-click="AddBuilding()" />
         </div>
         <div id="editDisplay" class="display">
+            ID: <input type="text" disabled="disabled" ng-model="currentBuilding.Id" />
            Building Name:<input id="BuildingName" name="BuildingName" type="text" ng-model="currentBuilding.BuildingName" /><br />
            Property <input id="Property" name="Property" type="text" ng-model="currentBuilding.Property" />
             <br />
             <button ng-click="sumbitChange(currentBuilding)" class="btn btn-sm btn-warning">
-                Edit
+              Save
             </button>
         </div>
-        <!--<div class="col-xs-3">
-            <a ng-click="selectCategory()"
-               class="btn btn-block btn-default btn-lg">Home</a>
-            <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
-               ng-click="selectCategory(item)" class="btn btn-block btn-default btn-lg"
-               ng-class="getCategoryClass(item)"> {{item}}
-               
-            </a>
-        </div>-->
+        
     </div>
  </div>

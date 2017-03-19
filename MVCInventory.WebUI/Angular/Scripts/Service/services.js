@@ -25,6 +25,14 @@ mvcInventoryAppServices.factory('MVCInventoryAppService',
             });
         };
 
+        buildingAPIService.addBuilding = function (item) {
+            return $http({
+                method: 'POST',
+                url: "api/building",
+                data: item
+            });
+        };
+
         buildingAPIService.update = function (item) {
             return $http({
                 method: 'POST',

@@ -42,6 +42,7 @@ mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInv
        );
     }
 
+
     $scope.edit = function (id) {       
         MVCInventoryAppService.GetBuildingById(id)
          .then(function (response) {
@@ -55,16 +56,44 @@ mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInv
      );
     }
 
-    $scope.sumbitChange = function (item) {        
-        MVCInventoryAppService.update(item)
-           .then(function (response) {               
-               getData();
-           })            
-       .catch
-       (function (response) {
-           alert("update failed...");
-       }
-       );
+    $scope.AddBuilding = function () {
+        $scope.currentBuilding = {
+            Id: -1,
+            BuildingName: "",
+            Property: ""
+        };
+       selectView("edit");       
+    }
+
+    $scope.Refresh = function () {
+        getData();
+        
+    }
+
+    $scope.sumbitChange = function (item) {
+        if (item.Id < 0) {
+            MVCInventoryAppService.addBuilding(item)
+          .then(function (response) {
+              getData();
+          })
+      .catch
+      (function (response) {
+          alert("update failed...");
+      }
+      );
+        }
+        else {
+            MVCInventoryAppService.update(item)
+          .then(function (response) {
+              getData();
+          })
+      .catch
+      (function (response) {
+          alert("update failed...");
+      }
+      );
+        }
+       
     }
 }
 );

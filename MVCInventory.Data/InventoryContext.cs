@@ -20,5 +20,7 @@ namespace MVCInventory.Data
         public DbSet<FacilityAttachment> FacilityAttachments { get; set; }
 
         public DbSet<Building> Buildings { get; set; }
+
+        public DbSet<Employee> Employees { get; set; }
     }
 }

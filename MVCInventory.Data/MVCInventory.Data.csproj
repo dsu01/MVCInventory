@@ -63,6 +63,14 @@
     <Compile Include="Migrations\201703070236068_AddActiveFlag.Designer.cs">
       <DependentUpon>201703070236068_AddActiveFlag.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703190308181_addemployeeTable.cs" />
+    <Compile Include="Migrations\201703190308181_addemployeeTable.Designer.cs">
+      <DependentUpon>201703190308181_addemployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703191338556_addemployeeindex.cs" />
+    <Compile Include="Migrations\201703191338556_addemployeeindex.Designer.cs">
+      <DependentUpon>201703191338556_addemployeeindex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -82,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703070236068_AddActiveFlag.resx">
       <DependentUpon>201703070236068_AddActiveFlag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703190308181_addemployeeTable.resx">
+      <DependentUpon>201703190308181_addemployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703191338556_addemployeeindex.resx">
+      <DependentUpon>201703191338556_addemployeeindex.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
