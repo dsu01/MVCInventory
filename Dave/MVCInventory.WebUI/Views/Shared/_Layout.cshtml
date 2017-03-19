@@ -1,0 +1,33 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/UI/dist/css/design.min.css")
+    @Styles.Render("~/UI/dist/fonts/fonts.min.css")
+    @*    @Styles.Render("https://fonts.googleapis.com/css?family=Open+Sans:200,400,700")*@
+    @Scripts.Render("~/UI/dist/js/head-scripts.min.js")
+
+    @*@RenderSection("head", required: false)*@
+</head>
+<body>
+    <header class="contain-to-grid fixed">
+        @*@Html.ActionLink("CMMS Inventory", "Index", "Home", new { area = "" }, new { @class = "" })*@
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+    @*<footer>
+            <div class="row">
+                <div class="small-12 columns">
+                    <p class="text-center">Copyright</p>
+                </div>
+            </div>
+        </footer>*@
+    @Scripts.Render("~/UI/dist/js/foot-scripts.min.js")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,32 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// GLOBAL STYLES -------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;	
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;  
+	overflow-x: hidden; 
+}
+
+a, 
+button, 
+checkbox, 
+input, 
+textarea, 
+.alert-box, 
+.button, 
+.slide-button, 
+.switch {
+	transition: all 150ms ease-in-out;    
+}

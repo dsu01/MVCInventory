@@ -1,0 +1,36 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// GRID ----------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.spaced-rows .row {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid $gray-bright-color;
+    .button {
+        margin-bottom: 10px;
+    }
+}
+
+@media print {
+	html {
+		width: rem-calc(1024px);
+		overflow-x: visible;
+		body {
+			overflow-x: visible;
+			* {
+				transition: none !important;
+				box-shadow: none !important;
+				text-decoration: none !important;
+			}
+		}
+	}
+	@for $i from 1 through $total-columns {
+		.medium-#{$i} {
+			width: percentage($i / $total-columns);
+		}
+	}
+}

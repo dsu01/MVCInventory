@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>SIRS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    <style>
+        main {
+            padding-top: 111px;
+        }
+        #ui-color li {
+            text-align: center;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            line-height: 1.2; 
+        }
+    </style>
+    <script src="js/head.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <header class="contain-to-grid fixed" role="banner">
+        <nav class="top-bar" data-topbar data-options="is_hover: false" role="navigation" aria-label="primary navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">US Courts Foundation</a></h1>
+                </li>
+                <li class="action">
+                    <a href="#" class="hide-for-medium-up ss-icon ss-community" title="Hi!">&#x1F4A1;</a>
+                    <a href="#" class="show-for-medium-up">Hi!</a>
+                </li>
+            </ul>
+            <div class="icon-bar nine-up">
+                <a href="#" class="item" role="button">
+                    <label>Welcome</label>
+                </a>
+                <a href="#ui-grids" class="item" role="button">
+                    <label>Grids</label>
+                </a>
+                <a href="#ui-color" class="item" role="button">
+                    <label>Color</label>
+                </a>
+                <a href="#ui-type" class="item" role="button">
+                    <label>Type</label>
+                </a>
+                <a href="#ui-tables" class="item" role="button">
+                    <label>Tables</label>
+                </a>
+                <a href="#ui-forms" class="item" role="button">
+                    <label>Forms</label>
+                </a>
+                <a href="#ui-buttons" class="item" role="button">
+                    <label>Buttons</label>
+                </a>
+                <a href="#ui-utilities" class="item" role="button">
+                    <label>Utilities</label>
+                </a>
+                <a href="#ui-visibility" class="item" role="button">
+                    <label>Visibility</label>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!--
+        <nav class="row" role="navigation" aria-label="page navigation">
+            <div class="small-12 columns">
+                <dl class="sub-nav">
+                    <dd><a href="#">Link</a></dd>
+                    <dd><a href="#">Link</a></dd>
+                    <dd><a href="#">Link</a></dd>
+                </dl>
+            </div>
+        </nav>
+        -->
+        <div class="row">
+            <div class="small-12 columns">
+                <h1>The Kitchen Sink</h1>
+                
+                <section class="card" id="ui-joyride">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="joyride">Joyride</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.joyride.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_joyride.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_joyride.scss</h5>
+                            
+                            <hr>
+                            
+                            <a class="secondary button" id="start-jr" name="start-jr">Start Joyride</a>
+                            <h5 class="so-awesome" id="numero1">Build Joyride with HTML</h5>
+                            <p class="so-awesome" id="numero2">Stop Number 2 for You!</p><!--stops-->
+                            <ol class="joyride-list" data-joyride="">
+                                <li data-class="custom so-awesome" data-id="numero1" data-text="Next">
+                                    <h4>Stop #1</h4>
+                                    <p>You can control all the details for you tour stop. Any valid HTML will
+                            work inside of Joyride.</p>
+                                </li>
+                                <li data-button="Next" data-id="numero2">
+                                    <h4>Stop #2</h4>
+                                    <p>Get the details right by styling Joyride with a custom stylesheet!</p>
+                                </li>
+                                <li data-button="Next">
+                                    <h4>Stop #3</h4>
+                                    <p>It works as a modal too!</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-accordion">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="accordion">Accordion</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.accordion.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_accordion.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_accordion.scss</h5>
+                            
+                            <hr>
+                            
+                            <dl class="accordion" data-accordion>
+                                <dd>
+                                    <a href="#panel1">Accordion 1</a>
+                                    <div id="panel1" class="content active">
+                                        <dl class="tabs" data-tab>
+                                            <dd class="active"><a href="#panel1-1">Tab 1</a></dd>
+                                            <dd><a href="#panel1-2">Tab 2</a></dd>
+                                            <dd><a href="#panel1-3">Tab 3</a></dd>
+                                            <dd><a href="#panel1-4">Tab 4</a></dd>
+                                        </dl>
+                                        <div class="tabs-content">
+                                            <div class="content active" id="panel1-1">
+                                                <p>First panel content goes here...</p>
+                                            </div>
+                                            <div class="content" id="panel1-2">
+                                                <p>Second panel content goes here...</p>
+                                            </div>
+                                            <div class="content" id="panel1-3">
+                                                <p>Third panel content goes here...</p>
+                                            </div>
+                                            <div class="content" id="panel1-4">
+                                                <p>Fourth panel content goes here...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <a href="#panel2">Accordion 2</a>
+                                    <div id="panel2" class="content">
+                                        Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <a href="#panel3">Accordion 3</a>
+                                    <div id="panel3" class="content">
+                                        Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>     
+                
+                <section class="card" id="ui-alert-box">
+                    <div class="row">
+                        <div class="small-12 columns">        
+                            <h2 id="alert-boxes">Alert Boxes</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.alert.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_alert-boxes.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_alert-boxes.scss</h5>
+                            
+                            <hr>
+                            
+                            <div data-alert class="alert-box radius">
+                            This is a standard alert (div.alert-box.radius).
+                                <a href="" class="close">&times;</a>
+                            </div>
+                            <div data-alert class="alert-box success">
+                            This is a success alert (div.alert-box.success).
+                                <a href="" class="close">&times;</a>
+                            </div>
+                            <div data-alert class="alert-box alert round">
+                            This is an alert (div.alert-box.alert.round).
+                                <a href="" class="close">&times;</a>
+                            </div>
+                            <div data-alert class="alert-box secondary">
+                            This is a secondary alert (div.alert-box.secondary).
+                                <a href="" class="close">&times;</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-billboard">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="billboards">Billboards</h2>
+                            <h5 class="subheader">UI/scss/components/_billboard.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="billboard">
+                                This is a billboard (div.billboard).
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-block-grid">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="block-grid">Block Grid</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_block-grid.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_block-grid.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="small-block-grid-2 large-block-grid-4">
+                                <li><img class="th" src="img/examples/comet-th.jpg"></li>
+                                <li><img class="th" src="img/examples/launch-th.jpg"></li>
+                                <li><img class="th" src="img/examples/space-th.jpg"></li>
+                                <li><img class="th" src="img/examples/spacewalk-th.jpg"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-breadcrumbs">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="breadcrumbs">Breadcrumbs</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_breadcrumbs.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_breadcrumbs.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="breadcrumbs">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li class="unavailable"><a href="#">Gene Splicing</a></li>
+                                <li class="current"><a href="#">Cloning</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>               
+                
+                <section class="card" id="ui-button-groups">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="button-groups">Button Groups</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_button-groups.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_button-groups.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="button-group">
+                                <li><a href="#" class="small button">Button 1</a></li>
+                                <li><a href="#" class="small button">Button 2</a></li>
+                                <li><a href="#" class="small button">Button 3</a></li>
+                            </ul>
+                            <ul class="button-group radius">
+                                <li><a href="#" class="button secondary">Button 1</a></li>
+                                <li><a href="#" class="button secondary">Button 2</a></li>
+                                <li><a href="#" class="button secondary">Button 3</a></li>
+                                <li><a href="#" class="button secondary">Button 4</a></li>
+                            </ul>
+                            <ul class="button-group round even-3">
+                                <li><a href="#" class="button alert">Button 1</a></li>
+                                <li><a href="#" class="button alert">Button 2</a></li>
+                                <li><a href="#" class="button alert">Button 3</a></li>
+                            </ul>
+                            <ul class="button-group round even-3">
+                                <li><input type="submit" class="button success" value="Button 1"></li>
+                                <li><input type="submit" class="button success" value="Button 2"></li>
+                                <li><input type="submit" class="button success" value="Button 3"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>            
+
+                <section class="card" id="ui-buttons">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="buttons">Buttons</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_buttons.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_buttons.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="row">
+                                <div class="small-6 large-6 columns">
+                                    <a href="#" class="tiny button">.tiny.button</a><br>
+                                    <a href="#" class="small button">.small.button</a><br>
+                                    <a href="#" class="button">.button</a><br>
+                                    <a href="#" class="button tertiary expand">.expand</a><br>
+                                </div>
+                                <div class="small-6 large-6 columns">
+                                    <a href="#" class="tiny button secondary">.tiny.secondary</a><br>
+                                    <a href="#" class="small button success radius">.small.success.radius</a><br>
+                                    <a href="#" class="button alert round disabled">.round.disabled</a><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-calendar">
+                    <div class="row">
+                        <div class="small-12 columns">    
+                            <h2 id="clearing">Calendar</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/fullcalendar/dist/fullcalendar.js</h5>
+                            <h5 class="secondary-color subheader">UI/bower_components/moment/moment.js</h5>
+                            <h5 class="subheader">UI/scss/components/_calendar.scss</h5>
+                            
+                            <hr>                
+                
+                            <div id="calendar"></div>
+                            <div id="calendar-key">
+                                <h3>Key</h3>
+                                <span class="label secondary-bright-bg">District Event</span> 
+                                <span class="label success-bright-bg">National Event</span>
+                                <span class="label alert-bright-bg">NTA Event</span>
+                                <br>
+                                <small><i class="ss-icon ss-glyphish-outlined">&#x2302;</i> in district</small>&nbsp;&nbsp;&nbsp;
+                                <small><i class="ss-icon ss-glyphish-outlined">&#x2708;</i> out of district</small>&nbsp;&nbsp;&nbsp;
+                                <small><i class="ss-icon ss-glyphish-outlined">&#xEA00;</i> online</small>&nbsp;&nbsp;&nbsp;
+                                <small><i class="ss-icon ss-glyphish-outlined">&#x22C6;</i> mandatory</small>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-clearing">
+                    <div class="row">
+                        <div class="small-12 columns">    
+                            <h2 id="clearing">Clearing</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.clearing.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_clearing.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_clearing.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="clearing-thumbs" data-clearing>
+                                <li><a class="th" href="img/examples/comet.jpg"><img data-caption="Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum." src="img/examples/comet-th-sm.jpg"></a></li>
+                                <li><a class="th" href="img/examples/earth.jpg"><img src="img/examples/earth-th-sm.jpg"></a></li>
+                                <li><a class="th" href="img/examples/launch.jpg"><img data-caption="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." src="img/examples/launch-th-sm.jpg"></a></li>
+                                <li><a class="th" href="img/examples/satelite.jpg"><img src="img/examples/satelite-th-sm.jpg"></a></li>
+                                <li><a class="th" href="img/examples/space.jpg"><img data-caption="Integer posuere erat a ante venenatis dapibus posuere velit aliquet." src="img/examples/space-th-sm.jpg"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-color">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Color</h2>
+                            <h5 class="subheader">UI/scss/components/_color.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="small-block-grid-5">
+                                <li class="black-color">.black-color</li>
+                                <li class="white-color">.white-color</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="black-bg"><span class="white-color">.black-bg</span><br><span class="black-color">.black-bg</span></li>
+                                <li class="white-bg"><span class="white-color">.white-bg</span><br><span class="black-color">.white-bg</span></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="gray-dark-color">.gray-dark-color</li>
+                                <li class="gray-shade-color">.gray-shade-color</li>
+                                <li class="gray-color">.gray-color</li>
+                                <li class="gray-bright-color">.gray-bright-color</li>
+                                <li class="gray-light-color">.gray-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="gray-dark-bg"><span class="white-color">.gray-dark-bg</span><br><span class="black-color">.gray-dark-bg</span></li>
+                                <li class="gray-shade-bg"><span class="white-color">.gray-shade-bg</span><br><span class="black-color">.gray-shade-bg</span></li>
+                                <li class="gray-bg"><span class="white-color">.gray-bg</span><br><span class="black-color">.gray-bg</span></li>
+                                <li class="gray-bright-bg"><span class="white-color">.gray-bright-bg</span><br><span class="black-color">.gray-bright-bg</span></li>
+                                <li class="gray-light-bg"><span class="white-color">.gray-light-bg</span><br><span class="black-color">.gray-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="primary-dark-color">.primary-dark-color</li>
+                                <li class="primary-shade-color">.primary-shade-color</li>
+                                <li class="primary-color">.primary-color</li>
+                                <li class="primary-bright-color">.primary-bright-color</li>
+                                <li class="primary-light-color">.primary-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="primary-dark-bg"><span class="white-color">.primary-dark-bg</span><br><span class="black-color">.primary-dark-bg</span></li>
+                                <li class="primary-shade-bg"><span class="white-color">.primary-shade-bg</span><br><span class="black-color">.primary-shade-bg</span></li>
+                                <li class="primary-bg"><span class="white-color">.primary-bg</span><br><span class="black-color">.primary-bg</span></li>
+                                <li class="primary-bright-bg"><span class="white-color">.primary-bright-bg</span><br><span class="black-color">.primary-bright-bg</span></li>
+                                <li class="primary-light-bg"><span class="white-color">.primary-light-bg</span><br><span class="black-color">.primary-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="secondary-dark-color">.secondary-dark-color</li>
+                                <li class="secondary-shade-color">.secondary-shade-color</li>
+                                <li class="secondary-color">.secondary-color</li>
+                                <li class="secondary-bright-color">.secondary-bright-color</li>
+                                <li class="secondary-light-color">.secondary-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="secondary-dark-bg"><span class="white-color">.secondary-dark-bg</span><br><span class="black-color">.secondary-dark-bg</span></li>
+                                <li class="secondary-shade-bg"><span class="white-color">.secondary-shade-bg</span><br><span class="black-color">.secondary-shade-bg</span></li>
+                                <li class="secondary-bg"><span class="white-color">.secondary-bg</span><br><span class="black-color">.secondary-bg</span></li>
+                                <li class="secondary-bright-bg"><span class="white-color">.secondary-bright-bg</span><br><span class="black-color">.secondary-bright-bg</span></li>
+                                <li class="secondary-light-bg"><span class="white-color">.secondary-light-bg</span><br><span class="black-color">.secondary-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="tertiary-dark-color">.tertiary-dark-color</li>
+                                <li class="tertiary-shade-color">.tertiary-shade-color</li>
+                                <li class="tertiary-color">.tertiary-color</li>
+                                <li class="tertiary-bright-color">.tertiary-bright-color</li>
+                                <li class="tertiary-light-color">.tertiary-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="tertiary-dark-bg"><span class="white-color">.tertiary-dark-bg</span><br><span class="black-color">.tertiary-dark-bg</span></li>
+                                <li class="tertiary-shade-bg"><span class="white-color">.tertiary-shade-bg</span><br><span class="black-color">.tertiary-shade-bg</span></li>
+                                <li class="tertiary-bg"><span class="white-color">.tertiary-bg</span><br><span class="black-color">.tertiary-bg</span></li>
+                                <li class="tertiary-bright-bg"><span class="white-color">.tertiary-bright-bg</span><br><span class="black-color">.tertiary-bright-bg</span></li>
+                                <li class="tertiary-light-bg"><span class="white-color">.tertiary-light-bg</span><br><span class="black-color">.tertiary-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="alert-dark-color">.alert-dark-color</li>
+                                <li class="alert-shade-color">.alert-shade-color</li>
+                                <li class="alert-color">.alert-color</li>
+                                <li class="alert-bright-color">.alert-bright-color</li>
+                                <li class="alert-light-color">.alert-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="alert-dark-bg"><span class="white-color">.alert-dark-bg</span><br><span class="black-color">.alert-dark-bg</span></li>
+                                <li class="alert-shade-bg"><span class="white-color">.alert-shade-bg</span><br><span class="black-color">.alert-shade-bg</span></li>
+                                <li class="alert-bg"><span class="white-color">.alert-bg</span><br><span class="black-color">.alert-bg</span></li>
+                                <li class="alert-bright-bg"><span class="white-color">.alert-bright-bg</span><br><span class="black-color">.alert-bright-bg</span></li>
+                                <li class="alert-light-bg"><span class="white-color">.alert-light-bg</span><br><span class="black-color">.alert-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="success-dark-color">.success-dark-color</li>
+                                <li class="success-shade-color">.success-shade-color</li>
+                                <li class="success-color">.success-color</li>
+                                <li class="success-bright-color">.success-bright-color</li>
+                                <li class="success-light-color">.success-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="success-dark-bg"><span class="white-color">.success-dark-bg</span><br><span class="black-color">.success-dark-bg</span></li>
+                                <li class="success-shade-bg"><span class="white-color">.success-shade-bg</span><br><span class="black-color">.success-shade-bg</span></li>
+                                <li class="success-bg"><span class="white-color">.success-bg</span><br><span class="black-color">.success-bg</span></li>
+                                <li class="success-bright-bg"><span class="white-color">.success-bright-bg</span><br><span class="black-color">.success-bright-bg</span></li>
+                                <li class="success-light-bg"><span class="white-color">.success-light-bg</span><br><span class="black-color">.success-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="warning-dark-color">.warning-dark-color</li>
+                                <li class="warning-shade-color">.warning-shade-color</li>
+                                <li class="warning-color">.warning-color</li>
+                                <li class="warning-bright-color">.warning-bright-color</li>
+                                <li class="warning-light-color">.warning-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="warning-dark-bg"><span class="white-color">.warning-dark-bg</span><br><span class="black-color">.warning-dark-bg</span></li>
+                                <li class="warning-shade-bg"><span class="white-color">.warning-shade-bg</span><br><span class="black-color">.warning-shade-bg</span></li>
+                                <li class="warning-bg"><span class="white-color">.warning-bg</span><br><span class="black-color">.warning-bg</span></li>
+                                <li class="warning-bright-bg"><span class="white-color">.warning-bright-bg</span><br><span class="black-color">.warning-bright-bg</span></li>
+                                <li class="warning-light-bg"><span class="white-color">.warning-light-bg</span><br><span class="black-color">.warning-light-bg</span></li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="info-dark-color">.info-dark-color</li>
+                                <li class="info-shade-color">.info-shade-color</li>
+                                <li class="info-color">.info-color</li>
+                                <li class="info-bright-color">.info-bright-color</li>
+                                <li class="info-light-color">.info-light-color</li>
+                            </ul>
+                            <ul class="small-block-grid-5">
+                                <li class="info-dark-bg"><span class="white-color">.info-dark-bg</span><br><span class="black-color">.info-dark-bg</span></li>
+                                <li class="info-shade-bg"><span class="white-color">.info-shade-bg</span><br><span class="black-color">.info-shade-bg</span></li>
+                                <li class="info-bg"><span class="white-color">.info-bg</span><br><span class="black-color">.info-bg</span></li>
+                                <li class="info-bright-bg"><span class="white-color">.info-bright-bg</span><br><span class="black-color">.info-bright-bg</span></li>
+                                <li class="info-light-bg"><span class="white-color">.info-light-bg</span><br><span class="black-color">.info-light-bg</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-datepicker">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Datepicker</h2>
+                            <h5 class="secondary-color subheader">UI/js/components/_datepicker.js</h5>
+                            <h5 class="secondary-color subheader">UI/js/components/_timezones.js</h5>
+                            <h5 class="subheader">UI/scss/components/_datepicker.scss</h5>
+                            <hr>
+                            <p></p>
+                            <form>
+                                <div class="row">
+                                    <div class="small-12 medium-6 columns">
+                                        <label for="date-date">Date</label>
+                                        <input id="date-date" class="type-date" type="date" pattern="(?:(?:0[1-9]|1[0-2])[\/\\-. ]?(?:0[1-9]|[12][0-9])|(?:(?:0[13-9]|1[0-2])[\/\\-. ]?30)|(?:(?:0[13578]|1[02])[\/\\-. ]?31))[\/\\-. ]?(?:19|20)[0-9]{2}" placeholder="mm/dd/yyy">
+                                        <label for="date-week">Week</label>
+                                        <input id="date-week" class="type-week" type="week" pattern="(5[0-3]|[1-4][0-9]|0[1-9])/,\s*/([0-9]{4})" placeholder="Week --, ----">
+                                        <label for="date-month">Month</label>
+                                        <input id="date-month" class="type-month" type="month" pattern="" placeholder="--------- ----">
+                                    </div>
+                                    <div class="small-12 medium-6 columns">
+                                        <label for="date-year">Year</label>
+                                        <input id="date-year" class="type-year" type="number" min="1900" max="2050" placeholder="----">
+                                        <label for="date-time">Time</label>
+                                        <input id="date-time" class="type-time" type="time" pattern="^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$" placeholder="--:-- --">
+                                        <label for="date-and-time">Date + Time</label>
+                                        <input id="date-and-time" class="type-datetime" type="datetime" placeholder="--/--/-- --:-- --">                                    
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-dropdowns">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="dropdowns">Dropdowns</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.dropdown.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_dropdown.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_dropdown.scss</h5>
+                            
+                            <hr>
+                            
+                            <p><a class="button" data-dropdown="tinyDrop" href="#">Link Dropdown &raquo;</a>
+                            <a class="button" data-dropdown="contentDrop" href="#">Content Dropdown &raquo;</a>
+                            <!-- Dropdowns --></p>
+                            <ul class="f-dropdown" data-dropdown-content="" id="tinyDrop">
+                                <li><a href="#">This is a link</a></li>
+                                <li><a href="#">This is another</a></li>
+                                <li><a href="#">Yet another</a></li>
+                            </ul>
+                            <div class="f-dropdown content medium" data-dropdown-content="" id=
+                            "contentDrop">
+                                <h4>Title</h4>
+                                <p>Some text that people will think is awesome! Some text that people will
+                                think is awesome! Some text that people will think is awesome!</p><img src=
+                                "img/examples/launch.jpg">
+                                <p>Launching a Discovery Mission</p><a class="button" href="#">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-dropdown-buttons">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="dropdown-buttons">Dropdown Buttons</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_dropdown-buttons.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul id="drop" class="f-dropdown content" data-dropdown-content>
+                                <li><a href="#">This is a link</a></li>
+                                <li><a href="#">This is another</a></li>
+                                <li><a href="#">Yet another link</a></li>
+                            </ul>
+                            <p><a href="#" data-dropdown="drop" class="tiny button dropdown">Tiny Dropdown Button</a><br>
+                            <a href="#" data-dropdown="drop" class="small secondary radius button dropdown">Small Secondary Radius Dropdown Button</a><br>
+                            <a href="#" data-dropdown="drop" class="button alert round dropdown">Button Alert Round Dropdown Button</a><br>
+                            <a href="#" data-dropdown="drop" class="large success button dropdown">Large Success Dropdown Button</a><br>
+                            <a href="#" data-dropdown="drop" class="large button dropdown expand">Large Expanded Dropdown Button</a></p>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-flex-video">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="flex-video">Flex Video</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_flex-video.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_flex-video.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="flex-video">
+                                <iframe width="420" height="315" src="http://www.youtube.com/embed/0_EW8aNgKlA" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-floating-button">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Floating Button</h2>
+                            <h5 class="subheader">UI/scss/components/_floating-button.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-forms">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="forms">Forms</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_forms.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_forms.scss</h5>
+                            
+                            <hr>
+                            
+                            <form>
+                                <div class="row">
+                                    <div class="medium-6 columns">
+                                        <label>Input</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="medium-6 columns">
+                                        <label>Input with hint
+                                            <span class="hint">This is your official number.</span>
+                                        </label>
+                                        <input type="text">
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Required input</label>
+                                        <input type="text" placeholder="required" required>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Input with static error</label>
+                                        <input type="text" class="test-error" aria-invalid>
+                                        <span>You misspelled this.</span>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Input with hint and dynamic error 
+                                            <span>You can find this number on your ID tag.</span>
+                                        </label>
+                                        <input type="text" class="test-error" aria-invalid>
+                                        <span>This is too long. Please look again and see if you can fix the problem.</span>
+                                    </div>
+                                    <div class="medium-6 large-6 columns">
+                                        <label>Textarea</label>
+                                        <textarea msd-elastic></textarea>
+                                    </div>
+                                </div>   
+                                <div class="row">
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Password</label>
+                                        <input type="password" placeholder="required" required>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <input type="search" placeholder="search" aria-label="search">
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Read-only</label>
+                                        <input type="text" readonly>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Disabled</label>
+                                        <input type="text" disabled>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label class="type-file" for="file1">Single File</label>
+                                        <input type="file" id="file1">
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label class="type-file" for="file2">Multiple File</label>
+                                        <input type="file" id="file2" multiple>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Select</label>
+                                        <select>
+                                            <option value="value-0">Select one</option>
+                                            <option value="value-1">Value 1</option>
+                                            <option value="value-2">Value 2</option>
+                                            <option value="value-3">Value 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <label>Select Multiple</label>
+                                        <select multiple>
+                                            <option value="value-0">Select multiple</option>
+                                            <option value="value-1">Value 1</option>
+                                            <option value="value-2">Value 2</option>
+                                            <option value="value-3">Value 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <input type="checkbox" id="checkbox1">
+                                        <label for="checkbox1">Checkbox One</label>
+                                    </div>
+                                    <div class="medium-6 large-4 columns">
+                                        <input type="checkbox" id="checkbox2">
+                                        <label for="checkbox2">Checkbox Two</label>
+                                    </div>
+                                    <div class="medium-6 large-4 columns end">
+                                        <input type="checkbox" id="checkbox3">
+                                        <label for="checkbox3">Checkbox Three</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="medium-6 large-4 columns">
+                                        <fieldset class="vertical">
+                                            <legend>Favorite color</legend>
+                                            <span>Please select one</span>
+                                            <input type="radio" name="radio" id="radio1">
+                                            <label for="radio1">Blue</label>
+                                            <input type="radio" name="radio" id="radio2">
+                                            <label for="radio2">Yellow</label>
+                                            <input type="radio" name="radio" id="radio3">
+                                            <label for="radio3">Red</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-grids">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="grids">Grids</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_grid.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_grid.scss</h5>
+                            
+                            <hr>
+                            
+                            <p>For a complete understanding of the Foundation grid syntax, its variants and supplemental classes, please see the original document at <a href="http://foundation.zurb.com/docs/components/grid.html">http://foundation.zurb.com/docs/components/grid.html</a></p>
+                        </div>
+                    </div>
+                </section>                 
+                
+                <section class="card" id="ui-headroom">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Headroom</h2>
+                            <h5 class="subheader">UI/scss/components/_headroom.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>    
+                
+                <section class="card" id="ui-icon-bar">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Icon Bar</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_icon-bar.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_icon-bar.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                    
+                
+                <section class="card" id="ui-icons">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Icons</h2>
+                            <h5 class="subheader">UI/scss/components/_icons.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                    
+                
+                <section class="card" id="ui-inline-lists">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="inline-lists">Inline Lists</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_inline-lists.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_inline-lists.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="inline-list">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>               
+                
+                <section class="card" id="ui-interchange">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="inline-lists">Interchange Responsive Content</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.interchange.js</h5>
+                            <h5 class="subheader">UI/scss/components/_interchange.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-keystroke">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="keystroke">Keystroke</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_keystrokes.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_keystrokes.scss</h5>
+                            
+                            <hr>
+                            
+                            <p>To make something pretty, press and hold <kbd>cmd + alt + shift + w + a + !</kbd></p>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-labels">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="labels">Labels</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_labels.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_labels.scss</h5>
+                            
+                            <hr>
+                            
+                            <p>
+                                <span class="label">Regular Label</span><br>
+                                <span class="radius secondary label">Radius Secondary Label</span><br>
+                                <span class="radius tertiary label">Radius Tertiary Label</span><br>
+                                <span class="round alert label">Round Alert Label</span><br>
+                                <span class="success label">Success Label</span><br>
+                                <span class="warning label">Warning Label</span><br>
+                                <span class="info label">Info Label</span><br>
+                            </p>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-loader">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Loading Animation</h2>
+                            <h5 class="subheader">UI/scss/components/_loader.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                 
+                
+                <section class="card" id="ui-magellan">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="magellan">Magellan</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.magellan.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_magellan.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_magellan.scss</h5>
+                            <hr>
+                            <p>See the Foundation documentation on this feature.</p>
+
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-map">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Map</h2>
+                            <h5 class="subheader">UI/scss/components/_map.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>   
+                
+                <section class="card" id="ui-media-queries">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="media-queries">Media Queries</h2>
+                            <h5 class="subheader">UI/scss/components/_media-queries.scss</h5>
+                            
+                            <hr>
+                            
+                            <code>
+                                // Small screens<br><br>
+                                @media only screen { } /* Define mobile styles */<br><br>
+                                @media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */<br><br>
+                                // Medium screens<br>
+                                @media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */<br><br>
+                                @media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */<br><br>
+                                // Large screens<br><br>
+                                @media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */<br><br>
+                                @media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */<br><br>
+                                // XLarge screens<br><br>
+                                @media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */<br><br>
+                                @media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */<br><br>
+                                // XXLarge screens<br><br>
+                                @media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */
+                            </code>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-orbit">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="orbit">Orbit</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.orbit.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_orbit.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_orbit.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <ul id="featured1" data-orbit data-options="timer_speed:5000;">
+                                        <li>
+                                            <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" />
+                                            <div class="orbit-caption">
+                                            Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="http://foundation.zurb.com/docs/assets/img/examples/andromeda-orbit.jpg" />
+                                            <div class="orbit-caption">
+                                            Caption Two. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="http://foundation.zurb.com/docs/assets/img/examples/launch-orbit.jpg" />
+                                            <div class="orbit-caption">
+                                            Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-pagination">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="pagination">Pagination</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_pagination.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_pagination.scss</h5>
+                            
+                            <hr>
+                            
+                            <ul class="pagination">
+                                <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                                <li class="current"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                <li><a href="">12</a></li>
+                                <li><a href="">13</a></li>
+                                <li class="arrow"><a href="">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-panels">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="panels">Panels</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_panels.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_panels.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="row">
+                                <div class="large-6 columns">
+                                    <div class="panel">
+                                        <h5>This is a regular panel.</h5>
+                                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                                    </div>
+                                </div>
+                                <div class="large-6 columns">
+                                    <div class="panel callout radius">
+                                        <h5>This is a radius callout panel.</h5>
+                                        <p>It&#39;s a little ostentatious, but useful for important content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-photo-cards">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Photo Cards</h2>
+                            <h5 class="subheader">UI/scss/components/_map.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                 
+                
+                <section class="card" id="ui-pricing-tables">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="pricing-tables">Pricing Tables</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_pricing-tables.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_pricing-tables.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="row">
+                                <div class="large-4 columns">
+                                    <ul class="pricing-table">
+                                        <li class="title">Standard</li>
+                                        <li class="price">$99.99</li>
+                                        <li class="description">An awesome description</li>
+                                        <li class="bullet-item">1 Database</li>
+                                        <li class="bullet-item">5GB Storage</li>
+                                        <li class="bullet-item">20 Users</li>
+                                        <li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-progress-bars">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="progress-bars">Progress Bars</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_progress-bars.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_progress-bars.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="progress large-6"><span class="meter" style="width: 40%"></span></div>
+                            <div class="radius progress success large-8"><span class="meter" style="width: 80%"></span></div>
+                            <div class="nice round progress alert large-10"><span class="meter" style="width: 30%"></span></div>
+                            <div class="nice secondary progress"><span class="meter" style="width: 50%"></span></div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-range-sliders">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="sliders">Range Sliders</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.slider.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_range-sliders.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_range-sliders.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="range-slider" data-slider>
+                                <span class="range-slider-handle"></span>
+                                <span class="range-slider-active-segment"></span>
+                                <input type="hidden">
+                            </div>
+                            <div class="range-slider radius" data-slider>
+                                <span class="range-slider-handle"></span>
+                                <span class="range-slider-active-segment"></span>
+                                <input type="hidden">
+                            </div>
+                            <div class="range-slider round" data-slider>
+                                <span class="range-slider-handle"></span>
+                                <span class="range-slider-active-segment"></span>
+                                <input type="hidden">
+                            </div>
+                            <div class="range-slider" data-slider data-options="step: 20;">
+                                <span class="range-slider-handle"></span>
+                                <span class="range-slider-active-segment"></span>
+                                <input type="hidden">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-reveal">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="reveal">Reveal Modals</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.reveal.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_reveal.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_reveal.scss</h5>
+                            
+                            <hr>
+                            
+                            <p><a href="#" data-reveal-id="firstModal" class="radius button">Example Modal&hellip;</a>
+                            <a href="#" data-reveal-id="videoModal" class="radius button">Example Video Modal&hellip;</a></p>
+                            <!-- Reveal Modals begin -->
+                            <div id="firstModal" class="reveal-modal" data-reveal>
+                                <h2>This is a modal.</h2>
+                                <p>Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of <code>close-reveal-modal</code>. Clicking anywhere outside the modal will also dismiss it.</p>
+                                <p>Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.</p>
+                                <p><a href="#" data-reveal-id="secondModal" class="secondary button">Second Modal&hellip;</a></p>
+                                <a class="close-reveal-modal">&#215;</a>
+                            </div>
+                            <div id="secondModal" class="reveal-modal" data-reveal>
+                                <h2>This is a second modal.</h2>
+                                <p>See? It just slides into place after the first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+                                <a class="close-reveal-modal">&#215;</a>
+                            </div>
+                            <div id="videoModal" class="reveal-modal large" data-reveal>
+                                <h2>This modal has video</h2>
+                                <div class="flex-video">
+                                    <iframe width="420" height="315" src="//www.youtube.com/embed/aiBt44rrslw" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <a class="close-reveal-modal">&#215;</a>
+                            </div>
+                            <!-- Reveal Modals end -->
+                        </div>
+                    </div>
+                </section>    
+                
+                <section class="card" id="ui-scrolling-list">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="scrollinglist">Scrolling List</h2>
+                            <h5 class="subheader">UI/scss/components/_scrollinglist.scss</h5>
+                            <hr>
+                            <div class="tall scrolling-list">
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox1">
+                                        <label for="slbox1">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox2">
+                                        <label for="slbox2">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox3">
+                                        <label for="slbox3">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox4">
+                                        <label for="slbox4">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <label>Group Label</label>
+                                    </div>
+                                </div>
+                                <div class="sl-row child">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox5">
+                                        <label for="slbox5">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox6">
+                                        <label for="slbox6">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox7">
+                                        <label for="slbox7">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <label>Group Label</label>
+                                    </div>
+                                </div>
+                                <div class="sl-row child">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox8">
+                                        <label for="slbox8">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox9">
+                                        <label for="slbox9">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox10">
+                                        <label for="slbox10">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox11">
+                                        <label for="slbox11">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox12">
+                                        <label for="slbox12">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox13">
+                                        <label for="slbox13">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox14">
+                                        <label for="slbox14">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row child">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox15">
+                                        <label for="slbox15">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row grandchild">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox16">
+                                        <label for="slbox16">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row grandchild selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox17">
+                                        <label for="slbox17">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row grandchild">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox18">
+                                        <label for="slbox18">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row grandchild">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox19">
+                                        <label for="slbox19">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox20">
+                                        <label for="slbox20">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox21">
+                                        <label for="slbox21">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row selected">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox22">
+                                        <label for="slbox22">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox23">
+                                        <label for="slbox23">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox24">
+                                        <label for="slbox24">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox25">
+                                        <label for="slbox25">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                                <div class="sl-row">
+                                    <div class="sl-column">
+                                        <input type="checkbox" id="slbox26">
+                                        <label for="slbox26">Label</label>
+                                    </div>
+                                    <div class="sl-column">
+                                        <span>Description</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-sections">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Sections</h2>
+                            <h5 class="subheader">UI/scss/components/_sections.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>                  
+                
+                <section class="card" id="ui-side-nav">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="side-nav">Side Nav</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_side-nav.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_side-nav.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="row">
+                                <div class="large-4 columns end">
+                                    <ul class="side-nav">
+                                        <li class="active"><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>    
+                
+                <section class="card" id="ui-snackbar">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="snackbar">Snackbars</h2>
+                            <h5 class="secondary-color subheader">UI/js/components/_snackbar.js</h5>
+                            <h5 class="subheader">UI/scss/components/_snackbar.scss</h5>
+                            <hr>
+                            <button class="round primary" id="singleLineSnackbar">Single line<div/></button>
+                            <button class="round primary" id="multiLineSnackbar">Multi-line<div/></button>
+                            <button class="round primary" id="singleActionSnackbar">Single + action<div/></button>
+                            <button class="round primary" id="multiActionSnackbar">Multi + action<div/></button>
+                            <hr>
+                            <pre><code class="html">
+                                <button class="round primary" id="singleLineSnackbar">Single line<div/></button>
+                                <button class="round primary" id="multiLineSnackbar">Multi-line<div/></button>
+                                <button class="round primary" id="singleActionSnackbar">Single + action<div/></button>
+                                <button class="round primary" id="multiActionSnackbar">Multi + action<div/></button>
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>  
+                
+                <section class="card" id="ui-split-buttons">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="split-buttons">Split Buttons</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_split-buttons.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_split-buttons.scss</h5>
+                            
+                            <hr>
+                            
+                            <p><a href="#" class="tiny button split">Tiny Split Button <span data-dropdown="drop"></span></a><br>
+                            <a href="#" class="small secondary radius button split">Small Secondary Radius Split Button <span data-dropdown="drop"></span></a><br>
+                            <a href="#" class="button alert round split">Round Alert Split Button <span data-dropdown="drop"></span></a><br>
+                            <a href="#" class="large success button split">Large Success Split Button <span data-dropdown="drop"></span></a></p>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-sub-nav">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="sub-nav">Sub Nav</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_sub-nav.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_sub-nav.scss</h5>
+                            
+                            <hr>
+                            
+                            <dl class="sub-nav">
+                                <dt>Filter:</dt>
+                                <dd class="active"><a href="#">All</a></dd>
+                                <dd><a href="#">Active</a></dd>
+                                <dd><a href="#">Pending</a></dd>
+                                <dd><a href="#">Suspended</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>                
+                
+                <!--
+                <section class="card" id="ui-switches">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="switches">Switches</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_switches.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_switches.scss</h5>
+                            
+                            <hr>
+                            
+                            <div class="small-2 switch tiny">
+                                <input id="a" name="switch-a" type="radio" checked>
+                                <label for="a" onclick="">Off</label>
+                                <input id="a1" name="switch-a" type="radio">
+                                <label for="a1" onclick="">On</label>
+                                <span></span>
+                            </div>
+                            <div class="small-3 switch small">
+                                <input id="b" name="switch-b" type="radio" checked>
+                                <label for="b" onclick="">Off</label>
+                                <input id="b1" name="switch-b" type="radio">
+                                <label for="b1" onclick="">On</label>
+                                <span></span>
+                            </div>
+                            <div class="small-4 switch radius">
+                                <input id="c" name="switch-c" type="radio" checked>
+                                <label for="c" onclick="">Off</label>
+                                <input id="c1" name="switch-c" type="radio">
+                                <label for="c1" onclick="">On</label>
+                            <span></span>
+                            </div>
+                            <div class="small-6 switch large round">
+                                <input id="d" name="switch-d" type="radio" checked>
+                                <label for="d" onclick="">Off</label>
+                                <input id="d1" name="switch-d" type="radio">
+                                <label for="d1" onclick="">On</label>
+                            <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>   
+                -->
+                
+                <section class="card" id="ui-tables">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="tables">Tables</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_tables.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_tables.scss</h5>
+                            
+                            <hr>
+                            
+                            <table class="footable table">
+                                <thead>
+                                    <tr>
+                                        <th width="200">Table Header</th>
+                                        <th>Table Header</th>
+                                        <th width="150">Table Header</th>
+                                        <th width="150">Table Header</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-tabs">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="tabs">Tabs</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.tab.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_tabs.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_tabs.scss</h5>
+                            
+                            <hr>
+                            
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel2-1">Tab 1</a></dd>
+                                <dd><a href="#panel2-2">Tab 2</a></dd>
+                                <dd><a href="#panel2-3">Tab 3</a></dd>
+                                <dd><a href="#panel2-4">Tab 4</a></dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel2-1">
+                                    <p>First panel content goes here...</p>
+                                </div>
+                                <div class="content" id="panel2-2">
+                                    <p>Second panel content goes here...</p>
+                                </div>
+                                <div class="content" id="panel2-3">
+                                    <p>Third panel content goes here...</p>
+                                </div>
+                                <div class="content" id="panel2-4">
+                                    <p>Fourth panel content goes here...</p>
+                                </div>
+                            </div>
+                            <dl class="tabs vertical" data-tab="">
+                                <dd class="active"><a href="#panel1a">Tab 1</a></dd>
+                                <dd><a href="#panel2a">Tab 2</a></dd>
+                                <dd><a href="#panel3a">Tab 3</a></dd>
+                                <dd><a href="#panel4a">Tab 4</a></dd>
+                            </dl>
+                            <div class="tabs-content vertical">
+                                <div class="content active" id="panel1a">
+                                    <p>Panel 1 content goes here.</p>
+                                </div>
+                                <div class="content" id="panel2a">
+                                    <p>Panel 2 content goes here.</p>
+                                </div>
+                                <div class="content" id="panel3a">
+                                    <p>Panel 3 content goes here.</p>
+                                </div>
+                                <div class="content" id="panel4a">
+                                    <p>Panel 4 content goes here.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-thumbnails">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="thumbnails">Thumbnails</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_thumbs.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_thumbs.scss</h5>
+                            
+                            <hr>
+                            
+                            <p><img class="th" src="http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg"><img class="th" src="http://foundation.zurb.com/docs/assets/img/examples/space-th-sm.jpg"></p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" id="ui-tooltips">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="tooltips">Tooltips</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.tooltip.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_tooltips.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_tooltips.scss</h5>
+                            
+                            <hr>
+                            
+                            <p>The tooltips can be positioned on the <span data-tooltip class="has-tip" data-width="210" title="I'm on bottom and the default position.">&quot;tip-bottom&quot;</span>, which is the default position, <span data-tooltip class="has-tip tip-top noradius" data-width="210" title="I'm on the top and I'm not rounded!">&quot;tip-top&quot; (hehe)</span>, <span data-tooltip="left" class="has-tip tip-left" data-width="90" title="I'm on the left!">&quot;tip-left&quot;</span>, or <span data-tooltip="right" class="has-tip tip-right" data-width="120" title="I'm on the right!">&quot;tip-right&quot;</span> of the target element by adding the appropriate class to them. You can even add your own custom class to style each tip differently. On a small device, the tooltips are full width and bottom aligned.</p>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-top-bar">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="top-bar">Top Bar</h2>
+                            <h5 class="secondary-color subheader">UI/bower_components/foundation/js/foundation/foundation.topbar.js</h5>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_top-bar.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_top-bar.scss</h5>
+                            
+                            <hr>
+                            
+                            <nav class="top-bar" data-topbar>
+                                <ul class="title-area">
+                                    <!-- Title Area -->
+                                    <li class="name">
+                                        <h1><a href="#">Top Bar Title</a></h1>
+                                    </li>
+                                    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+                                </ul>
+                                <section class="top-bar-section">
+                                    <!-- Right Nav Section -->
+                                    <ul class="right">
+                                        <li class="divider"></li>
+                                        <li class="has-dropdown">
+                                            <a href="#">Main Item 1</a>
+                                            <ul class="dropdown">
+                                                <li><label>Section Name</label></li>
+                                                <li class="has-dropdown">
+                                                    <a href="#" class="">Has Dropdown, Level 1</a>
+                                                    <ul class="dropdown">
+                                                        <li><a href="#">Dropdown Options</a></li>
+                                                        <li><a href="#">Dropdown Options</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Subdropdown Option</a></li>
+                                                        <li><a href="#">Subdropdown Option</a></li>
+                                                        <li><a href="#">Subdropdown Option</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li class="divider"></li>
+                                                <li><label>Section Name</label></li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">See all &rarr;</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li class="has-dropdown">
+                                            <a href="#">Main Item 2</a>
+                                            <ul class="dropdown">
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li><a href="#">Dropdown Option</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">See all &rarr;</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </nav>
+                            <!-- End Top Bar -->
+                        </div>
+                    </div>
+                </section>                
+                
+                <section class="card" id="ui-type">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Type</h2>
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_type.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_type.scss</h5>
+
+                            <hr>
+
+                            <p>p. This is plain ol' paragraph text. <strong>This text is strong</strong>, <em>while this text is emphasized.</em></p>
+                            <p>"The rascal is off, after all!" he exclaimed. "Two thousand pounds sacrificed! He's as prodigal as a thief! I'll follow him to the end of the world if necessary; but, at the rate he is going on, the stolen money will soon be exhausted."</p>
+                            <p>The detective was not far wrong in making this conjecture. Since leaving London, what with travelling expenses, bribes, the purchase of the elephant, bails, and fines, Mr. Fogg had already spent more than five thousand pounds on the way, and the percentage of the sum recovered from the bank robber promised to the detectives, was rapidly diminishing.</p>
+                            <p><small>You can also make text small.</small></p>
+
+                            <br>
+
+                            <h1>h1. This is a very large header.</h1>
+                            <h2>h2. This is a large header.</h2>
+                            <h3>h3. This is a medium header.</h3>
+                            <h4>h4. This is a moderate header.</h4>
+                            <h5>h5. This is a small header.</h5>
+                            <h6>h6. This is a tiny header.</h6>
+
+                            <br>
+
+                            <h1 class="subheader">h1. subheader</h1>
+                            <h2 class="subheader">h2. subheader</h2>
+                            <h3 class="subheader">h3. subheader</h3>
+                            <h4 class="subheader">h4. subheader</h4>
+                            <h5 class="subheader">h5. subheader</h5>
+                            <h6 class="subheader">h6. subheader</h6>
+
+                            <hr>
+
+                            <h5>Definition lists are great for small block of copy that describe the header</h5>
+                            <dl>
+                                <dt>Lower cost</dt>
+                                <dd>The new version of this product costs significantly less than the previous one!</dd>
+                                <dt>Easier to use</dt>
+                                <dd>We&#39;ve changed the product so that it&#39;s much easier to use!</dd>
+                                <dt>Safe for kids</dt>
+                                <dd>You can leave your kids alone in a room with this product and they won&#39;t get hurt (not a guarantee).</dd>
+                            </dl>
+
+                            <br>
+
+                            <h5>Un-ordered lists are great for making quick outlines bulleted.</h5>
+                            <ul class="disc">
+                                <li>List item with a much longer description or more content.</li>
+                                <li>List item</li>
+                                <li>List item
+                            <ul>
+                                <li>Nested List Item</li>
+                                <li>Nested List Item</li>
+                                <li>Nested List Item</li>
+                            </ul>
+                            </li>
+                                <li>List item</li>
+                                <li>List item</li>
+                                <li>List item</li>
+                            </ul>
+
+                            <br>
+
+                            <h5>Ordered lists are great for lists that need order, duh.</h5>
+                            <ol>
+                                <li>List Item 1</li>
+                                <li>List Item 2</li>
+                                <li>List Item 3</li>
+                            </ol>
+
+                            <br>
+
+                            <h5>Blockquote</h5>
+                            <blockquote>I do not fear computers. I fear the lack of them. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.<cite>Isaac Asimov</cite></blockquote>
+
+                            <br>
+
+                            <h5>Vcard</h5>
+                            <ul class="vcard">
+                                <li class="fn">Gaius Baltar</li>
+                                <li class="street-address">123 Colonial Ave.</li>
+                                <li class="locality">Caprica City</li>
+                                <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+                                <li class="email"><a href="#"><span class="__cf_email__" data-cfemail="9bfcb5f9faf7effae9dbfee3faf6ebf7feb5f8f4f6">[email&nbsp;protected]</span><script type="text/javascript">
+                                /* <![CDATA[ */
+                                (function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+                                /* ]]> */
+                                </script></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card" id="ui-utilities">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Utility Classes</h2>
+                            <h5 class="subheader">UI/scss/components/_utilities.scss</h5>
+                            
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </section>     
+
+                <section class="card" id="ui-visibility">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2 id="visibility-classes">Visibility Classes</h2>
+                            
+                            <h5 class="subheader">UI/bower_components/foundation/scss/foundation/components/_visibility.scss</h5>
+                            <h5 class="subheader">UI/scss/components/_visibility.scss</h5>
+                            
+                            <hr>
+                            
+                            <h5 id="screen-size-visibility-control-show-">Screen Size Visibility Control (Show)</h5>
+                            <p>The following text should describe the screen size you&#39;re using:</p>
+                            <p class="panel">
+                                <strong class="show-for-small">You are on a small screen.</strong>
+                                <strong class="show-for-medium">You are on a medium screen.</strong>
+                                <strong class="show-for-medium-up">You are on a medium, large or xlarge screen.</strong>
+                                <strong class="show-for-medium-down">You are on a medium or small screen.</strong>
+                                <strong class="show-for-large">You are on a large screen.</strong>
+                                <strong class="show-for-large-up">You are on a large or xlarge screen.</strong>
+                                <strong class="show-for-large-down">You are on a large, medium or small screen.</strong>
+                                <strong class="show-for-xlarge">You are on a xlarge screen.</strong>
+                            </p>
+                            <h5 id="screen-size-visibility-control-hide-">Screen Size Visibility Control (Hide)</h5>
+                            <p>The following text should describe the screen size you aren&#39;t using:</p>
+                            <p class="panel">
+                                <strong class="hide-for-small">You are <em>not</em> on a small screen.</strong>
+                                <strong class="hide-for-medium">You are <em>not</em> on a medium screen.</strong>
+                                <strong class="hide-for-medium-up">You are <em>not</em> on a medium, large or xlarge screen.</strong>
+                                <strong class="hide-for-medium-down">You are <em>not</em> on a medium or small screen.</strong>
+                                <strong class="hide-for-large">You are <em>not</em> on a large screen.</strong>
+                                <strong class="hide-for-large-up">You are <em>not</em> on a large or xlarge screen.</strong>
+                                <strong class="hide-for-large-down">You are <em>not</em> on a large, medium or small screen.</strong>
+                                <strong class="hide-for-xlarge">You are <em>not</em> on a xlarge screen.</strong>
+                            </p>
+                            <h5 id="orientation-detection">Orientation Detection</h5>
+                            <p>The following text should describe the device orientation you&#39;re using:</p>
+                            <p class="panel">
+                                <strong class="show-for-landscape">You are in landscape orientation.</strong>
+                                <strong class="show-for-portrait">You are in portrait orientation.</strong>
+                            </p>
+                            <h5 id="touch-detection">Touch Detection</h5>
+                            <p>The following text should describe if you&#39;re using a touch device:</p>
+                            <p class="panel">
+                                <strong class="show-for-touch">You are on a touch-enabled device.</strong>
+                                <strong class="hide-for-touch">You are not on a touch-enabled device.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+ 
+            </div>
+        </div>
+    </main>
+                
+    <footer>
+        <div class="row">
+            <div class="small-12 columns">
+                <p class="smallprint">SIRS is the Safety and Information Reporting System for the Administrative Office of the US Courts</p>
+            </div>
+        </div>
+        <ul class="mfb-component--br mfb-slidein" data-mfb-toggle="hover">
+            <li class="mfb-component__wrap">
+                <!-- the main menu button -->
+                <a data-mfb-label="Feedback?" class="mfb-component__button--main">
+                    <!-- the main button icon visibile by default -->
+                    <i class="mfb-component__main-icon--resting ss-icon ss-community">&#x1F56B;</i>
+                    <!-- the main button icon visibile when the user is hovering/interacting with the menu -->
+                    <i class="mfb-component__main-icon--active ss-icon ss-community">&#x1F56B;</i>
+                </a>
+                <!--
+                <ul class="mfb-component__list">
+                    <!- a child button, repeat as many times as needed ->
+                    <li>
+                        <a href="link.html" data-mfb-label="{{the label text of the a child button}}" class="mfb-component__button--child">
+                            <i class="mfb-component__child-icon {{icon-class}}"></i>
+                        </a>
+                    </li>
+                </ul>
+                -->
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/foot.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#date-and-time").AnyTime_picker({ format: "%m/%d/%y %h:%i %p" });
+        });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

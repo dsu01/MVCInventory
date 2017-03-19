@@ -1,0 +1,25 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// MEDIA QUERIES -------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+// Use these queries in the specific stylesheet and rules section so that the responsive
+// rules directly follow the default rules 
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
