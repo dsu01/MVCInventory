@@ -1,0 +1,17 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// BUTTON GROUPS -------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+@media #{$small-only} {
+.button-group {
+        a {
+            padding-right: 0.2rem;
+            padding-left: 0.2rem;
+            font-size: 0.75rem;
+        }
+    }
+}

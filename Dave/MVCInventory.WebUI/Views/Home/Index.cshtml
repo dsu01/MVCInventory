@@ -1,0 +1,62 @@
+﻿@{ ViewBag.Title = "Index";}
+@section scripts {
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/Home/Index.js"></script>
+}
+<div class="row">
+    <div class="large-6 columns">
+        <div id="summaryDisplay" class="display">
+            <h4>Facilities</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="selectCol"></th>
+                        <th class="nameCol">Building</th>
+                        <th class="groupCol">Facility Group</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr><td colspan="3">The data is loading</td></tr>
+                </tbody>
+            </table>
+            <div id="buttonContainer">
+                <button id="refresh">Refresh...</button>
+                <button id="add">Add...</button>
+                <button id="edit">Edit...</button>
+                <button id="delete">Delete...</button>
+            </div>
+        </div>
+
+        <div id="addDisplay" class="display">
+            <h4>Add New Facility</h4>
+            @{
+                AjaxOptions addAjaxOpts = new AjaxOptions
+                {
+                    OnSuccess = "getData",
+                    Url = "/api/facility",
+                    HttpMethod = "POST",
+                };
+            }
+            @using (Ajax.BeginForm(addAjaxOpts))
+            {
+                @Html.Hidden("Id", Guid.NewGuid())
+                <p><label>Name:</label>@Html.Editor("FacilityName")</p>
+                <p><label>Group:</label>@Html.Editor("FacilityGroup")</p>
+                <button type="submit">Submit</button>
+            }
+        </div>
+
+        <div id="editDisplay" class="display">
+            <h4>Edit Facility</h4>
+            <form id="editForm">
+                <input id="editFacilityId" type="hidden" name="Id" />
+                <p><label>Name:</label><input id="editFacilityName" name="FacilityName" /></p>
+                <p><label>Group:</label><input id="editFacilityGroup" name="FacilityGroup" /></p>
+               
+            </form>
+            <button id="submitEdit" type="submit">Save</button>
+        </div>
+    </div>
+
+</div>

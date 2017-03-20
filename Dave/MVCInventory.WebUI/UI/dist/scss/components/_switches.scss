@@ -1,0 +1,19 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// SWITCHES ------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.switch {
+	label {
+		background: $gray-bright-color;
+	}
+    input:checked + label {
+        background: $secondary-color;
+    }
+}
+td > .switch {
+    margin-bottom: 0;
+}

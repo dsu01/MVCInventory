@@ -1,0 +1,60 @@
+﻿<!--<input type="text" ng-model="nameFilter" placeholder="Search..." />-->
+
+<div class="row">
+    <div class="large-6 columns">
+        
+        <div ng-controller="CurrentTimeController">
+            Date format: <input ng-model="format"> <hr />
+            Current time is: <span my-Current-Time="format"></span>
+        </div>
+        
+        <!--<div ng-controller="CurrentTimeController">
+            <div facility-Info></div>
+        </div>-->
+
+        <div id="summaryDisplay" class="display">
+            <table>
+                <thead>
+                <tr><th colspan="4">***Facilities***</th></tr>
+                </thead>
+                <tbody>
+                <!--<tr ng-repeat="driver in driversList | filter: searchFilter">-->
+                <tr ng-repeat="facility in facilitiesList">
+                    <td>
+                        <input id="id" name="id" type="radio" value="{{facility.Id}}"/>
+                    </td>
+                    <td>{{facility.FacilityName}}</td>
+                    <td>{{facility.FacilityGroup}}</td>
+                    <td>{{facility.BuildingId}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div id="buttonContainer">
+                <button id="reveal">Reveal</button>
+                <button id="refresh">Refresh</button>
+                <button id="add">Add</button>
+                <button id="edit">Edit</button>
+                <button id="delete">Delete</button>
+            </div>
+        </div>
+
+        <div id="editDisplay" class="display">
+            <h4>Edit Facility</h4>
+            
+            <div ng-controller="CurrentTimeController">
+                <div facility-Info></div>
+            </div>
+                            
+            <form id="editForm">
+                <input id="editFacilityId" type="hidden" name="Id"/>
+                <p><label>Name:</label><input id="editFacilityName" name="FacilityName"/>
+                </p>
+                <p><label>Group:</label><input id="editFacilityGroup" name="FacilityGroup"/>
+                </p>
+            </form>
+            <button id="submitEdit" type="submit">Save</button>
+        </div>
+
+    </div>
+</div>

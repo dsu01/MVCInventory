@@ -1,0 +1,74 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// SCROLLING LIST ---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.scrolling-list {
+    position: relative;
+    overflow-y: scroll;
+    &.short {
+        height: 11rem;
+    }
+    &.tall {
+        height: 26rem;
+    }
+    &.xtall {
+        height: 32rem;
+    }
+    .sl-row {
+        display: flex;
+        align-items: center;
+        border: 1px solid $gray-light-color;
+        &.child {
+            margin-left: 1.7rem;
+            background-color: lighten($gray-light-color,4%);
+            border-color: $gray-light-color;
+            
+        }
+        &.grandchild {
+            margin-left: 3.4rem;
+            background-color: $gray-light-color;
+            border-color: darken($gray-light-color,6%);
+        }
+        &.selected {
+            background-color: $highlight-color;
+        }
+    }
+    .sl-column {
+        display: inline-block;
+        padding: 0 0 0 1rem;
+        &:last-child {
+            padding-right: 1rem;
+        }
+        &:not(:first-child) {
+            display: none;
+        }
+    }
+    span,
+    button,
+    a {
+        margin: 0 !important;
+    }
+    label {
+        margin: 0.25rem 0 !important;
+    }
+}
+
+@media #{$medium-up} {
+	.scrolling-list {
+        .sl-row {
+            &.child {
+                margin-left: 3.2rem;
+            } 
+            &.grandchild {
+                margin-left: 6.4rem;
+            } 
+        }
+        .sl-column:not(:first-child) {
+		  display: inline-block;
+        }
+	}
+}

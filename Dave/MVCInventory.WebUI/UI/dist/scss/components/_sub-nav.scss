@@ -1,0 +1,51 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// SUB NAV -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.sub-nav {
+    line-height: 2;
+    margin-bottom: 0.2rem;
+    dd,
+    dt,
+    li {
+        margin: 0 0.4em 0.75em 0;
+        a {
+            padding: 0.2em 0.9em;
+            background-color: none !important;
+            border: none !important;
+            border-radius: 0 !important;
+            color: $primary-color !important;
+            outline: none !important;
+            text-decoration: underline;
+            &:focus,
+            &:hover, 
+            &:active {
+                background-color: $primary-color !important;
+                // border: 2 solid $primary-color !important;
+                border-radius: 1000px !important;
+                // border-color: $primary-color !important;
+                color: #fff !important;
+                outline: none !important;
+                text-decoration: none;
+            }
+        }
+        &.active a {
+            background-color: $secondary-color !important;
+            // border: 2px solid $secondary-color !important;
+            border-radius: 1000px !important;
+            color: #fff !important;
+            outline: none !important;
+            text-decoration: none;
+            &:focus,
+            &:hover, 
+            &:active {
+                border-color: $secondary-dark-color !important;
+                outline: none !important;
+            }
+        }
+    }
+}

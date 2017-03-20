@@ -1,0 +1,100 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// TYPE ----------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+@mixin text-wrap {
+    word-break: break-word;
+    word-wrap: break-word;
+    hyphens: none;
+}
+
+h1 {
+    margin-top: 0.5em;
+    @media #{$medium-up} {
+        margin-top: 0;
+    }
+}
+
+small {
+    font-size: 70%;
+}
+
+dl, 
+dt, 
+dd, 
+ul, 
+ol, 
+li, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+label,
+legend,
+pre, 
+form, 
+p, 
+blockquote, 
+small,
+span,
+th, 
+td {
+    &.primary-color {
+    	color: $primary-color;
+    }
+    &.secondary-color {
+    	color: $secondary-color;
+    }
+    &.alert-color {
+    	color: $alert-color;
+    }
+    &.success-color {
+    	color: $success-color;
+    }
+    &.warning-color {
+    	color: $warning-color;
+    }
+    &.info-color {
+    	color: $info-color;
+    }
+    &.light-color {
+    	color: $gray-bright-color;
+    }
+    &.dark-color {
+    	color: $gray-dark-color;
+    }
+    &.body-color {
+    	color: $body-font-color;
+    }
+    &.text-wrap {
+        @include text-wrap;
+    }
+}
+
+p,
+small {
+    a {
+	   text-decoration: underline;
+    }
+}
+
+.smallprint {
+    font-size: 80%;
+    color: $gray-shade-color;
+}
+
+ul.no-bullets { 
+	list-style-type: none;
+}
+
+hr {
+    @media #{$medium-up} {
+        margin: 1.25rem 0 1.1875rem;
+    }
+}

@@ -1,0 +1,39 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// PANELS --------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+.panel { 
+	&.callout,
+	&.primary {
+		h1,
+		h2,
+		h3,
+		h4 {
+			color: $primary-color;
+		}
+	}
+	&.success {
+		background-color: lighten($success-color, 50%);
+		border-color: lighten($success-color, 25%);
+		h1,
+		h2,
+		h3,
+		h4 {
+			color: $success-color;
+		}
+	}	
+	&.warning {
+		background-color: lighten($warning-color, 40%);
+		border-color: lighten($warning-color, 25%);
+		h1,
+		h2,
+		h3,
+		h4 {
+			color: $warning-color;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+// Custom Styles for Zurb's Foundation for Sites
+// CMSO, Administrative Office of the US Courts
+// Chris Kobar, SRA International
+
+// ---------------------------------------------------------------------------------------
+// PHOTO CARDS ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+li.photocard { 
+	padding: 0.5rem;
+	margin-bottom: 1.5rem;
+	.photocard-content {
+		padding: 0.75rem;
+		min-height: 16rem;
+		background: lighten($gray-dark-color, 20%);
+		box-shadow: 3px 3px 3px darken($secondary-color, 20%);
+    	transition: box-shadow 50ms ease-in-out, background 50ms ease-in-out;
+		text-align: center;
+		font-size: 0.8em;    	
+		&.sexOffender {
+			background: $alert-color;
+		}
+		.photocard-title {
+			font-size: 1.1em;
+		}
+		.photocard-photo {
+			width: 100%;
+			height: 14rem;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-clip: content-box;
+		}
+		.photocard-caption {
+			color: rgba(255,255,255,0.85) !important;
+		}
+		a {
+			&:link,
+			&:active,
+			&:focus,
+			&:hover,
+			&:visited {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		span {
+			display: block;
+			padding: 0.5rem 0 0;
+		}
+	    &:hover, 
+	    &:active, 
+	    &:focus {
+	        background: $primary-color !important;
+	        box-shadow: 1px 1px 2px darken($secondary-color, 27%);
+	        outline: none !important;
+	    }
+	}
+}
+
+@media #{$medium-up} { 
+	li.photocard .photocard-content {
+		min-height: 20rem;
+		.photocard-photo {
+			height: 10rem; 
+		}
+	}
+}
