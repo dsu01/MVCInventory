@@ -1,4 +1,4 @@
-﻿@using System.Web.Optimization
+﻿@*@using System.Web.Optimization*@
 
 <!DOCTYPE html>
 <html>
@@ -6,10 +6,10 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/UI/dist/css/design.min.css")
-    @Styles.Render("~/UI/dist/fonts/fonts.min.css")
+    @*@Styles.Render("~/UI/dist/css/design.min.css")
+    @Styles.Render("~/UI/dist/fonts/fonts.min.css")*@
     @*    @Styles.Render("https://fonts.googleapis.com/css?family=Open+Sans:200,400,700")*@
-    @Scripts.Render("~/UI/dist/js/head-scripts.min.js")
+    @*@Scripts.Render("~/UI/dist/js/head-scripts.min.js")*@
 
     @*@RenderSection("head", required: false)*@
 </head>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </footer>*@
-    @Scripts.Render("~/UI/dist/js/foot-scripts.min.js")
+    @*@Scripts.Render("~/UI/dist/js/foot-scripts.min.js")*@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
