@@ -117,4 +117,20 @@ angular.module('FacilitiesApp.controllers', []).
     FacilityAPIService.GetFacility($scope.Id).then(function (response) {
         $scope.Facility = response.data;
     });
-});
+})
+.controller('CurrentTimeController', ['$scope', function ($scope) {
+    $scope.format = 'M/d/yy h:mm:ss a';
+}])
+.controller('DialogController', ['$scope', '$timeout', function ($scope, $timeout) {
+    $scope.name = 'Scott';
+    $scope.message = '';
+    $scope.hideDialog = function (message) {
+        $scope.message = message;
+        $scope.dialogIsHidden = true;
+        $timeout(function () {
+            $scope.message = '';
+            $scope.dialogIsHidden = false;
+        }, 2000);
+    };
+}])
+;

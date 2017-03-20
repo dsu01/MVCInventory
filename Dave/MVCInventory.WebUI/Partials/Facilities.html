@@ -2,12 +2,12 @@
 
 <div class="row">
     <div class="large-6 columns">
-        
+
         <div ng-controller="CurrentTimeController">
             Date format: <input ng-model="format"> <hr />
             Current time is: <span my-Current-Time="format"></span>
         </div>
-        
+
         <!--<div ng-controller="CurrentTimeController">
             <div facility-Info></div>
         </div>-->
@@ -15,18 +15,18 @@
         <div id="summaryDisplay" class="display">
             <table>
                 <thead>
-                <tr><th colspan="4">***Facilities***</th></tr>
+                    <tr><th colspan="4">***Facilities***</th></tr>
                 </thead>
                 <tbody>
-                <!--<tr ng-repeat="driver in driversList | filter: searchFilter">-->
-                <tr ng-repeat="facility in facilitiesList">
-                    <td>
-                        <input id="id" name="id" type="radio" value="{{facility.Id}}"/>
-                    </td>
-                    <td>{{facility.FacilityName}}</td>
-                    <td>{{facility.FacilityGroup}}</td>
-                    <td>{{facility.BuildingId}}</td>
-                </tr>
+                    <!--<tr ng-repeat="driver in driversList | filter: searchFilter">-->
+                    <tr ng-repeat="facility in facilitiesList">
+                        <td>
+                            <input id="id" name="id" type="radio" value="{{facility.Id}}" />
+                        </td>
+                        <td>{{facility.FacilityName}}</td>
+                        <td>{{facility.FacilityGroup}}</td>
+                        <td>{{facility.BuildingId}}</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -37,20 +37,32 @@
                 <button id="edit">Edit</button>
                 <button id="delete">Delete</button>
             </div>
+
+            <div ng-controller="DialogController">
+                {{message}}
+                <my-dialog ng-hide="dialogIsHidden" on-close="hideDialog(message)">
+                    Check out the contents, {{name}}!
+                </my-dialog>
+            </div>
         </div>
+
 
         <div id="editDisplay" class="display">
             <h4>Edit Facility</h4>
+
+            <!--<div ng-controller="CurrentTimeController">-->
+            <div facility-Info facility="{{CurrentFacility}}"></div>
+            <!--</div>-->
             
-            <div ng-controller="CurrentTimeController">
-                <div facility-Info></div>
-            </div>
-                            
+            <facility-Component CurrentFacility="CurrentFacility"></facility-Component>
+
             <form id="editForm">
-                <input id="editFacilityId" type="hidden" name="Id"/>
-                <p><label>Name:</label><input id="editFacilityName" name="FacilityName"/>
+                <input id="editFacilityId" type="hidden" name="Id" />
+                <p>
+                    <label>Name:</label><input id="editFacilityName" name="FacilityName" />
                 </p>
-                <p><label>Group:</label><input id="editFacilityGroup" name="FacilityGroup"/>
+                <p>
+                    <label>Group:</label><input id="editFacilityGroup" name="FacilityGroup" />
                 </p>
             </form>
             <button id="submitEdit" type="submit">Save</button>

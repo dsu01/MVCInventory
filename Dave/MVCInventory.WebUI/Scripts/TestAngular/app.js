@@ -2,6 +2,7 @@
   'FacilitiesApp.services',
   'FacilitiesApp.controllers',
   'FacilitiesApp.directives',
+  'FacilitiesApp.components',
   'ngRoute'
 ])
 .config(['$routeProvider', function ($routeProvider) {

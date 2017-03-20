@@ -1,10 +1,10 @@
 ﻿angular.module('FacilitiesApp.directives', [])
-.controller('CurrentTimeController', ['$scope', function ($scope) {
-    $scope.format = 'M/d/yy h:mm:ss a';
-}])
 .directive('facilityInfo', function () {
     return {
-        template: 'Name: {{CurrentFacility.FacilityName}} Property: {{CurrentFacility.FacilityGroup}}'
+        scope: { CurrentFacility: '=facility' },
+        //scope: { CurrentFacility: '=999' },
+        templateUrl: "Partials/FacilityInfo.html"
+        // template: 'Name: {{CurrentFacility.FacilityName}} Property: {{CurrentFacility.FacilityGroup}}'
     };
 })
 .directive('myCurrentTime', ['$interval', 'dateFilter', function ($interval, dateFilter) {
@@ -35,8 +35,14 @@
         link: link
     };
 }])
+.directive('myDialog', function () {
+    return {
+        restrict: 'E',
+        transclude: true,
+        scope: {
+            'close': '&onClose'
+        },
+        templateUrl: 'Partials/MyDialogClose.html'
+    };
+})
 ;
-
-
-
-
