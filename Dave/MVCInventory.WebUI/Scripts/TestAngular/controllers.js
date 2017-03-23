@@ -1,5 +1,4 @@
-﻿
-angular.module('FacilitiesApp.controllers', []).
+﻿angular.module('FacilitiesApp.controllers', []).
   controller('FacilitiesController', function ($scope, FacilityAPIService) {
       //$scope.nameFilter = null;
 
@@ -118,8 +117,34 @@ angular.module('FacilitiesApp.controllers', []).
         $scope.Facility = response.data;
     });
 })
+.controller('BuildingSelectorController', function ($scope, BuildingAPIService) {
+    $scope.BuildingList = null;
+
+    BuildingAPIService.GetBuildings().then(function (response) {
+        $scope.BuildingList = response.data;
+    });
+})
 .controller('CurrentTimeController', ['$scope', function ($scope) {
     $scope.format = 'M/d/yy h:mm:ss a';
 }])
+.controller('DialogController', ['$scope', '$timeout', function ($scope, $timeout) {
+    $scope.name = 'Scott';
+    $scope.message = 'Closing Facility...';
+    $scope.hideDialog = function (message) {
+        $scope.message = message;
+        $scope.dialogIsHidden = true;
+        $timeout(function () {
+            $scope.message = 'Closing Facility';
+            $scope.dialogIsHidden = false;
+        }, 2000);
+    };
+}])
+.controller('FacilityController', function ($scope, $routeParams, FacilityAPIService) {
+    $scope.Id = $routeParams.Id;
+    $scope.Facility = null;
 
+    FacilityAPIService.GetFacility($scope.Id).then(function (response) {
+        $scope.Facility = response.data;
+    });
+})
 ;

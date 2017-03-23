@@ -199,6 +199,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Partials\FacilityComponent.html" />
+    <Content Include="Partials\BuildingSelector.html" />
     <Content Include="Partials\MyDialogClose.html" />
     <Content Include="Partials\FacilityInfo.html" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -254,12 +255,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BuildingController.cs" />
     <Compile Include="Controllers\FacilityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestAngularController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BuildingRepository.cs" />
     <Compile Include="Models\FacilityRepository.cs" />
     <Compile Include="Models\BuildingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

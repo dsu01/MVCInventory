@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
@@ -50,7 +51,10 @@ namespace MVCInventory.WebUI.Models
         {
             using (var dbContext = new InventoryContext())
             {
-                return dbContext.Facilities.FirstOrDefault(x => x.Id == id);
+                return dbContext.Facilities
+                        .Where(x => x.Id == id)
+                        .Include(x => x.Building)
+                        .FirstOrDefault();
             }
         }
 
