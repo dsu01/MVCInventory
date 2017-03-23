@@ -1,4 +1,16 @@
 ﻿angular.module('FacilitiesApp.directives', [])
+.controller('DialogController', ['$scope', '$timeout', function ($scope, $timeout) {
+    $scope.name = 'Scott';
+    $scope.message = 'Closing Facility...';
+    $scope.hideDialog = function (message) {
+        $scope.message = message;
+        $scope.dialogIsHidden = true;
+        $timeout(function () {
+            $scope.message = 'Closing Facility';
+            $scope.dialogIsHidden = false;
+        }, 2000);
+    };
+}])
 .directive('facilityInfo', function () {
     return {
         scope: { CurrentFacility: '=facility' },
@@ -8,7 +20,6 @@
     };
 })
 .directive('myCurrentTime', ['$interval', 'dateFilter', function ($interval, dateFilter) {
-
     function link(scope, element, attrs) {
         var format, timeoutId;
 
