@@ -111,5 +111,24 @@ app.directive('myDialog',
         };
     });
 
+app.directive('facilityDetail', [function ($filter) {
 
+    function link($scope, element, attrs) {
 
+        //$scope.$watch('building', function (newValue, oldValue) {
+        //    if (newValue) {
+        //        $scope.buildingId = newValue.Id;
+        //    }
+        //});
+    }
+
+    return {
+        restrict: 'E',
+        scope: {
+            facility: '=',
+        },
+        link: link,
+        controller: 'FacilityDetailController',
+        templateUrl: "Partials/FacilityDetail.html"
+    };
+}]);

@@ -46,16 +46,13 @@
             </div>
         </div>
 
-
-        <div id="editDisplay" class="display">
+        <!--<div ng-controller="CurrentTimeController">-->
+        <!--<div facility-Info facility="{{CurrentFacility}}"></div>-->
+        <!--</div>-->
+        <!--<facility-Component CurrentFacility="{{CurrentFacility}}"></facility-Component>-->
+        <!--<facility-Component CurrentFacility="Facility"></facility-Component>-->
+        <!--<div id="editDisplay" class="display">
             <h4>Edit Facility</h4>
-
-            <!--<div ng-controller="CurrentTimeController">-->
-            <!--<div facility-Info facility="{{CurrentFacility}}"></div>-->
-            <!--</div>-->
-            
-            <!--<facility-Component CurrentFacility="{{CurrentFacility}}"></facility-Component>-->
-            <!--<facility-Component CurrentFacility="Facility"></facility-Component>-->
 
             <form id="editForm">
                 <input id="editFacilityId" type="hidden" name="Id" />
@@ -67,11 +64,16 @@
                 </p>
                 <p>
                     <label>Building:</label>
-                    <!--<building-Selector building="CurrentFacility.Building" building-id="CurrentFacility.BuildingId" default="Select Building"></building-Selector>-->
                     <building-Selector building-id="CurrentFacility.BuildingId" building="CurrentFacility.Building" default="Select Building"></building-Selector>
                 </p>
             </form>
             <button id="submitEdit" type="submit">Save</button>
+        </div>-->
+
+        <div id="editDisplay" class="display" ng-show="displayDetail">
+            
+            <facility-Detail facility="CurrentFacility" ></facility-Detail>
+
         </div>
 
     </div>

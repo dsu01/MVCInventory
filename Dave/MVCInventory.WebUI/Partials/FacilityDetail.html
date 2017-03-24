@@ -1,0 +1,22 @@
+﻿<div>
+    <h4>Edit Facility</h4>
+
+    <form id="editForm" ng-submit = "submit()">
+        <input id="editFacilityId" type="hidden" name="Id" />
+        <p>
+            <label>Name:</label>
+            <input ng-model="facility.FacilityName" />
+        </p>
+        <p>
+            <label>Group:</label>
+            <input ng-model="facility.FacilityGroup" />
+        </p>
+        <p>
+            <label>Building:</label>
+            <building-Selector building-id="facility.BuildingId" building="facility.Building" default="Select Building"></building-Selector>
+        </p>
+        <p>
+            <input type="submit" value="Save">
+        </p>
+    </form>
+</div>

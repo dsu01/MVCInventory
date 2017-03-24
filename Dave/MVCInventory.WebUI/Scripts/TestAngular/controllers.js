@@ -11,6 +11,8 @@
       $scope.facilitiesList = [];
       $self = this;
 
+      $scope.displayDetail = false;
+
       $self.getData = function () {
           FacilityAPIService.GetFacilities()
             .then(function (response) {
@@ -67,10 +69,13 @@
                   FacilityAPIService.GetFacility(facilityId)
                       .then(function (response) {
                           $scope.CurrentFacility = response.data;
-                          $('#editFacilityId').val(response.data.Id);
-                          $('#editFacilityName').val(response.data.FacilityName);
-                          $('#editFacilityGroup').val(response.data.FacilityGroup);
+
+                          //$('#editFacilityId').val(response.data.Id);
+                          //$('#editFacilityName').val(response.data.FacilityName);
+                          //$('#editFacilityGroup').val(response.data.FacilityGroup);
                           selectView("edit");
+
+                          $scope.displayDetail = true;
                       })
                     .catch(function (response) {
                         alert("Loading facility failed...");
@@ -156,5 +161,25 @@
     FacilityAPIService.GetFacility($scope.Id).then(function (response) {
         $scope.Facility = response.data;
     });
+})
+.controller('FacilityDetailController', function ($scope, FacilityAPIService) {
+
+    //FacilityAPIService.GetFacility($scope.Id).then(function (response) {
+    //    $scope.Facility = response.data;
+    //});
+    $scope.submit = function () {
+        var item = $scope.facility;
+
+        if (item != null) {
+            FacilityAPIService.UpdateFacility(item)
+                .then(function (response) {
+                    //$self.getData();
+                })
+                .catch(function (response) {
+                    alert("update facility failed...");
+                });
+        }
+    }
+
 })
 ;
