@@ -12,6 +12,9 @@
       $self = this;
 
       $scope.displayDetail = false;
+      $scope.testFunc = function (displayDetail) {
+          $scope.displayDetail = displayDetail;
+      };
 
       $self.getData = function () {
           FacilityAPIService.GetFacilities()
@@ -27,7 +30,7 @@
                 //    return !$scope.nameFilter || keyword.test(facility.Property) || keyword.test(facility.FacilityName);
                 //};
 
-                selectView("summary");
+                //selectView("summary");
             })
               .catch(function (response) {
                   alert("Loading facilities failed...");
@@ -73,7 +76,7 @@
                           //$('#editFacilityId').val(response.data.Id);
                           //$('#editFacilityName').val(response.data.FacilityName);
                           //$('#editFacilityGroup').val(response.data.FacilityGroup);
-                          selectView("edit");
+                          //selectView("edit");
 
                           $scope.displayDetail = true;
                       })
@@ -173,7 +176,8 @@
         if (item != null) {
             FacilityAPIService.UpdateFacility(item)
                 .then(function (response) {
-                    //$self.getData();
+                    // $scope.displayDetail = false;
+                    $scope.testFunc(false);
                 })
                 .catch(function (response) {
                     alert("update facility failed...");

@@ -12,7 +12,7 @@
             <div facility-Info></div>
         </div>-->
 
-        <div id="summaryDisplay" class="display">
+        <div id="summaryDisplay" class="display" ng-show="!displayDetail">
             <table>
                 <thead>
                     <tr><th colspan="4">***Facilities***</th></tr>
@@ -72,7 +72,7 @@
 
         <div id="editDisplay" class="display" ng-show="displayDetail">
             
-            <facility-Detail facility="CurrentFacility" ></facility-Detail>
+            <facility-Detail facility="CurrentFacility" display-Detail ="displayDetail" test-Func="testFunc"  ></facility-Detail>
 
         </div>
 

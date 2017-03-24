@@ -126,6 +126,8 @@ app.directive('facilityDetail', [function ($filter) {
         restrict: 'E',
         scope: {
             facility: '=',
+            displayDetail: '=',
+            testFunc: '=',
         },
         link: link,
         controller: 'FacilityDetailController',
