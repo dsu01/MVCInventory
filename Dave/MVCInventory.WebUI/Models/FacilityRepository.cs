@@ -37,7 +37,7 @@ namespace MVCInventory.WebUI.Models
             {
                 using (var dbContext = new InventoryContext())
                 {
-                    var list = dbContext.Facilities.ToList();
+                    var list = dbContext.Facilities.Include(x => x.Building).ToList();
                     return list;
                 }
             }
@@ -100,7 +100,7 @@ namespace MVCInventory.WebUI.Models
                 {
                     existingFacility.FacilityName = item.FacilityName;
                     existingFacility.FacilityGroup = item.FacilityGroup;
-                   // existingFacility.BuildingId = item.BuildingId;
+                    existingFacility.BuildingId = item.BuildingId;
 
                     dbContext.SaveChanges();
 

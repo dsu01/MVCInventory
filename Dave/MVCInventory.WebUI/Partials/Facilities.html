@@ -25,7 +25,7 @@
                         </td>
                         <td>{{facility.FacilityName}}</td>
                         <td>{{facility.FacilityGroup}}</td>
-                        <td>{{facility.BuildingId}}</td>
+                        <td>{{facility.Building.BuildingName}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -67,10 +67,9 @@
                 </p>
                 <p>
                     <label>Building:</label>
-                    <building-Selector building="CurrentFacility.Building" building-id="CurrentFacility.BuildingId"></building-Selector>
+                    <!--<building-Selector building="CurrentFacility.Building" building-id="CurrentFacility.BuildingId" default="Select Building"></building-Selector>-->
+                    <building-Selector building-id="CurrentFacility.BuildingId" building="CurrentFacility.Building" default="Select Building"></building-Selector>
                 </p>
-                
-
             </form>
             <button id="submitEdit" type="submit">Save</button>
         </div>

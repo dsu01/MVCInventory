@@ -66,7 +66,7 @@
               case "edit":
                   FacilityAPIService.GetFacility(facilityId)
                       .then(function (response) {
-                          $scope.CurrentFacility = response.data.Id;
+                          $scope.CurrentFacility = response.data;
                           $('#editFacilityId').val(response.data.Id);
                           $('#editFacilityName').val(response.data.FacilityName);
                           $('#editFacilityGroup').val(response.data.FacilityGroup);
@@ -78,17 +78,13 @@
                   ;
                   break;
               case "submitEdit":
-                  // var item = $('#editForm').seria;
-                  //var item = JSON.stringify($('#editForm').serializeObject());
-                  var item = $self.getFormData();
+
+                  var item = $scope.CurrentFacility;
 
                   if (item != null) {
                       FacilityAPIService.UpdateFacility(item)
                           .then(function (response) {
-                              var cells = selectedRadio.closest('tr').children();
-                              cells[1].innerText = $('#editFacilityName').val();
-                              cells[2].innerText = $('#editFacilityGroup').val();
-                              selectView("summary");
+                              $self.getData();
                           })
                           .catch(function (response) {
                               alert("update facility failed...");
@@ -122,6 +118,20 @@
 
     BuildingAPIService.GetBuildings().then(function (response) {
         $scope.BuildingList = response.data;
+
+        //$scope.$watch('building', function (newValue, oldValue) {
+        //    if (newValue) {
+        //        $scope.buildingId = newValue.Id;
+        //    }
+        //});
+
+        //$scope.$watch('buildingId', function (newValue, oldValue) {
+        //    if (newValue) {
+        //        //$scope.building = $filter('filter')($scope.states, function (d) { return d.IntegerValue === $scope.stateId; })[0];
+        //        $scope.building = $scope.BuildingList[0];
+        //    }
+        //})
+
     });
 })
 .controller('CurrentTimeController', ['$scope', function ($scope) {

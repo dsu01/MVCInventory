@@ -27,20 +27,47 @@ app.directive('facilityInfo',
         };
     });
 
-app.directive('buildingSelector',
-    function() {
-        return {
-            //scope: { CurrentFacility: '=facility' },
-            
-            controller: 'BuildingSelectorController',
-            templateUrl: "Partials/BuildingSelector.html"
-        };
-    });
+app.directive('buildingSelector', ['$filter', function ($filter) {
 
+    function link($scope, element, attrs) {
+
+        $scope.building = {};
+
+        //if ($scope.default)
+        //    $scope.states.splice(0, 0, { IntegerValue: null, StringValue: $scope.default });
+
+        if (!$scope.buildingId && $scope.BuildingList && $scope.BuildingList.length > 0)
+            $scope.building = $scope.BuildingList[0];
+
+        $scope.$watch('building', function (newValue, oldValue) {
+            if (newValue) {
+                $scope.buildingId = newValue.Id;
+            }
+        });
+
+        $scope.$watch('buildingId', function (newValue, oldValue) {
+            if (newValue) {
+                $scope.building = $filter('filter')($scope.BuildingList, function (d) { return d.Id === $scope.buildingId; })[0];
+            }
+        })
+    }
+
+    return {
+        restrict: 'E',
+        scope: {
+            building: '=',
+            buildingId: '=',
+            'default': '@default',
+        },
+        link: link,
+        controller: 'BuildingSelectorController',
+        templateUrl: "Partials/BuildingSelector.html"
+    };
+}]);
 
 app.directive('myCurrentTime',
 [
-    '$interval', 'dateFilter', function($interval, dateFilter) {
+    '$interval', 'dateFilter', function ($interval, dateFilter) {
         function link(scope, element, attrs) {
             var format, timeoutId;
 
@@ -49,20 +76,20 @@ app.directive('myCurrentTime',
             }
 
             scope.$watch(attrs.myCurrentTime,
-                function(value) {
+                function (value) {
                     format = value;
                     updateTime();
                 });
 
             element.on('$destroy',
-                function() {
+                function () {
                     $interval.cancel(timeoutId);
                 });
 
             // start the UI update process; save the timeoutId for canceling
-            timeoutId = $interval(function() {
-                    updateTime(); // update DOM
-                },
+            timeoutId = $interval(function () {
+                updateTime(); // update DOM
+            },
                 1000);
         }
 
@@ -73,7 +100,7 @@ app.directive('myCurrentTime',
 ]);
 
 app.directive('myDialog',
-    function() {
+    function () {
         return {
             restrict: 'E',
             transclude: true,
