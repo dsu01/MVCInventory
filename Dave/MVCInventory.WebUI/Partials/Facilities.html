@@ -7,10 +7,13 @@
             Date format: <input ng-model="format"> <hr />
             Current time is: <span my-Current-Time="format"></span>
         </div>
+        <div>
+            <facility-Selector></facility-Selector>   
+        </div>
+        <div>
+            <facility-Info></facility-Info>
+        </div>
 
-        <!--<div ng-controller="CurrentTimeController">
-            <div facility-Info></div>
-        </div>-->
 
         <div id="summaryDisplay" class="display" ng-show="!displayDetail">
             <table>

@@ -55,21 +55,9 @@
   <ItemGroup>
     <Compile Include="InventoryContext.cs" />
     <Compile Include="IStore.cs" />
-    <Compile Include="Migrations\201703070221569_InitialCreate.cs" />
-    <Compile Include="Migrations\201703070221569_InitialCreate.Designer.cs">
-      <DependentUpon>201703070221569_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703070236068_AddActiveFlag.cs" />
-    <Compile Include="Migrations\201703070236068_AddActiveFlag.Designer.cs">
-      <DependentUpon>201703070236068_AddActiveFlag.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703190308181_addemployeeTable.cs" />
-    <Compile Include="Migrations\201703190308181_addemployeeTable.Designer.cs">
-      <DependentUpon>201703190308181_addemployeeTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703191338556_addemployeeindex.cs" />
-    <Compile Include="Migrations\201703191338556_addemployeeindex.Designer.cs">
-      <DependentUpon>201703191338556_addemployeeindex.cs</DependentUpon>
+    <Compile Include="Migrations\201703251942496_First.cs" />
+    <Compile Include="Migrations\201703251942496_First.Designer.cs">
+      <DependentUpon>201703251942496_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,17 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703070221569_InitialCreate.resx">
-      <DependentUpon>201703070221569_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703070236068_AddActiveFlag.resx">
-      <DependentUpon>201703070236068_AddActiveFlag.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703190308181_addemployeeTable.resx">
-      <DependentUpon>201703190308181_addemployeeTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703191338556_addemployeeindex.resx">
-      <DependentUpon>201703191338556_addemployeeindex.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703251942496_First.resx">
+      <DependentUpon>201703251942496_First.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

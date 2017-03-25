@@ -20,10 +20,9 @@
 app.directive('facilityInfo',
     function () {
         return {
-            scope: { CurrentFacility: '=facility' },
-            //scope: { CurrentFacility: '=999' },
-            templateUrl: "Partials/FacilityInfo.html"
-            // template: 'Name: {{CurrentFacility.FacilityName}} Property: {{CurrentFacility.FacilityGroup}}'
+            restrict: 'E',
+            scope: { selectedFacility: '=' },
+            templateUrl: "Partials/derective-FacilityInfo.html"
         };
     });
 
@@ -31,7 +30,7 @@ app.directive('buildingSelector', ['$filter', function ($filter) {
 
     function link($scope, element, attrs) {
 
-        $scope.building = {};
+        //$scope.building = {};
 
         //if ($scope.default)
         //    $scope.states.splice(0, 0, { IntegerValue: null, StringValue: $scope.default });
@@ -64,6 +63,39 @@ app.directive('buildingSelector', ['$filter', function ($filter) {
         templateUrl: "Partials/BuildingSelector.html"
     };
 }]);
+
+app.directive('facilitySelector', function () {
+    function link($scope, element, attrs) {
+
+        $scope.selectedFacility = {};
+
+        if ($scope.FacilityList.length > 0)
+            $scope.selectedFacility = $scope.FacilityList[0];
+
+        $scope.$watch('facility', function (newValue, oldValue) {
+            if (newValue) {
+                $scope.facilityId = newValue.Id;
+            }
+        });
+
+        $scope.$watch('Id',
+            function(newValue, oldValue) {
+                if (newValue) {
+                    $scope.selectedFacility = $filter('filter')($scope.FacilityList,
+                        function (d) { return d.Id === $scope.facilityId; })[0];
+                }
+            });
+    }
+
+    return {
+        retrict: 'E',
+        templateUrl: 'Partials/derective-facilityselector.html',
+        controller: 'FacilitySelectorController',
+        scope: {
+            facilityList: '='
+        }
+    }
+});
 
 app.directive('myCurrentTime',
 [

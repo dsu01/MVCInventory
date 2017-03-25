@@ -201,8 +201,9 @@
     <Content Include="Partials\FacilityDetail.html" />
     <Content Include="Partials\FacilityComponent.html" />
     <Content Include="Partials\BuildingSelector.html" />
+    <Content Include="Partials\derective-facilityselector.html" />
     <Content Include="Partials\MyDialogClose.html" />
-    <Content Include="Partials\FacilityInfo.html" />
+    <Content Include="Partials\derective-FacilityInfo.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

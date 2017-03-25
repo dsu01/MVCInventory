@@ -3,7 +3,7 @@ namespace MVCInventory.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class First : DbMigration
     {
         public override void Up()
         {
@@ -14,6 +14,18 @@ namespace MVCInventory.Data.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         BuildingName = c.String(),
                         Property = c.String(),
+                        IsActive = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Employees",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        name = c.String(),
+                        email = c.String(),
+                        mobile_no = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -58,6 +70,7 @@ namespace MVCInventory.Data.Migrations
             DropIndex("dbo.Facilities", new[] { "BuildingId" });
             DropTable("dbo.FacilityAttachments");
             DropTable("dbo.Facilities");
+            DropTable("dbo.Employees");
             DropTable("dbo.Buildings");
         }
     }

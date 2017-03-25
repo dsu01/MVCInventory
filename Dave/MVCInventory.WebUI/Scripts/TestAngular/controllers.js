@@ -14,7 +14,16 @@
       $scope.displayDetail = false;
       $scope.testFunc = function (displayDetail) {
           $scope.displayDetail = displayDetail;
+
+          //if ($scope.displayDetail)
+              $self.getData();
       };
+
+      $scope.$watch('displayDetail', function (newValue) {
+          if (!newValue) {
+              $self.getData();
+          }
+      });
 
       $self.getData = function () {
           FacilityAPIService.GetFacilities()
@@ -121,6 +130,7 @@
         $scope.Facility = response.data;
     });
 })
+
 .controller('BuildingSelectorController', function ($scope, BuildingAPIService) {
     $scope.BuildingList = null;
 
@@ -142,6 +152,14 @@
 
     });
 })
+.controller('FacilitySelectorController', function ($scope, FacilityAPIService) {
+    $scope.FacilityList = null;
+
+    FacilityAPIService.GetFacilities().then(function (response) {
+        $scope.FacilityList = response.data;
+    });
+})
+
 .controller('CurrentTimeController', ['$scope', function ($scope) {
     $scope.format = 'M/d/yy h:mm:ss a';
 }])
@@ -176,8 +194,8 @@
         if (item != null) {
             FacilityAPIService.UpdateFacility(item)
                 .then(function (response) {
-                    // $scope.displayDetail = false;
-                    $scope.testFunc(false);
+                     $scope.displayDetail = false;
+                    //$scope.testFunc(false);
                 })
                 .catch(function (response) {
                     alert("update facility failed...");

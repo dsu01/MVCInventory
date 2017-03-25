@@ -71,7 +71,7 @@ mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInv
     }
 
     $scope.sumbitChange = function (item) {
-        if (item.Id < 0) {
+        if (item == null || item.Id == null ||item.Id < 0) {
             MVCInventoryAppService.addBuilding(item)
           .then(function (response) {
               getData();
