@@ -20,7 +20,6 @@
 app.directive('buildingSelector', ['$filter', function ($filter) {
 
     function link($scope, element, attrs) {
-
         //$scope.building = {};
 
         //if ($scope.default)

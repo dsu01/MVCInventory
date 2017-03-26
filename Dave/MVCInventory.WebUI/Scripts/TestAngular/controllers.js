@@ -16,7 +16,7 @@
           $scope.displayDetail = displayDetail;
 
           //if ($scope.displayDetail)
-              $self.getData();
+          $self.getData();
       };
 
       $scope.$watch('displayDetail', function (newValue) {
@@ -137,19 +137,6 @@
     BuildingAPIService.GetBuildings().then(function (response) {
         $scope.BuildingList = response.data;
 
-        //$scope.$watch('building', function (newValue, oldValue) {
-        //    if (newValue) {
-        //        $scope.buildingId = newValue.Id;
-        //    }
-        //});
-
-        //$scope.$watch('buildingId', function (newValue, oldValue) {
-        //    if (newValue) {
-        //        //$scope.building = $filter('filter')($scope.states, function (d) { return d.IntegerValue === $scope.stateId; })[0];
-        //        $scope.building = $scope.BuildingList[0];
-        //    }
-        //})
-
     });
 })
 .controller('FacilitySelectorController', function ($scope, FacilityAPIService) {
@@ -185,16 +172,23 @@
 })
 .controller('FacilityDetailController', function ($scope, FacilityAPIService) {
 
-    //FacilityAPIService.GetFacility($scope.Id).then(function (response) {
-    //    $scope.Facility = response.data;
-    //});
-    $scope.submit = function () {
-        var item = $scope.facility;
+    $scope.canSubmit = function (editForm) {
 
+        return (editForm.$valid);
+    }
+
+    $scope.submit = function (editForm) {
+
+        if (!editForm.$valid) {
+            alert('Invalid form entries');
+            return;
+        }
+
+        var item = $scope.facility;
         if (item != null) {
             FacilityAPIService.UpdateFacility(item)
                 .then(function (response) {
-                     $scope.displayDetail = false;
+                    $scope.displayDetail = false;
                     //$scope.testFunc(false);
                 })
                 .catch(function (response) {
@@ -202,6 +196,5 @@
                 });
         }
     }
-
 })
 ;
