@@ -1,7 +1,8 @@
 ﻿var mvcInventoryApp = angular.module('MVCInventoryApp', [
     'MVCInventoryApp.services',
-  'MVCInventoryApp.controllers',
-  'ngRoute'
+    'MVCInventoryApp.controllers',
+    'MVCInventoryApp.directives',
+    'ngRoute'
 ]);
 
 mvcInventoryApp.config(['$routeProvider', function ($routeProvider) {

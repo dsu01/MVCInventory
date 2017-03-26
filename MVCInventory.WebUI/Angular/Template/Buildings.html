@@ -1,5 +1,6 @@
 ﻿<div class="row" ng-controller="BuildingIndexCtrl">
     <div class="large-6 columns">
+      
         <div id="summaryDisplay" class="display">
             <table>
                 <thead>
@@ -7,7 +8,7 @@
                 </thead>
                 <tbody ng-repeat="building in buildingList">
                 <tr>
-                    <td><input id="id" name="id" type="radio" value="{{building.Id}}" /></td>
+                    <td><input id="id" name="id" type="radio" value="{{building.Id}}"/></td>
                     <td>{{building.BuildingName}}</td>
                     <td>{{building.Property}}</td>
                     <td>
@@ -20,23 +21,26 @@
                             Edit
                         </button>
                     </td>
-                </tr>   
-               
+                </tr>
+
                 </tbody>
             </table>
-            <input type="button" class="btnAdd" value="Refresh" ng-click="Refresh()" />
+            <building-Selector building-id="selBuilding.Id" building="selBuilding"></building-Selector>
+            <building-Info building="selBuilding"></building-Info>
+
+            <input type="button" class="btnAdd" value="Refresh" ng-click="Refresh()"/>
             &nbsp;&nbsp;
-            <input type="button" class="btnAdd" value="Add" ng-click="AddBuilding()" />
+            <input type="button" class="btnAdd" value="Add" ng-click="AddBuilding()"/>
         </div>
         <div id="editDisplay" class="display">
-            ID: <input type="text" disabled="disabled" ng-model="currentBuilding.Id" />
-           Building Name:<input id="BuildingName" name="BuildingName" type="text" ng-model="currentBuilding.BuildingName" /><br />
-           Property <input id="Property" name="Property" type="text" ng-model="currentBuilding.Property" />
-            <br />
+            ID: <input type="text" disabled="disabled" ng-model="currentBuilding.Id"/>
+            Building Name:<input id="BuildingName" name="BuildingName" type="text" ng-model="currentBuilding.BuildingName"/><br/>
+            Property <input id="Property" name="Property" type="text" ng-model="currentBuilding.Property"/>
+            <br/>
             <button ng-click="sumbitChange(currentBuilding)" class="btn btn-sm btn-warning">
-              Save
+                Save
             </button>
         </div>
-        
+
     </div>
  </div>

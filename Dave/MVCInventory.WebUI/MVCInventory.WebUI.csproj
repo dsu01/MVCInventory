@@ -201,7 +201,6 @@
     <Content Include="Partials\FacilityDetail.html" />
     <Content Include="Partials\FacilityComponent.html" />
     <Content Include="Partials\BuildingSelector.html" />
-    <Content Include="Partials\derective-facilityselector.html" />
     <Content Include="Partials\MyDialogClose.html" />
     <Content Include="Partials\derective-FacilityInfo.html" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -251,6 +250,9 @@
     <Content Include="Scripts\TestAngular\services.js" />
     <Content Include="Partials\Facility.html" />
     <Content Include="Partials\Facilities.html" />
+    <Content Include="Shared\FacilityDropDown\directive-facilitySelector.html" />
+    <Content Include="Shared\FacilityDropDown\directive-facilitySelectorCtrl.js" />
+    <Content Include="Shared\FacilityDropDown\directive-facilitySelectorFunc.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -288,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Shared\BuildingDropDown\" />
     <Folder Include="UI\dist\" />
   </ItemGroup>
   <ItemGroup>

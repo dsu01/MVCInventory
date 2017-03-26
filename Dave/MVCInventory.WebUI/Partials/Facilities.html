@@ -8,10 +8,10 @@
             Current time is: <span my-Current-Time="format"></span>
         </div>
         <div>
-            <facility-Selector></facility-Selector>   
+            <facility-Selector facilityid="facility.Id" facility="facility" default="Select facility"></facility-Selector>
         </div>
         <div>
-            <facility-Info></facility-Info>
+            <facility-Info facility ="facility"></facility-Info>
         </div>
 
 
@@ -75,7 +75,7 @@
 
         <div id="editDisplay" class="display" ng-show="displayDetail">
             
-            <facility-Detail facility="CurrentFacility" display-Detail ="displayDetail" test-Func="testFunc"  ></facility-Detail>
+            <facility-Detail facility="CurrentFacility" display-Detail ="displayDetail" test-Func="testFunc"></facility-Detail>
 
         </div>
 

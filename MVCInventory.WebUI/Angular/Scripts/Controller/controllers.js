@@ -1,8 +1,20 @@
 ﻿var mvcInventoryControllers = angular.module('MVCInventoryApp.controllers', []);
 
+mvcInventoryControllers.controller('BuildingSelectorController',
+    function($scope, MVCInventoryAppService) {
+        $scope.BuildingList = null;
+
+        MVCInventoryAppService.GetBuilding()
+            .then(function(response) {
+                $scope.BuildingList = response.data;
+            });
+    });
+
+
 mvcInventoryControllers.controller('BuildingIndexCtrl', function ($scope, MVCInventoryAppService) {
     $scope.buildingList = [];
     $scope.currentBuilding = {};
+    $scope.selBuilding = {};
     getData();
 
     function selectView(view) {

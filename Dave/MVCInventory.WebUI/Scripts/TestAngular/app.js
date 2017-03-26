@@ -17,15 +17,6 @@
 //}])
 ;
 
-app.directive('facilityInfo',
-    function () {
-        return {
-            restrict: 'E',
-            scope: { selectedFacility: '=' },
-            templateUrl: "Partials/derective-FacilityInfo.html"
-        };
-    });
-
 app.directive('buildingSelector', ['$filter', function ($filter) {
 
     function link($scope, element, attrs) {
@@ -64,38 +55,6 @@ app.directive('buildingSelector', ['$filter', function ($filter) {
     };
 }]);
 
-app.directive('facilitySelector', function () {
-    function link($scope, element, attrs) {
-
-        $scope.selectedFacility = {};
-
-        if ($scope.FacilityList.length > 0)
-            $scope.selectedFacility = $scope.FacilityList[0];
-
-        $scope.$watch('facility', function (newValue, oldValue) {
-            if (newValue) {
-                $scope.facilityId = newValue.Id;
-            }
-        });
-
-        $scope.$watch('Id',
-            function(newValue, oldValue) {
-                if (newValue) {
-                    $scope.selectedFacility = $filter('filter')($scope.FacilityList,
-                        function (d) { return d.Id === $scope.facilityId; })[0];
-                }
-            });
-    }
-
-    return {
-        retrict: 'E',
-        templateUrl: 'Partials/derective-facilityselector.html',
-        controller: 'FacilitySelectorController',
-        scope: {
-            facilityList: '='
-        }
-    }
-});
 
 app.directive('myCurrentTime',
 [

@@ -127,10 +127,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\Directives\directive-building-dropdown.html" />
+    <Content Include="Angular\Directives\directive-building-info.html" />
+    <Content Include="Angular\Directives\directive-facility-dropdown.html" />
     <Content Include="Angular\Scripts\app.js" />
     <Content Include="Angular\Scripts\Controller\commonController.js" />
     <Content Include="Angular\Scripts\Controller\controllers.js" />
     <Content Include="Angular\Scripts\Controller\employeeCtrl.js" />
+    <Content Include="Angular\Scripts\directives.js" />
     <Content Include="Angular\Scripts\Service\commonServices.js" />
     <Content Include="Angular\Scripts\Service\services.js" />
     <Content Include="Angular\Template\Empty.html" />
