@@ -2,30 +2,30 @@
 
 mvcInventoryAppServices.factory('MVCInventoryAppService',
     function ($http) {
-        var buildingAPIService = {};
+        var inventorAPIService = {};
 
-        buildingAPIService.GetBuilding = function() {
+        inventorAPIService.GetBuilding = function () {
             return $http({
                 method: 'GET',
                 url: "api/building"
             });
         };
 
-        buildingAPIService.GetBuildingById = function (id) {
+        inventorAPIService.GetBuildingById = function (id) {
             return $http({
                 method: 'GET',
                 url: "api/building/" + id
             });
         };
 
-        buildingAPIService.remove = function(id) {
+        inventorAPIService.remove = function (id) {
             return $http({
                 method: 'DELETE',
                 url: "api/building/" + id
             });
         };
 
-        buildingAPIService.addBuilding = function (item) {
+        inventorAPIService.addBuilding = function (item) {
             return $http({
                 method: 'POST',
                 url: "api/building",
@@ -33,13 +33,50 @@ mvcInventoryAppServices.factory('MVCInventoryAppService',
             });
         };
 
-        buildingAPIService.update = function (item) {
+        inventorAPIService.update = function (item) {
             return $http({
                 method: 'POST',
                 url: "api/building/edit",
                 data: item
             });
         };
-        return buildingAPIService;
+
+        inventorAPIService.GetFacilities = function () {
+            return $http({
+                method: 'GET',
+                url: "/api/facility"
+            });
+        },
+
+        inventorAPIService.GetFacilityById = function (id) {
+            return $http({
+                method: 'GET',
+                url: "api/facility/" + id
+            });
+        },
+
+        inventorAPIService.removeFacility = function (id) {
+            return $http({
+                method: 'DELETE',
+                url: "api/facility/delete/" + id
+            });
+        },
+
+        inventorAPIService.addFacility = function (item) {
+            return $http({
+                method: 'POST',
+                url: "api/facility/add",
+                data: item
+            });
+        },
+
+        inventorAPIService.updateFacility = function (item) {
+            return $http({
+                method: 'POST',
+                url: "api/facility/edit",
+                data: item
+            });
+        }
+        return inventorAPIService;
 
     });

@@ -12,7 +12,7 @@ namespace MVCInventory.Data
     {
         public InventoryContext() : base("InventoryContextConnection")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Facility> Facilities { get; set; }

@@ -137,8 +137,9 @@
     <Content Include="Angular\Scripts\directives.js" />
     <Content Include="Angular\Scripts\Service\commonServices.js" />
     <Content Include="Angular\Scripts\Service\services.js" />
-    <Content Include="Angular\Template\Empty.html" />
+    <Content Include="Angular\Template\FacilityAddEdit.html" />
     <Content Include="Angular\Template\Buildings.html" />
+    <Content Include="Angular\Template\Facility.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -207,6 +208,8 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Angular\AngularIndex.cshtml" />
     <Content Include="Views\Employee\EmployeeList.cshtml" />
+    <Content Include="Views\Facility\AddEdit.cshtml" />
+    <Content Include="Views\Facility\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
