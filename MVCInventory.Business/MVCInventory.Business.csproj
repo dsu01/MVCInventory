@@ -54,7 +54,7 @@
     <Compile Include="Abstract\IBuildingRepository.cs" />
     <Compile Include="Abstract\IFacilityRepository.cs" />
     <Compile Include="BuildingRepository.cs" />
-    <Compile Include="FacilityMapper.cs" />
+    <Compile Include="DAndSProfile.cs" />
     <Compile Include="FacilityRepository.cs" />
     <Compile Include="FacilityManager.cs" />
     <Compile Include="Models\BuildingModel.cs" />

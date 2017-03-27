@@ -9,9 +9,9 @@ using MVCInventory.Domain;
 
 namespace MVCInventory.Business
 {
-    public class MapperProfile : Profile
+    public class DAndSProfile : Profile
     {
-        public MapperProfile()
+        public DAndSProfile()
         {
             CreateMap<Building, BuildingModel>();
             CreateMap<FacilityAttachment, FacilityAttachmentModel>()

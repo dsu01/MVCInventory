@@ -13,7 +13,7 @@ namespace MVCInventory.WebUI
         {
             Mapper.Initialize(m =>
             {
-                m.AddProfile<MapperProfile>();
+                m.AddProfile<DAndSProfile>();
               
             });
             var container = new UnityContainer();
@@ -24,7 +24,6 @@ namespace MVCInventory.WebUI
              container.RegisterType<IFacilityManager, FacilityManager>();
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
-
 
             return container;
         }
