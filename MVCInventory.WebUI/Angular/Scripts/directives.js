@@ -41,3 +41,21 @@ appDirectives.directive('buildingInfo',
             templateUrl: "/Angular/Directives/directive-building-info.html"
         };
     });
+
+appDirectives.directive('facilityDetail',
+[
+    function($filter) {
+
+        return {
+            restrict: 'E',
+            scope: {
+                facility: '=',
+                displayDetail: '=',
+                testFunc: '='
+            },
+            link: link,
+            controller: 'FacilityDetailController',
+            templateUrl: "/Angular/Directives/directive-Facility-detail.html"
+        };
+    }
+]);

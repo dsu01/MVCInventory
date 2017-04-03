@@ -110,7 +110,15 @@ mvcInventoryControllers.controller('BuildingIndexCtrl',
 
 mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInventoryAppService) {
     $scope.facilityList = [];
+    $self = this;
+
     $scope.displayDetail = false;
+    $scope.testFunc = function (displayDetail) {
+        $scope.displayDetail = displayDetail;
+
+        //if ($scope.displayDetail)
+        getData();
+    };
     getData();
    
     function getData() {
@@ -134,6 +142,28 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
               }
               )
         ;
+
+        $("button").click(function (e) {
+            var selectedRadio = $('input:radio:checked');
+            var facilityId = selectedRadio.attr('value');
+            switch (e.target.id) {
+                case "refresh":
+                    $self.getData();
+                    break;
+                case "editBtn":
+                    MVCInventoryAppService.GetFacilityById(facilityId)
+                        .then(function (response) {
+                            $scope.CurrentFacility = response.data;
+                            $scope.displayDetail = true;
+                        })
+                      .catch(function (response) {
+                          alert("Loading facility failed...");
+                      })
+                    ;
+                    break;
+              
+            }
+        });
     }
     
     $scope.Refresh = function () {
@@ -143,6 +173,8 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
     $scope.search = function() {
             $(".facility-table-wrapper").css("display", "block");
     }
+
+   
 
     $scope.$watch('filter', function (newValue, oldValue) {
         //perform the initial search when the page first loads
@@ -154,42 +186,38 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
     }
 );
 
-mvcInventoryControllers.controller('FacilityDetailController', function ($scope, FacilityAPIService) {
-
+mvcInventoryControllers.controller('FacilityDetailController', function ($scope, MVCInventoryAppService) {
+    //var facilityId = $routeParams.Id;
     $scope.currentFacility = {};
-    $scope.selBuilding = {};
-
-     
-    $scope.remove = function (id) {
-        MVCInventoryAppService.removeFacility(id)
-           .then(function (response) {
-               //show only summary list
-           })
-       .catch
-       (function (response) {
-           alert("remove facility failed...");
-       }
-       );
-    }
+   // $scope.selBuilding = {};
     
-    $scope.addedit = function (id) {       
-        MVCInventoryAppService.GetFacilityById(id)
-         .then(function (response) {
-             $scope.currentFacility = response.data;
-             //show edit view
-         })        
-     .catch
-     (function (response) {
-         alert("edit failed...");
-     }
-     );
-    }
+    //if (facilityId != null && parseInt(facilityId) > 0)
+    //{ getDataByID();}
+    
+    $scope.canSubmit = function (editForm) {
 
-    $scope.sumbitChange = function (item) {
+        return (editForm.$valid);
+    }
+    //function getDataByID() {
+    //    MVCInventoryAppService.GetFacilityById(parseInt(facilityId))
+    //        .then(function (response) {
+    //            //Dig into the responde to get the relevant data
+    //            $scope.currentFacility = response.data;
+    //        })
+    //          .catch(function (response) {
+    //              alert("Loading facilities failed...");
+    //          }
+    //          )
+    //    ;
+    //}
+  
+
+    $scope.sumbit = function (item) {
+  
         if (item == null || item.Id == null ||item.Id < 0) {
-            MVCInventoryAppService.addFacility(item)
+            MVCInventoryAppService.AddFacility(item)
           .then(function (response) {
-              getData();
+              $scope.displayDetail = false;
           })
       .catch
       (function (response) {
@@ -198,7 +226,7 @@ mvcInventoryControllers.controller('FacilityDetailController', function ($scope,
       );
         }
         else {
-            MVCInventoryAppService.updateFacility(item)
+            MVCInventoryAppService.UpdateFacility(item)
           .then(function (response) {
               getData();
           })
