@@ -126,17 +126,15 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
             .then(function (response) {
                 //Dig into the responde to get the relevant data
                 $scope.facilitiesList = response.data;
+                    $scope.displayDetail = false;
 
-                if ($('input:radio') != null && $('input:radio')[0] != null)
-                    $('input:radio')[0].checked = "checked";
+                    //$scope.searchFilter = function(driver) {
+                    //    var keyword = new RegExp($scope.nameFilter, 'i');
+                    //    return !$scope.nameFilter || keyword.test(facility.Property) || keyword.test(facility.FacilityName);
+                    //};
 
-                //$scope.searchFilter = function(driver) {
-                //    var keyword = new RegExp($scope.nameFilter, 'i');
-                //    return !$scope.nameFilter || keyword.test(facility.Property) || keyword.test(facility.FacilityName);
-                //};
-
-                //selectView("summary");
-            })
+                    //selectView("summary");
+                })
               .catch(function (response) {
                   alert("Loading facilities failed...");
               }
@@ -155,7 +153,15 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
 
     // Show Blank Form For Adding New Facility
     $scope.addBlankFacilityForm = function () {
+        //$scope.currentFacility = {
+        //    "Id" : 0,
+        //    "FacilityName": '',
+        //    "FacilityGroup": '',
+        //    BuildingId: 1,
+        //    //Building: null
+        //};
         $scope.currentFacility = [];
+        //$scope.currentFacility = {};
         $scope.displayDetail = true;
 
     }
@@ -174,7 +180,11 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
         } else {
             MVCInventoryAppService.updateFacility($scope.currentFacility)
                       .then(function (response) {
-                          getData();
+                          if (response.data)
+                              getData();
+                          else {
+                              alert('cannot add');
+                          }
                       })
                     .catch(function (response) {
                         alert("Add facility failed...");

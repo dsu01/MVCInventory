@@ -25,7 +25,7 @@ appDirectives.directive('buildingSelector', ['$filter', function ($filter) {
         retrict: 'E',
         scope: {
             building: '=',
-            buildingid: '='
+            buildingId: '='
         },
         link: link,
         templateUrl: '/Angular/Directives/directive-building-dropdown.html',

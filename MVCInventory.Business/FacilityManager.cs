@@ -31,23 +31,35 @@ namespace MVCInventory.Business
 
         public FacilityModel Add(FacilityModel item)
         {
-            using (var dbContext = new InventoryContext())
+            //if (item == null)
+            //    throw new Exception("item is null");
+
+            try
             {
-                if (item != null)
+                using (var dbContext = new InventoryContext())
                 {
-                    item.Id = Guid.NewGuid();
-                    if (item.BuildingId == 0)
-                        item.BuildingId = 1;
+                    //if (item != null)
+                    //{
+                        item.Id = Guid.NewGuid();
+                        if (item.BuildingId == 0)
+                            item.BuildingId = 1;
 
-                    var upd = Mapper.Map<Facility>(item);
-                    dbContext.Facilities.Add(upd);
-                    dbContext.SaveChanges();
-                    var res = dbContext.Facilities.FirstOrDefault(x => x.FacilityName == upd.FacilityName);
-                    var result = Mapper.Map<FacilityModel>(res);
+                        var upd = Mapper.Map<Facility>(item);
+                        dbContext.Facilities.Add(upd);
+                        dbContext.SaveChanges();
+                        var res = dbContext.Facilities.FirstOrDefault(x => x.FacilityName == upd.FacilityName);
+                        var result = Mapper.Map<FacilityModel>(res);
 
-                    return result;
+                        return result;
+                    //}
+                    return null;
                 }
-                return null;
+            }
+            catch (Exception ex)
+            {
+                // logging
+
+                throw;
             }
         }
 
@@ -60,7 +72,8 @@ namespace MVCInventory.Business
                 {
                     existingFacility.FacilityName = item.FacilityName;
                     existingFacility.FacilityGroup = item.FacilityGroup;
-
+                    existingFacility.BuildingId = item.BuildingId;
+                  
                     try
                     {
                         return dbContext.SaveChanges() > 0;
@@ -82,7 +95,11 @@ namespace MVCInventory.Business
                         }
                         throw raise;
                     }
-                 
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+
                 }
                 else
                 {

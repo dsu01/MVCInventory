@@ -13,7 +13,8 @@ namespace MVCInventory.Business
     {
         public DAndSProfile()
         {
-            CreateMap<Building, BuildingModel>();
+            CreateMap<Building, BuildingModel>()
+                .ReverseMap();
             CreateMap<FacilityAttachment, FacilityAttachmentModel>()
                 .ForSourceMember(m => m.Facility, opt => opt.Ignore())
                 .ForSourceMember(m => m.FacilityId, opt => opt.Ignore())

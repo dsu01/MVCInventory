@@ -1,2 +1,1 @@
-﻿<p>Select a building</p>
-<p><select class="form-control" ng-model="building" ng-options="building.BuildingName for building in BuildingList track by building.Id"></select></p>
+﻿<select class="form-control" ng-model="building" ng-options="b.BuildingName for b in buildings track by building.Id"></select>
