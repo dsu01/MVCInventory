@@ -25,27 +25,35 @@ namespace MVCInventory.Business
     {
         //private readonly ILogService _logService;
 
-        private InventoryContext dbContext = new InventoryContext();
+      //  private InventoryContext dbContext = new InventoryContext();
         private bool _isDisposed;
         //dbContext.Configuration.LazyLoadingEnabled = false;
 
         public FacilityModel Add(FacilityModel item)
         {
-            using (dbContext)
+            using (var dbContext = new InventoryContext())
             {
-                var upd = Mapper.Map<Facility>(item);
-                dbContext.Facilities.Add(upd);
-                dbContext.SaveChanges();
-                var res = dbContext.Facilities.FirstOrDefault(x => x.FacilityName == upd.FacilityName);
-                var result = Mapper.Map<FacilityModel>(res);
+                if (item != null)
+                {
+                    item.Id = Guid.NewGuid();
+                    if (item.BuildingId == 0)
+                        item.BuildingId = 1;
 
-                return result;
+                    var upd = Mapper.Map<Facility>(item);
+                    dbContext.Facilities.Add(upd);
+                    dbContext.SaveChanges();
+                    var res = dbContext.Facilities.FirstOrDefault(x => x.FacilityName == upd.FacilityName);
+                    var result = Mapper.Map<FacilityModel>(res);
+
+                    return result;
+                }
+                return null;
             }
         }
 
         public bool Update(FacilityModel item)
         {
-            using (dbContext)
+            using (var dbContext = new InventoryContext())
             {
                 var existingFacility = dbContext.Facilities.FirstOrDefault(x => x.Id == item.Id);
                 if (existingFacility != null)
@@ -84,7 +92,7 @@ namespace MVCInventory.Business
         }
         public FacilityModel GetById(Guid Id)
         {
-            using (dbContext)
+            using (var dbContext = new InventoryContext())
             {
                 var res = dbContext.Facilities.Where(x => x.Id == Id)
                     .Include(x => x.Building)
@@ -97,7 +105,7 @@ namespace MVCInventory.Business
 
         public void Delete(Guid Id)
         {
-            using (dbContext)
+            using (var dbContext = new InventoryContext())
             {
                 var existingFacility = dbContext.Facilities.FirstOrDefault(x => x.Id == Id);
                 if (existingFacility == null)
@@ -110,7 +118,7 @@ namespace MVCInventory.Business
       
         public List<FacilityModel> GetAll()
         {
-            using (dbContext)
+            using (var dbContext = new InventoryContext())
             {
                 var list = dbContext.Facilities
                     .Include(x => x.Building)
@@ -128,7 +136,7 @@ namespace MVCInventory.Business
         {
             if (this._isDisposed == false)
             {
-                this.dbContext.Dispose();
+               // this.dbContext.Dispose();
                 this._isDisposed = true;
             }
         }

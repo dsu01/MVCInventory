@@ -5,7 +5,12 @@
     'ngRoute'
 ]);
 
-mvcInventoryApp.config(['$routeProvider', function ($routeProvider) {
+mvcInventoryApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+
     $routeProvider.
            when('/buildings', {
                templateUrl: '../Angular/Template/Buildings.html',
@@ -24,5 +29,7 @@ mvcInventoryApp.config(['$routeProvider', function ($routeProvider) {
            otherwise({
                redirectTo: '/'
            });
+
+    $locationProvider.html5Mode(true);
     }
 ]);

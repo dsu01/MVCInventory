@@ -1,28 +1,12 @@
-﻿
-           
-<div>
-                <h4>Add/Edit Facility</h4>
-    <p><a href="/#!/"> Back to Facilities list </a></p>
-                <form name="editForm" ng-submit="submit(editForm)" novalidate>
-                    <input id="editFacilityId" type="hidden" name="Id" />
-                    <p>
-                        <label>Name:</label>
-                        <input id="facilityName" ng-model="facility.FacilityName" ng-required="true"
-                               ng-class="{'erroneous-field': editForm.facilityName.$dirty &&  editForm.facilityName.invalid}" />
-                    </p>
-                    <p>
-                        <label>Group:</label>
-                        <input id="facilityGroup" ng-model="facility.FacilityGroup" ng-required="true"
-                               ng-class="{'erroneous-field': editForm.facilityGroup.$dirty &&  editForm.facilityGroup.invalid}" />
-                    </p>
-                    <p>
-                        <label>Building:</label>
-                        <building-Selector id="selectedBuilding" building-id="facility.BuildingId" building="facility.Building" default="Select Building" ng-required="true"
-                                           ng-class="{'erroneous-field': editForm.selectedBuilding.$dirty &&  editForm.selectedBuilding.invalid}" />
-                    </p>
-                    <p>
-                        <input type="submit" value="Save" ng-disabled="!canSubmit(editForm)">
-                    </p>
-                </form>
-            </div>
+﻿<div class="row" ng-controller="FacilityIndexCtrl">
+    <div class="large-6 columns">
+        <a href="/"> Back to Facilities list </a>
+        <div class="clearfix"></div>
 
+        <div>
+            <h4>Add/Edit Facility</h4>
+         
+        </div>
+    </div>
+
+</div>

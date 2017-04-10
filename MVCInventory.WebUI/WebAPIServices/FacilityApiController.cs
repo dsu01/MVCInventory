@@ -39,16 +39,16 @@ namespace MVCInventory.WebUI.WebAPIServices
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/facility/add", Name = "AddFacility")]
-        public FacilityModel AddFacility(FacilityModel Facility)
+        public FacilityModel AddFacility(FacilityModel item)
         {
-            return _facilityManager.Add(Facility);
+            return _facilityManager.Add(item);
         }
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/facility/edit", Name = "UpdateFacility")]
-        public bool UpdateFacility(FacilityModel Facility)
+        public bool UpdateFacility(FacilityModel item)
         {
-            return _facilityManager.Update(Facility);
+            return _facilityManager.Update(item);
         }
 
         [System.Web.Http.HttpDelete]

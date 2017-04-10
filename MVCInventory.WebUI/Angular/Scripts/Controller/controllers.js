@@ -143,27 +143,6 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
               )
         ;
 
-        $("button").click(function (e) {
-            var selectedRadio = $('input:radio:checked');
-            var facilityId = selectedRadio.attr('value');
-            switch (e.target.id) {
-                case "refresh":
-                    $self.getData();
-                    break;
-                case "editBtn":
-                    MVCInventoryAppService.GetFacilityById(facilityId)
-                        .then(function (response) {
-                            $scope.CurrentFacility = response.data;
-                            $scope.displayDetail = true;
-                        })
-                      .catch(function (response) {
-                          alert("Loading facility failed...");
-                      })
-                    ;
-                    break;
-              
-            }
-        });
     }
     
     $scope.Refresh = function () {
@@ -174,13 +153,68 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
             $(".facility-table-wrapper").css("display", "block");
     }
 
+    // Show Blank Form For Adding New Facility
+    $scope.addBlankFacilityForm = function () {
+        $scope.currentFacility = [];
+        $scope.displayDetail = true;
+
+    }
    
+    // Save or add new facility
+    $scope.saveFacility = function () {
+        if (!$scope.currentFacility.Id) {
+            MVCInventoryAppService.addFacility($scope.currentFacility)
+                        .then(function (response) {
+                            getData();
+                        })
+                      .catch(function (response) {
+                          alert("Add facility failed...");
+                      })
+            ;
+        } else {
+            MVCInventoryAppService.updateFacility($scope.currentFacility)
+                      .then(function (response) {
+                          getData();
+                      })
+                    .catch(function (response) {
+                        alert("Add facility failed...");
+                    })
+            ;
+        }
+    }
+            
+    // Get facility
+    $scope.getFacility = function (facilityId) {
+       
+        $scope.currentFacility = [];
+        MVCInventoryAppService.GetFacilityById(facilityId)
+                       .then(function (response) {
+                           $scope.currentFacility = response.data;
+                           $scope.displayDetail = true;
+                       })
+                     .catch(function (response) {
+                         alert("Loading facility detail info failed...");
+                     });
+    }
+
+    // Delete facility
+    $scope.deleteFacility = function (facilityId) {
+    
+        MVCInventoryAppService.removeFacility(facilityId)
+                       .then(function (response) {
+                           getData();
+                       })
+                     .catch(function (response) {
+                         alert("Loading facility detail info failed...");
+                     });
+    }
 
     $scope.$watch('filter', function (newValue, oldValue) {
         //perform the initial search when the page first loads
         if (!oldValue && newValue)
             $scope.search();
     });
+
 
 
     }

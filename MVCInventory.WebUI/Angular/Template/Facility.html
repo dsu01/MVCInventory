@@ -6,54 +6,83 @@
 </div>
 <div class="row" ng-controller="FacilityIndexCtrl">
     <div class="large-6 columns">
-        <a href="/#!/facility/addedit" class="pull-right btn btn-primary">Add Facility</a>
+        <!--<a href="/facility/addedit" class="pull-right btn btn-primary">Add Facility</a>-->
+       
         <div class="clearfix"></div>
 
-        <div class="facility-table-wrapper" ng-show="!displayDetail">
+        <div class="facility-table-wrapper" ng-show="!displayDetail" ng-hide="displayDetail">
             <div class="row">
                 <div class="col-md-12">
 
                     <table id="facility-table" class="table table-striped table-condensed filter-facility">
                         <thead>
-                        <tr>
-                            <th><span>Id</span></th>
-                            <th><span>Facility Name</span></th>
-                            <th><span>Property</span></th>
-                            <th><span>Building</span></th>
-                              
-                        </tr>
+                            <tr>
+                                <th><span>Id</span></th>
+                                <th><span>Facility Name</span></th>
+                                <th><span>Property</span></th>
+                                <th><span>Building</span></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="facility in facilitiesList">
-                            <td>
-                                <input id="id" name="id" type="radio" value="{{facility.Id}}" />
-                            </td>
-                            <td>{{facility.FacilityName}}</td>
-                            <td>{{facility.FacilityGroup}}</td>
-                            <td>{{facility.Building.BuildingName}}</td>
-                              
-                               
-                        </tr>
+                            <tr ng-repeat="facility in facilitiesList">
+                                <td>
+                                    <input id="id" name="id" type="radio" value="{{facility.Id}}" />
+                                </td>
+                                <td>{{facility.FacilityName}}</td>
+                                <td>{{facility.FacilityGroup}}</td>
+                                <td>{{facility.Building.BuildingName}}</td>
+                                <td><button class="btn btn-primary btn-sm" ng-click="getFacility(facility.Id)">Edit</button></td>
+                                <td><button class="btn btn-primary btn-sm" ng-click="deleteFacility(facility.Id)">Delete</button></td>
+                            </tr>
                         </tbody>
                     </table>
                     <div id="buttonContainer">
+
+                        <button id="refresh" ng-click="getData()">Refresh</button>
                       
-                        <button id="refresh">Refresh</button>
-                        <button id="editBtn">Add/Edit</button>
-                      
+                        <button class="btn btn-primary pull-right" ng-click="addBlankFacilityForm()">Add New Facility</button>
                     </div>
                 </div>
             </div>
             <!--<building-Selector building-id="selBuilding.Id" building="selBuilding"></building-Selector>
-            <building-Info building="selBuilding"></building-Info>-->
-            
-        <div id="editDisplay" class="display" ng-show="displayDetail">
-            <p>test</p>
-            <facility-Detail facility="CurrentFacility" display-Detail ="displayDetail" test-Func="testFunc"></facility-Detail>
+        <building-Info building="selBuilding"></building-Info>-->
+        </div>
+        <div id="editDisplay" class="display" ng-show="displayDetail" ng-hide="!displayDetail">
+            <!--<facility-Detail facility="CurrentFacility" display-Detail="displayDetail" test-Func="testFunc"></facility-Detail>-->
+            <div class="col-md-8">
+                <form id="facilityDetForm" class="form-horizontal" ng-submit="saveFacility()">
+                    <div class="form-group">
+                        <label class="col-md-3">Facility Name</label>
+                        <div class="col-md-9">
+                            <input id="facilityName" type="text" ng-required="true" ng-model="currentFacility.FacilityName" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3">Facility Group</label>
+                        <div class="col-md-9">
+                            <input id="facilityGroup" type="text" ng-required="true" ng-model="currentFacility.FacilityGroup" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3">Facility Building</label>
+                        <div class="col-md-9">
+                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button type="submit" class="btn btn-primary">Save</button> <a class="btn btn-default" ng-click="displayDetail = false">Cancel</a>
 
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
       
-        </div>
+       
         
 
 </div>
