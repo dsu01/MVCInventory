@@ -42,18 +42,17 @@ appDirectives.directive('buildingInfo',
         };
     });
 
-appDirectives.directive('facilityDetail',
-[
+appDirectives.directive('facilityDetail',[
     function($filter) {
-
         return {
             restrict: 'E',
             scope: {
                 facility: '=',
                 displayDetail: '=',
-                testFunc: '='
+                testFunc: '=',
+                getData: '&'
             },
-            link: link,
+          //  link: link,
             controller: 'FacilityDetailController',
             templateUrl: "/Angular/Directives/directive-Facility-detail.html"
         };

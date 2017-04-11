@@ -119,7 +119,7 @@ app.directive('facilityDetail', [function ($filter) {
             displayDetail: '=',
             testFunc: '=',
         },
-        link: link,
+      //  link: link,
         controller: 'FacilityDetailController',
         templateUrl: "Partials/FacilityDetail.html"
     };

@@ -119,9 +119,9 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
         //if ($scope.displayDetail)
         getData();
     };
-    getData();
-   
-    function getData() {
+  
+     function getData() {
+   // $scope.getData = function(){
         MVCInventoryAppService.GetFacilities()
             .then(function (response) {
                 //Dig into the responde to get the relevant data
@@ -142,8 +142,11 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
         ;
 
     }
-    
-    $scope.Refresh = function () {
+
+    getData();
+
+
+    $scope.refresh = function () {
         getData();
     }
 
@@ -160,43 +163,42 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
         //    BuildingId: 1,
         //    //Building: null
         //};
-        $scope.currentFacility = [];
+        $scope.currentFacility = {};
         //$scope.currentFacility = {};
         $scope.displayDetail = true;
 
     }
    
     // Save or add new facility
-    $scope.saveFacility = function () {
-        if (!$scope.currentFacility.Id) {
-            MVCInventoryAppService.addFacility($scope.currentFacility)
-                        .then(function (response) {
-                            getData();
-                        })
-                      .catch(function (response) {
-                          alert("Add facility failed...");
-                      })
-            ;
-        } else {
-            MVCInventoryAppService.updateFacility($scope.currentFacility)
-                      .then(function (response) {
-                          if (response.data)
-                              getData();
-                          else {
-                              alert('cannot add');
-                          }
-                      })
-                    .catch(function (response) {
-                        alert("Add facility failed...");
-                    })
-            ;
-        }
-    }
+    //$scope.saveFacility = function () {
+    //    if (!$scope.currentFacility.Id) {
+    //        MVCInventoryAppService.addFacility($scope.currentFacility)
+    //                    .then(function (response) {
+    //                        getData();
+    //                    })
+    //                  .catch(function (response) {
+    //                      alert("Add facility failed...");
+    //                  })
+    //        ;
+    //    } else {
+    //        MVCInventoryAppService.updateFacility($scope.currentFacility)
+    //                  .then(function (response) {
+    //                      if (response.data)
+    //                          getData();
+    //                      else {
+    //                          alert('cannot add');
+    //                      }
+    //                  })
+    //                .catch(function (response) {
+    //                    alert("Add facility failed...");
+    //                })
+    //        ;
+    //    }
+    //}
             
     // Get facility
     $scope.getFacility = function (facilityId) {
-       
-        $scope.currentFacility = [];
+        $scope.currentFacility = {};
         MVCInventoryAppService.GetFacilityById(facilityId)
                        .then(function (response) {
                            $scope.currentFacility = response.data;
@@ -231,17 +233,14 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
 );
 
 mvcInventoryControllers.controller('FacilityDetailController', function ($scope, MVCInventoryAppService) {
-    //var facilityId = $routeParams.Id;
-    $scope.currentFacility = {};
-   // $scope.selBuilding = {};
-    
+  
     //if (facilityId != null && parseInt(facilityId) > 0)
     //{ getDataByID();}
     
-    $scope.canSubmit = function (editForm) {
+    //$scope.canSubmit = function (editForm) {
 
-        return (editForm.$valid);
-    }
+    //    return (editForm.$valid);
+    //}
     //function getDataByID() {
     //    MVCInventoryAppService.GetFacilityById(parseInt(facilityId))
     //        .then(function (response) {
@@ -256,32 +255,38 @@ mvcInventoryControllers.controller('FacilityDetailController', function ($scope,
     //}
   
 
-    $scope.sumbit = function (item) {
-  
-        if (item == null || item.Id == null ||item.Id < 0) {
-            MVCInventoryAppService.AddFacility(item)
-          .then(function (response) {
-              $scope.displayDetail = false;
-          })
-      .catch
-      (function (response) {
-          alert("update failed...");
-      }
-      );
+    $scope.saveFacility = function () {
+        if (!$scope.facility.Id) {
+           
+            MVCInventoryAppService.addFacility($scope.facility)
+                        .then(function (response) {
+                            //how to call getData(); or Refresh
+                            $scope.getData();
+                            $scope.displayDetail = false;
+                        })
+                      .catch(function (response) {
+                          alert("Add facility failed..." + response.message);
+                      })
+            ;
+        } else {
+            MVCInventoryAppService.updateFacility($scope.facility)
+                      .then(function (response) {
+                          if (response.data)
+                          {
+                            $scope.getData();
+                            $scope.displayDetail = false;
+                          }
+                        else {
+                            alert('cannot update');
+                        }
+                    })
+                    .catch(function (response) {
+                        alert("update facility failed..." + response.message);
+                    })
+            ;
         }
-        else {
-            MVCInventoryAppService.UpdateFacility(item)
-          .then(function (response) {
-              getData();
-          })
-      .catch
-      (function (response) {
-          alert("update failed...");
-      }
-      );
-        }
-       
     }
+
     
 })
 ;
