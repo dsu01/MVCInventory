@@ -65,6 +65,8 @@ namespace MVCInventory.Business
 
         public bool Update(FacilityModel item)
         {
+            var success = true;
+
             using (var dbContext = new InventoryContext())
             {
                 var existingFacility = dbContext.Facilities.FirstOrDefault(x => x.Id == item.Id);
@@ -76,7 +78,7 @@ namespace MVCInventory.Business
                   
                     try
                     {
-                        return dbContext.SaveChanges() > 0;
+                        dbContext.SaveChanges();
                     }
                     catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
                     {
@@ -97,6 +99,7 @@ namespace MVCInventory.Business
                     }
                     catch (Exception ex)
                     {
+                        success = false;
                         throw ex;
                     }
 
@@ -105,6 +108,8 @@ namespace MVCInventory.Business
                 {
                     return false;
                 }
+
+                return success;
             }
         }
         public FacilityModel GetById(Guid Id)

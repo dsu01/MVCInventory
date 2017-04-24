@@ -154,6 +154,12 @@ mvcInventoryControllers.controller('FacilityIndexCtrl', function ($scope, MVCInv
             $(".facility-table-wrapper").css("display", "block");
     }
 
+    $scope.$watch('displayDetail', function (newValue) {
+        if (!newValue) {
+            $self.getData();
+        }
+    });
+
     // Show Blank Form For Adding New Facility
     $scope.addBlankFacilityForm = function () {
         //$scope.currentFacility = {

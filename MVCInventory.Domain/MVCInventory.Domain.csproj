@@ -52,6 +52,7 @@
     <Compile Include="Building.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Facility.cs" />
+    <Compile Include="ForTestClass.cs" />
     <Compile Include="InvFacilityAttachment.cs" />
     <Compile Include="mytestclass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
