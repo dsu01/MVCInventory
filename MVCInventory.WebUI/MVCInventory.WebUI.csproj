@@ -149,6 +149,7 @@
   <ItemGroup>
     <Content Include="Angular\Directives\directive-building-dropdown.html" />
     <Content Include="Angular\Directives\directive-building-info.html" />
+    <Content Include="Angular\Directives\directive-facility-detail.html" />
     <Content Include="Angular\Directives\directive-facility-dropdown.html" />
     <Content Include="Angular\Scripts\app.js" />
     <Content Include="Angular\Scripts\Controller\commonController.js" />

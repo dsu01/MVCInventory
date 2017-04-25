@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.Data", "MVCInv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.Business", "MVCInventory.Business\MVCInventory.Business.csproj", "{DC18ACC7-FD9B-4DF2-B058-49F94BCFFCB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.Testables", "MVCInventory.Testables\MVCInventory.Testables.csproj", "{7E47B523-75F5-4DF8-9DF3-BF3BC879B118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCInventory.UnitTests", "MVCInventory.UnitTests\MVCInventory.UnitTests.csproj", "{941B1D69-35C8-48BB-9D82-E5DC76B09687}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{DC18ACC7-FD9B-4DF2-B058-49F94BCFFCB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC18ACC7-FD9B-4DF2-B058-49F94BCFFCB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC18ACC7-FD9B-4DF2-B058-49F94BCFFCB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E47B523-75F5-4DF8-9DF3-BF3BC879B118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E47B523-75F5-4DF8-9DF3-BF3BC879B118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E47B523-75F5-4DF8-9DF3-BF3BC879B118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E47B523-75F5-4DF8-9DF3-BF3BC879B118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{941B1D69-35C8-48BB-9D82-E5DC76B09687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941B1D69-35C8-48BB-9D82-E5DC76B09687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941B1D69-35C8-48BB-9D82-E5DC76B09687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941B1D69-35C8-48BB-9D82-E5DC76B09687}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

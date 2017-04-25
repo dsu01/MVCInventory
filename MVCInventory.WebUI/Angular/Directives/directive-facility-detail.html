@@ -1,0 +1,29 @@
+﻿<div class="col-md-8">
+    <form id="facilityDetForm" class="form-horizontal" ng-submit="saveFacility()">
+        <div class="form-group">
+            <label class="col-md-3">Facility Name</label>
+            <div class="col-md-9">
+                <input id="facilityName" type="text" ng-required="true" ng-model="facility.FacilityName" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3">Facility Group</label>
+            <div class="col-md-9">
+                <input id="facilityGroup" type="text" ng-required="true" ng-model="facility.FacilityGroup" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3">Facility Building</label>
+            <div class="col-md-9">
+                <building-Selector id="selectedBuilding" building-id="facility.BuildingId" building="facility.Building"></building-Selector>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-9 col-md-offset-3">
+                <button type="submit" class="btn btn-primary">Save</button> <a class="btn btn-default" ng-click="displayDetail = false">Cancel</a>
+
+            </div>
+        </div>
+    </form>
+
+</div>

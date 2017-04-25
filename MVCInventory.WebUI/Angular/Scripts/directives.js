@@ -25,7 +25,7 @@ appDirectives.directive('buildingSelector', ['$filter', function ($filter) {
         retrict: 'E',
         scope: {
             building: '=',
-            buildingid: '='
+            buildingId: '='
         },
         link: link,
         templateUrl: '/Angular/Directives/directive-building-dropdown.html',
@@ -41,3 +41,20 @@ appDirectives.directive('buildingInfo',
             templateUrl: "/Angular/Directives/directive-building-info.html"
         };
     });
+
+appDirectives.directive('facilityDetail',[
+    function($filter) {
+        return {
+            restrict: 'E',
+            scope: {
+                facility: '=',
+                displayDetail: '=',
+                testFunc: '=',
+                getData: '&'
+            },
+          //  link: link,
+            controller: 'FacilityDetailController',
+            templateUrl: "/Angular/Directives/directive-Facility-detail.html"
+        };
+    }
+]);
