@@ -94,7 +94,7 @@ namespace MVCInventory.Business
             {
                 var list = dbContext.Facilities
                     .Include(x => x.Building)
-                    .Include(x=>x.FacilityAttachments).ToList();
+                    .ToList();
 
                 return list;
             }

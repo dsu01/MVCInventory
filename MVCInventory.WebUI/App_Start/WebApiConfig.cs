@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using MVCInventory.WebUI.App_Start;
 
 namespace MVCInventory.WebUI
 {
@@ -19,6 +20,10 @@ namespace MVCInventory.WebUI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Register Unity with Web API.
+            var container = UnityConfig.Config();
+            config.DependencyResolver = new UnityResolver(container);
         }
     }
 }

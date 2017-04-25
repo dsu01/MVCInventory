@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 using MVCInventory.WebUI.Models;
@@ -16,6 +17,7 @@ namespace MVCInventory.WebUI.Controllers
         {
             //Init();
             //var building = repo.Buildings.FirstOrDefault();
+            Claim newClaim = new Claim(ClaimTypes.Country, "Sweden");
             return View();
         }
 

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using MVCInventory.Business;
 using MVCInventory.Business.Abstract;
+using MVCInventory.Business.Models;
 using MVCInventory.Data;
 using MVCInventory.Domain;
 
@@ -12,45 +13,49 @@ namespace MVCInventory.WebUI.WebAPIServices
 {
     public class FacilityApiController : ApiController
     {
-        private IFacilityRepository facilityRepo = FacilityRepository.getRepository();
-     
-        public FacilityApiController() { }
+      //  private IFacilityRepository facilityRepo = FacilityRepository.getRepository();
+       private readonly IFacilityManager _facilityManager;
+
+        public FacilityApiController(IFacilityManager facilityManager)
+        {
+            _facilityManager = facilityManager;
+        }
 
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/facility", Name = "GetFacilities")]
         //public List<Facility> GetAllFacilities()
-        public IEnumerable<Facility> GetAllFacilities()
+        public List<FacilityModel> GetAllFacilities()
         {
             // return facilityRepo.GetAll().ToList();
-            return facilityRepo.GetAll();
+            return _facilityManager.GetAll();
         }
 
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/facility/{Id}", Name = "GetFacilityById")]
-        public Facility GetFacilityById(Guid id)
+        public FacilityModel GetFacilityById(Guid id)
         {
-            return facilityRepo.FetchByFacilityId(id);
+            return _facilityManager.GetById(id);
         }
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/facility/add", Name = "AddFacility")]
-        public Facility AddFacility(Facility Facility)
+        public FacilityModel AddFacility(FacilityModel Facility)
         {
-            return facilityRepo.Add(Facility);
+            return _facilityManager.Add(Facility);
         }
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/facility/edit", Name = "UpdateFacility")]
-        public Facility UpdateFacility(Facility Facility)
+        public bool UpdateFacility(FacilityModel Facility)
         {
-            return facilityRepo.Update(Facility);
+            return _facilityManager.Update(Facility);
         }
 
         [System.Web.Http.HttpDelete]
         [System.Web.Http.Route("api/facility/delete/{id}", Name = "DeleteFacility")]
         public void DeleteFacility(Guid id)
         {
-            facilityRepo.DeleteFacility(id);
+            _facilityManager.Delete(id);
         }
     }
 }

@@ -54,9 +54,12 @@
     <Compile Include="Abstract\IBuildingRepository.cs" />
     <Compile Include="Abstract\IFacilityRepository.cs" />
     <Compile Include="BuildingRepository.cs" />
+    <Compile Include="FacilityMapper.cs" />
     <Compile Include="FacilityRepository.cs" />
-    <Compile Include="IManager.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="FacilityManager.cs" />
+    <Compile Include="Models\BuildingModel.cs" />
+    <Compile Include="Models\FacilityAttachmentModel.cs" />
+    <Compile Include="Models\FacilityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
