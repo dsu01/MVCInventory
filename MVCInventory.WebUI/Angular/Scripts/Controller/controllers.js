@@ -35,7 +35,7 @@ mvcInventoryControllers.controller('BuildingIndexCtrl',
                 //});
                 .catch
                 (function(response) {
-                        alert("Loading facilities failed...");
+                        alert("Loading buildings failed...");
                     }
                 );
         }

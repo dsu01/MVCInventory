@@ -5,19 +5,45 @@
         <input id="editFacilityId" type="hidden" name="Id" />
         <p>
             <label>Name:</label>
-            <input id="facilityName" ng-model="facility.FacilityName" ng-required="true"
+            <input id="facilityName" ng-model="facility.FacilityName" ng-required="true"  
                    ng-class="{'erroneous-field': editForm.facilityName.$dirty &&  editForm.facilityName.invalid}"/>
         </p>
         <p>
             <label>Group:</label>
-            <input id="facilityGroup" ng-model="facility.FacilityGroup" ng-required="true"
-                   ng-class="{'erroneous-field': editForm.facilityGroup.$dirty &&  editForm.facilityGroup.invalid}"/>
+            <input id="facilityGroup" name="facilityGroup" ng-model="lityGroup" ng-required="true" ng-pattern="/^[2-9][0-9]{2}$/" ng-minlength="3" ng-maxlength="3" maxlength="3"
+                   ng-class="{'erroneous-field': editForm.facilityGroup.$dirty &&  editForm.facilityGroup.$invalid}"/>
         </p>
         <p>
             <label>Building:</label>
             <building-Selector id="selectedBuilding" building-id="facility.BuildingId" building="facility.Building" default="Select Building" ng-required="true"  
                                ng-class="{'erroneous-field': editForm.selectedBuilding.$dirty &&  editForm.selectedBuilding.invalid}"/>
         </p>
+        <div class="input-small" ng-class="{'erroneous-field': (editForm.requestingActivityOfficialPhoneAreaCode.$invalid && editForm.requestingActivityOfficialPhoneAreaCode.$dirty)}">
+            <input type="text" class="form-control" id="requestingActivityOfficialPhoneAreaCode" name="requestingActivityOfficialPhoneAreaCode" ng-model="waiver.OfficialPhoneInfo.AreaCode" ng-pattern="/^[2-9][0-9]{2}$/" ng-minlength="3" ng-maxlength="3" maxlength="3" ng-required="true" />
+            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+        </div>
+        <!--<div class="form-group has-feedback">
+            <label for="phone" id="labelPhone" class="col-sm-3 control-label">{{waiverType.Sections.Agency.LabelPrefix}} Phone*: </label>
+            <div class="col-sm-9">
+                <div class="input-inline input-small north-american" ng-class="{'has-error2': (form.requestingActivityOfficialPhoneAreaCode.$invalid && formValidate)}">
+                    <input type="text" class="form-control number-only" id="requestingActivityOfficialPhoneAreaCode" name="requestingActivityOfficialPhoneAreaCode" ng-model="waiver.OfficialPhoneInfo.AreaCode" ng-pattern="/^[2-9][0-9]{2}$/" ng-minlength="3" ng-maxlength="3" maxlength="3" ng-required="waiverType.Sections.Agency.Show" />
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div> <span class="north-american">-</span>
+                <div class="input-inline input-small north-american" ng-class="{'has-error2': (form.requestingActivityOfficialPhoneFirstThree.$invalid && formValidate)}">
+                    <input type="text" class="form-control number-only" id="requestingActivityOfficialPhoneFirstThree" name="requestingActivityOfficialPhoneFirstThree" ng-model="waiver.OfficialPhoneInfo.FirstThree" ng-pattern="/^[0-9]{3}$/" ng-minlength="3" ng-maxlength="3" maxlength="3" ng-required="waiverType.Sections.Agency.Show" />
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div> <span class="north-american">-</span>
+                <div class="input-inline input-small north-american" ng-class="{'has-error2': (form.requestingActivityOfficialPhoneLastFour.$invalid && formValidate)}">
+                    <input type="text" class="form-control number-only" id="requestingActivityOfficialPhoneLastFour" name="requestingActivityOfficialPhoneLastFour" ng-model="waiver.OfficialPhoneInfo.LastFour" ng-pattern="/^[0-9]{4}$/" ng-minlength="4" ng-maxlength="4" maxlength="4" ng-required="waiverType.Sections.Agency.Show" />
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div> <span class="north-american">Ex.</span>
+                <div class="input-inline input-small north-american" ng-class="{'has-error2': (form.requestingActivityOfficialPhoneExtension.$invalid && formValidate)}">
+                    <input type="text" class="form-control number-only" id="requestingActivityOfficialPhoneExtension" name="requestingActivityOfficialPhoneExtension" ng-model="waiver.OfficialPhoneInfo.Extension" ng-pattern="/^[0-9]*$/" ng-maxlength="5" maxlength="5" />
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+            </div>
+        </div>-->
+        <p ng-class="{'erroneous-field': true}"> here is my test</p>
         <p>
             <input type="submit" value="Save" ng-disabled="!canSubmit(editForm)">
         </p>

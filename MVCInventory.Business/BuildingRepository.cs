@@ -87,10 +87,19 @@ namespace MVCInventory.Business
 
         public IEnumerable<Building> GetAll()
         {
-            using (var dbContext = new InventoryContext())
+
+            try
             {
-                return dbContext.Buildings.ToList();
+                using (var dbContext = new InventoryContext())
+                {
+                    return dbContext.Buildings.ToList();
+                }
             }
+            catch (Exception e)
+            {
+                throw;
+            }
+            
         }
     }
 }

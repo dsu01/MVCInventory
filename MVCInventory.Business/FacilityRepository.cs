@@ -44,7 +44,7 @@ namespace MVCInventory.Business
                 }
             }
         }
-        public Facility FetchByFacilityId(Guid Id)
+        public Facility GetByFacilityId(Guid Id)
         {
             using (var dbContext = new InventoryContext())
             {
@@ -66,7 +66,7 @@ namespace MVCInventory.Business
             }
         }
 
-        public Facility FetchByFacilityName(string name)
+        public Facility GetByFacilityName(string name)
         {
             using (var dbContext = new InventoryContext())
             {

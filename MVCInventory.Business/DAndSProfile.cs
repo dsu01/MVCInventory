@@ -23,8 +23,8 @@ namespace MVCInventory.Business
             CreateMap<Facility, FacilityModel>()
                 .ReverseMap()
                 .ForSourceMember(m => m.FacilityAttachments, opt => opt.Ignore())
-            .ForMember(m => m.FacilityAttachments, opt => opt.Ignore());
-            //.ForSourceMember(m => m.Building, opt => opt.Ignore());
+            .ForMember(m => m.FacilityAttachments, opt => opt.Ignore())
+            .ForSourceMember(m => m.Building, opt => opt.Ignore());
         }
 
         //private static void ConfigureFacilityMappings()
@@ -44,7 +44,6 @@ namespace MVCInventory.Business
         //    .ForSourceMember(m => m.TestStatus, opt => opt.Ignore())
         //    .ForSourceMember(m => m.ExpiresDate, opt => opt.Ignore())
         //    .ForSourceMember(m => m.RecertifyDate, opt => opt.Ignore());
-
 
         // }
     }

@@ -12,8 +12,8 @@ namespace MVCInventory.WebUI.WebAPIServices
 {
     public class BuildingApiController : ApiController
     {
-
         private IBuildingRepository buildingRepo = BuildingRepository.getRepository();
+
         //public BuildingApiController(IBuildingRepository buildrepo)
         //{
         //    buildingRepo = buildrepo;
